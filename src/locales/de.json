@@ -1,0 +1,482 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "locations": "Standorte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "cta": "Angebot anfordern"
+  },
+  "hero": {
+    "badge": "Ihr Meisterbetrieb in Franken",
+    "title": "Reinigung der",
+    "subtitle": "Extraklasse.",
+    "desc": "Wir sind Ihr professioneller und erfahrener Meisterbetrieb für Reinigung aller Art und weitere Dienstleistungen in den Regionen Bamberg, Coburg, Erlangen, Forchheim, Fürth, Nürnberg, Regensburg.",
+    "cta_primary": "Jetzt unverbindlich anfragen",
+    "cta_secondary": "Unsere Leistungen",
+    "trust": {
+      "tuv": "TÜV Geprüft",
+      "fast": "Schneller Service",
+      "custom": "Maßgeschneidertes Angebot",
+      "local": "Lokale Teams"
+    }
+  },
+  "cta_section": {
+    "badge": "Unverbindliches Angebot",
+    "title": "Bereit für echte Qualität?",
+    "desc": "Konfigurieren Sie Ihr maßgeschneidertes Servicepaket in nur 60 Sekunden. Unser lokales Expertenteam meldet sich innerhalb von 2 Stunden bei Ihnen.",
+    "points": [
+      { "label": "Kostenlos & Unverbindlich", "sub": "Kein Risiko, kein Vertrag" },
+      { "label": "Antwort in 2 Stunden", "sub": "Garantierte Reaktionszeit" },
+      { "label": "100% DSGVO-konform", "sub": "Ihre Daten sind sicher" }
+    ],
+    "stats": [
+      { "value": "1500+", "label": "Projekte" },
+      { "value": "10+", "label": "Jahre" },
+      { "value": "99%", "label": "Zufriedenheit" },
+      { "value": "120+", "label": "Fachkräfte vor Ort" }
+    ]
+  },
+  "trust": {
+    "badge": "Vertrauen von führenden Unternehmen in Franken",
+    "stats": [
+      { "label": "Zufriedene Kunden", "value": "2500+" },
+      { "label": "Fachkräfte", "value": "120+" },
+      { "label": "Jahre Erfahrung", "value": "15+" }
+    ]
+  },
+  "services": {
+    "home_title": "Unsere Leistungen",
+    "home_subtitle": "Wir kümmern uns um Ihre Immobilie - mit Präzision, Fachwissen und modernster Technik.",
+    "home_badge": "Umfassende Leistungen",
+    "home_stat": "500+ Objekte betreut",
+    "reinigung": {
+      "title": "Reinigung",
+      "description": "Professionelle Gebäudereinigung und Unterhaltsreinigung für Büros und Privathaushalte.",
+      "bento_title": "Unterhaltsreinigung",
+      "bento_desc": "Regelmäßige, systematische Reinigung Ihrer Büro- und Geschäftsräume auf höchstem Niveau."
+    },
+    "hausmeisterservice": {
+      "title": "Hausmeisterservice",
+      "description": "Zuverlässige Objektbetreuung, Kleinreparaturen und Instandhaltung Ihrer Immobilien.",
+      "bento_title": "Hausmeisterservice",
+      "bento_desc": "Technisches Gebäudemanagement und schnelle Hilfe vor Ort."
+    },
+    "renovierungen": {
+      "title": "Renovierungen",
+      "description": "Malerarbeiten, Bodenverlegung und Komplettumbauten für einen frischen Look.",
+      "bento_title": "Renovierungen",
+      "bento_desc": "Fachgerechte Instandsetzung und Modernisierung."
+    },
+    "abbrucharbeiten": {
+      "title": "Abbrucharbeiten",
+      "description": "Sicherer und effizienter Rückbau inklusive Planung und fachgerechter Entsorgung.",
+      "bento_title": "Abbrucharbeiten",
+      "bento_desc": "Sicherer und umweltgerechter Rückbau."
+    },
+    "gartenpflege": {
+      "title": "Gartenpflege",
+      "description": "Rasenmähen, Heckenschnitt und Neugestaltung für Ihr grünes Paradies.",
+      "bento_title": "Gartenpflege",
+      "bento_desc": "Professionelle Pflege von Außen- und Grünanlagen."
+    },
+    "entruempelung": {
+      "title": "Entrümpelung",
+      "description": "Fachgerechte und besenreine Entrümpelung von Wohnungen, Kellern und Büros.",
+      "bento_title": "Entrümpelung",
+      "bento_desc": "Besenreine Räumung von Wohnungen, Kellern und Büros."
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "subtitle": "Antworten auf Ihre wichtigsten Fragen zu unseren Dienstleistungen.",
+    "items": [
+      {
+        "question": "Welche Regionen in Franken werden abgedeckt?",
+        "answer": "Wir sind mit lokalen Teams in Erlangen, Nürnberg, Bamberg, Coburg, Forchheim, Fürth und Regensburg im Einsatz. Dadurch garantieren wir kurze Anfahrtswege und schnelle Reaktionszeiten für unsere Kunden."
+      },
+      {
+        "question": "Sind Ihre Mitarbeiter fest angestellt und versichert?",
+        "answer": "Ja, als zertifizierter Meisterbetrieb legen wir höchsten Wert auf Qualität und Sicherheit. Alle unsere Mitarbeiter sind fest angestellt, professionell geschult und vollständig haftpflichtversichert."
+      },
+      {
+        "question": "Bieten Sie auch Notfall-Reinigungen an?",
+        "answer": "Selbstverständlich. Für gewerbliche Kunden und bei akuten Vorfällen (wie Wasserschäden oder nach Bauarbeiten) bieten wir einen schnellen 24/7 Notfall-Service nach vorheriger vertraglicher Vereinbarung an."
+      },
+      {
+        "question": "Wie berechnen sich die Kosten für eine Unterhaltsreinigung?",
+        "answer": "Die Kosten sind maßgeschneidert und richten sich nach der Quadratmeterzahl, dem Verschmutzungsgrad und der Reinigungshäufigkeit. Wir erstellen nach einer kostenlosen Vor-Ort-Besichtigung ein verbindliches und transparentes Angebot ohne versteckte Kosten."
+      },
+      {
+        "question": "Bringen Sie die Reinigungsmittel selbst mit?",
+        "answer": "Ja, wir nutzen ausschließlich professionelles, hochwirksames und umweltfreundliches Reinigungsequipment sowie eigene Reinigungsmittel. Sie müssen sich um nichts kümmern."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Kundenstimmen",
+    "subtitle": "Ihre Zufriedenheit ist unser größter Ansporn.",
+    "google_reviews": "Google Reviews",
+    "all_reviews": "Alle Bewertungen",
+    "verified": "Verifiziert",
+    "items": [
+      {
+        "id": 1,
+        "name": "Sybille H.",
+        "role": "Office Managerin",
+        "service": "Büroreinigung in Erlangen",
+        "content": "Wir sind Neukunden. Sehr gründliche Reinigung, professionell und sehr freundlich. Wir sind sehr zufrieden.",
+        "rating": 5,
+        "span": "md:col-span-1"
+      },
+      {
+        "id": 2,
+        "name": "Dostapix Fotografie",
+        "role": "Geschäftsführer",
+        "service": "Grundreinigung in Erlangen",
+        "content": "Sie sind alle superfreundlich, superschnell und professionell. Es ist alles blitzesauber. Es läuft offiziell mit Vertrag und MwSt. Das war mir wichtig. Preis Leistung ist top! Bin sehr zufrieden und glücklich.",
+        "rating": 5,
+        "span": "md:col-span-2"
+      },
+      {
+        "id": 3,
+        "name": "Sasan",
+        "role": "Hausverwaltung",
+        "service": "Treppenhausreinigung Erlangen",
+        "content": "Hervorragender Reinigungsservice. Ich bin absolut zufrieden mit der Arbeit. Die Treppenhäuser und Flächen sind immer blitzsauber und gepflegt.",
+        "rating": 5,
+        "span": "md:col-span-1"
+      }
+    ]
+  },
+  "form": {
+    "steps": {
+      "location": { "title": "Standort", "subtitle": "Wo benötigen Sie uns?", "desc": "Wählen Sie Ihren Standort in Franken." },
+      "service": { "title": "Leistung", "subtitle": "Welchen Service brauchen Sie?", "desc": "Wählen Sie die gewünschte Dienstleistung." },
+      "contact": { "title": "Kontakt", "subtitle": "Wie erreichen wir Sie?", "desc": "Ihre Daten werden streng vertraulich behandelt." }
+    },
+    "fields": {
+      "name": "Name / Firma *",
+      "name_placeholder": "Max Mustermann",
+      "phone": "Telefon",
+      "phone_placeholder": "+49 ...",
+      "email": "E-Mail Adresse *",
+      "email_placeholder": "max@beispiel.de",
+      "message": "Nachricht (optional)",
+      "message_placeholder": "Beschreiben Sie kurz Ihr Anliegen..."
+    },
+    "buttons": {
+      "next": "Weiter",
+      "prev": "Zurück",
+      "submit": "Angebot anfordern",
+      "submitting": "Wird gesendet..."
+    },
+    "trust": {
+      "ssl": "SSL verschlüsselt",
+      "gdpr": "DSGVO-konform",
+      "response": "Antwort in 2h"
+    },
+    "success": {
+      "title": "Erfolgreich gesendet!",
+      "desc": "Vielen Dank für Ihre Anfrage. Einer unserer Experten wird sich innerhalb von 2 Stunden bei Ihnen melden."
+    },
+    "validation": {
+      "city": "Bitte Standort wählen",
+      "service": "Bitte Leistung wählen",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "name": "Bitte geben Sie Ihren Namen ein"
+    },
+    "cities": ["Erlangen", "Nürnberg", "Bamberg", "Fürth", "Andere Region"],
+    "services": ["Unterhaltsreinigung", "Grundreinigung", "Hausmeisterservice", "Bauendreinigung", "Renovierung", "Sonstiges"]
+  },
+  "common": {
+    "open_details": "Details öffnen",
+    "all_services": "Alle Leistungen ansehen",
+    "contact_us": "Kontaktieren Sie uns",
+    "send": "Senden",
+    "more": "Mehr",
+    "details_prices": "Details & Preise",
+    "verified": "Verifiziert",
+    "meisterbetrieb": "Meisterbetrieb",
+    "tuev_geprueft": "TÜV Geprüft",
+    "answer_2h": "Antwort in 2h"
+  },
+  "city_page": {
+    "hero_badge": "Vor Ort in {city}",
+    "hero_title_1": "Ihr Partner für",
+    "hero_title_2": "Qualität in {city}",
+    "hero_desc": "Als zertifizierter Meisterbetrieb bieten wir Ihnen in {city} und Umgebung erstklassige Gebäudereinigung, Hausmeisterservice und Renovierungsarbeiten. Präzision aus Franken.",
+    "service_catalog": "Leistungskatalog {city}",
+    "service_title": "Full-Service für Ihre Immobilie",
+    "service_desc": "Vom Unterhaltsreinigung bis hin zur komplexen Sanierung — wir decken das gesamte Spektrum des Facility Managements in {city} ab.",
+    "trust_title": "Warum Kunden in {city} uns vertrauen.",
+    "trust_points": [
+      { "title": "Regionale Nähe", "desc": "Wir sind keine Fernagentur, sondern direkt vor Ort in Franken ansässig." },
+      { "title": "Faire Festpreise", "desc": "Transparente Angebote ohne versteckte Kosten oder böse Überraschungen." },
+      { "title": "Qualifiziertes Personal", "desc": "Regelmäßig geschulte Mitarbeiter und modernste Ausrüstung." }
+    ],
+    "cta_title": "Kostenloses Angebot anfordern?",
+    "cta_subtitle": "Unser lokales Team in {city} berät Sie gerne.",
+    "cta_button": "Jetzt anfragen",
+    "local_hotline": "Lokale Hotline",
+    "central_location": "Zentrale Lage",
+    "satisfied_customers": "Hunderte zufriedene Kunden in ganz Franken."
+  },
+  "service_page": {
+    "express_badge": "Express-Service in {city}",
+    "hero_desc": "Wir garantieren höchste Standards, Pünktlichkeit und absolute Sauberkeit direkt vor Ort in {city}.",
+    "feature_points": [
+      "Festpreisgarantie",
+      "Zertifizierter Fachbetrieb",
+      "Kurze Anfahrtswege",
+      "Versicherte Leistungen"
+    ],
+    "consultation_badge": "Beratung & Termin",
+    "offer_card_title": "Unverbindliches Angebot für {service}",
+    "offer_card_subtitle": "Kostenlos & ohne Risiko in 60 Sekunden.",
+    "content_title": "Professionelle {service} in {city}",
+    "content_subtitle": "Qualität, der Sie vertrauen können.",
+    "content_p1": "Suchen Sie eine zuverlässige Reinigungsfirma oder einen kompetenten Partner für {service} in {city}? Wir von AZ-Europa Service stehen für erstklassige Ergebnisse und kundenorientierten Service. Unser Team in {city} ist spezialisiert auf maßgeschneiderte Lösungen für Privat- und Geschäftskunden.",
+    "why_us_title": "Warum AZ-Europa Service?",
+    "why_us_p1": "In der Metropolregion Nürnberg / {city} haben wir uns durch jahrelange Erfahrung und höchste Qualitätsansprüche einen Namen gemacht. Ob es sich um die regelmäßige Unterhaltsreinigung, anspruchsvolle Renovierungen oder kurzfristige Abbrucharbeiten handelt — wir sind Ihr Ansprechpartner Nr. 1.",
+    "gepruefte_qualitaet_title": "Geprüfte Qualität",
+    "gepruefte_qualitaet_desc": "Regelmäßige Kontrollen und zertifizierte Abläufe sichern Ihr Ergebnis.",
+    "meisterbetrieb_title": "Meisterbetrieb",
+    "meisterbetrieb_desc": "Fachmännisches Know-how und handwerkliche Präzision in jeder Phase.",
+    "local_presence_title": "Lokale Präsenz",
+    "branch_label": "Niederlassung",
+    "availability_label": "Erreichbarkeit",
+    "availability_days": "Mo-Fr: 07:00 - 18:00 Uhr",
+    "notdienst_label": "24h Notdienst verfügbar",
+    "reviews_title": "Kundenbewertungen",
+    "local_partner_label": "Ihr lokaler Partner",
+    "location_strip_text": "Schnelle Anfahrt. Faire Preise. Beste Ergebnisse.",
+    "all_locations_link": "Alle Standorte ansehen",
+    "in_city": "in {city}",
+    "numerous_customers": "Zahlreiche zufriedene Kunden in {city}.",
+    "surroundings": "& Umgebung",
+    "expertise_label": "Unsere Expertise",
+    "tailored": "nach Maß.",
+    "desc_suffix": "Wir sind Ihr zuverlässiger Partner in ganz Franken für professionelle Ergebnisse und nachhaltige Pflege.",
+    "offer_title": "Was wir Ihnen bieten",
+    "offer_desc_template": "Unsere {service} zeichnet sich durch höchste Präzision und Zuverlässigkeit aus. Als Meisterbetrieb setzen wir auf modernste Techniken und umweltfreundliche Verfahren, um den Werterhalt Ihrer Immobilie langfristig zu sichern.",
+    "availability_title": "Verfügbarkeit in Ihrer Nähe",
+    "availability_desc": "Wählen Sie Ihren Standort, um spezifische Details und Ansprechpartner vor Ort zu erhalten:",
+    "open_details": "Details öffnen",
+    "request_now": "Jetzt anfragen",
+    "request_desc_template": "Angebot für {service} erhalten.",
+    "master_quality": "Meisterqualität",
+    "master_desc": "Wir arbeiten ausschließlich mit geschultem Personal und garantieren die Einhaltung aller Qualitätsstandards.",
+    "benefit1": "Individuelle Beratung vor Ort",
+    "benefit2": "Transparentes Festpreisangebot",
+    "benefit3": "Einsatz von Fachpersonal",
+    "benefit4": "Moderne Ausrüstung & Technik",
+    "benefit5": "Flexibles Zeitmanagement",
+    "benefit6": "Haftpflichtversichert & Geprüft"
+  },
+  "region_map": {
+    "badge": "Lokale Präsenz",
+    "title_template": "Überall in {region} für Sie da.",
+    "region_highlight": "Franken",
+    "desc": "Wir sind nicht irgendwo. Wir sind direkt vor Ort. Mit unseren dedizierten Teams in Erlangen, Nürnberg und Bamberg garantieren wir Reaktionszeiten, die andere nur versprechen können.",
+    "teams_label": "100% Lokale Teams",
+    "teams_sub": "Keine langen Anfahrtswege",
+    "branch_label": "Regionaler Standort",
+    "open_page": "Seite öffnen"
+  },
+  "geo_map": {
+    "badge": "Lokale Präsenz",
+    "title": "Überall in Franken für Sie da.",
+    "desc": "Mit dedizierten Teams in Erlangen, Nürnberg und Bamberg garantieren wir blitzschnelle Reaktionszeiten und absolute Verlässlichkeit.",
+    "emergency_active": "24/7 Notdienst aktiv",
+    "reaktionszeit_value": "<30 Min",
+    "reaktionszeit_label": "Reaktionszeit",
+    "lokale_teams_label": "Lokale Teams",
+    "zentrale": "Zentrale"
+  },
+  "leistungen": {
+    "hero_badge": "Meisterbetrieb aus Franken",
+    "hero_title": "Full-Service für Ihre Immobilie.",
+    "hero_desc": "Wir bieten Ihnen ein breites Spektrum an professionellen Dienstleistungen rund um Ihr Gebäude. Alles aus einer Hand, in höchster Qualität.",
+    "service_points": ["Fachpersonal", "Modernste Technik", "Termintreue"],
+    "more_details": "Mehr Details",
+    "cta_title": "Lassen Sie uns gemeinsam planen.",
+    "cta_desc": "Jedes Objekt ist individuell. Kontaktieren Sie uns für ein maßgeschneidertes Konzept und ein unverbindliches Angebot, das genau auf Ihre Bedürfnisse zugeschnitten ist.",
+    "call_us": "Rufen Sie uns an",
+    "write_us": "Schreiben Sie uns"
+  },
+  "kontakt": {
+    "hero_badge": "Kontakt aufnehmen",
+    "hero_title": "Wir freuen uns auf Ihre Nachricht.",
+    "hero_desc": "Haben Sie Fragen zu unseren Leistungen oder möchten Sie einen Termin vereinbaren? Wir sind jederzeit für Sie da.",
+    "direct_channels": "Direkte Kanäle",
+    "hotline_label": "Zentrale Hotline",
+    "email_label": "E-Mail Adresse",
+    "locations_title": "Unsere Standorte",
+    "form_title": "Angebotsanfrage",
+    "form_desc": "Beschreiben Sie Ihr Anliegen — wir antworten in 2 Stunden."
+  },
+  "about": {
+    "hero_badge": "Unsere Geschichte",
+    "hero_title": "Meisterhafte Präzision seit über 10 Jahren.",
+    "hero_desc": "AZ-Europa Service GmbH ist Ihr zertifizierter Partner für infrastrukturelles Facility Management in der Metropolregion Nürnberg. Wir verbinden handwerkliche Tradition mit modernsten Management-Methoden.",
+    "quality_title": "Qualität ist kein Zufall, sondern das Ergebnis harter Arbeit.",
+    "quality_desc": "Unser Erfolg basiert auf drei Grundpfeilern: Zuverlässigkeit, Transparenz und Fachkompetenz. Als Meisterbetrieb legen wir größten Wert auf die Ausbildung unserer Mitarbeiter und den Einsatz modernster Technik.",
+    "stats_projects": "Erfolgreiche Projekte",
+    "stats_experience": "Jahre Erfahrung",
+    "values": [
+      { "title": "Zertifizierter Betrieb", "desc": "Wir arbeiten nach strengen DIN ISO Standards und sind TÜV-geprüft." },
+      { "title": "Echte Meisterqualität", "desc": "Handwerkliches Know-how durch qualifizierte Meisterführung." },
+      { "title": "Lokales Experten-Team", "desc": "Feste Ansprechpartner direkt in Ihrer Region (Franken)." }
+    ],
+    "cta_title": "Bereit für den nächsten Schritt?",
+    "cta_desc": "Ob Großprojekt oder regelmäßige Unterhaltsreinigung — wir finden die passende Lösung für Ihre Anforderungen. Vertrauen Sie auf die Experten von AZ-Europa."
+  },
+  "karriere": {
+    "hero_badge": "Karriere bei AZ-Europa",
+    "hero_title": "Arbeiten in einem starken Team.",
+    "hero_desc": "Wir suchen Menschen mit Leidenschaft für Sauberkeit und Technik. Werden Sie Teil eines wachsenden Familienunternehmens in Franken.",
+    "open_positions": "Offene Stellen",
+    "apply_now": "Jetzt bewerben",
+    "benefits_title": "Ihre Vorteile bei uns",
+    "benefits_subtitle": "Warum Sie Teil der AZ-Europa Familie werden sollten.",
+    "benefits": [
+      { "title": "Faire Bezahlung", "desc": "Wir zahlen über Tarif und honorieren gute Leistung." },
+      { "title": "Sicherer Job", "desc": "Krisensicherer Arbeitsplatz in einem stabilen Unternehmen." },
+      { "title": "Familiäres Klima", "desc": "Flache Hierarchien und ein respektvoller Umgang." }
+    ],
+    "jobs": [
+      { "title": "Reinigungskraft (m/w/d)", "location": "Nürnberg / Erlangen", "type": "Teilzeit / Vollzeit", "desc": "Für unsere Objekte in Franken suchen wir zuverlässige Verstärkung." },
+      { "title": "Hausmeister (m/w/d)", "location": "Bamberg", "type": "Vollzeit", "desc": "Objektbetreuung und kleinere Reparaturarbeiten." },
+      { "title": "Auszubildende Gebäudereiniger (m/w/d)", "location": "Erlangen", "type": "Ausbildung", "desc": "Starte deine Karriere im Facility Management." }
+    ]
+  },
+  "legal": {
+    "impressum_title": "Impressum",
+    "impressum_desc": "Rechtliche Hinweise und Pflichtangaben.",
+    "angaben_tmg": "Angaben gemäß § 5 TMG",
+    "vertretung": "Vertretung",
+    "vertreten_durch": "Vertreten durch:",
+    "kontakt": "Kontakt",
+    "telefon": "Telefon:",
+    "email": "E-Mail:",
+    "register": "Registereintrag",
+    "registergericht": "Registergericht:",
+    "registernummer": "Registernummer:",
+    "ust_id": "Umsatzsteuer-ID",
+    "ust_id_desc": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:",
+    "streitschlichtung": "Streitschlichtung",
+    "streitschlichtung_desc": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse finden Sie oben im Impressum.",
+    "streitschlichtung_disclaimer": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "have_questions": "Haben Sie Fragen?",
+    "questions_desc": "Kontaktieren Sie uns direkt, falls Sie rechtliche Fragen haben.",
+    "send_email": "E-Mail senden"
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "subtitle": "Transparenz im Umgang mit Ihren Daten.",
+    "section1_title": "1. Datenschutz auf einen Blick",
+    "section1_subtitle": "Allgemeine Hinweise",
+    "section1_desc": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.",
+    "section2_title": "2. Hosting und Content Delivery Networks (CDN)",
+    "section2_desc": "Wir hosten die Inhalte unserer Website bei folgendem Anbieter: [Hoster Name].",
+    "section3_title": "3. Allgemeine Hinweise und Pflichtinformationen",
+    "section3_subtitle": "Datenschutz",
+    "section3_desc": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+    "section4_title": "4. Datenerfassung auf dieser Website",
+    "section4_subtitle": "Anfrage über das Kontaktformular",
+    "section4_desc": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+    "section5_title": "5. Plugins und Tools",
+    "section5_subtitle": "Google Fonts",
+    "section5_desc": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.",
+    "status_label": "Stand:",
+    "update_note": "Diese Datenschutzerklärung wird regelmäßig aktualisiert."
+  },
+  "agb": {
+    "title": "AGB",
+    "subtitle": "Allgemeine Geschäftsbedingungen.",
+    "section1_title": "§ 1 Geltungsbereich",
+    "section1_desc": "Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) gelten für alle Verträge, die zwischen der AZ-Europa Service GmbH (nachfolgend „Dienstleister“) und ihren Kunden (nachfolgend „Kunde“) über Dienstleistungen im Bereich Gebäudereinigung, Hausmeisterservice und verwandte Leistungen geschlossen werden.",
+    "section2_title": "§ 2 Vertragsabschluss",
+    "section2_desc": "Ein Vertrag kommt durch die schriftliche Annahme eines Angebots des Dienstleisters durch den Kunden oder durch die Unterzeichnung eines separaten Dienstleistungsverترages zustande.",
+    "section3_title": "§ 3 Leistungsumfang",
+    "section3_desc": "Der genaue Umfang der zu erbringenden Leistungen ergibt sich aus dem jeweiligen Angebot bzw. dem zugrunde liegenden Dienstleistungsvertrag.",
+    "section4_title": "§ 4 Vergütung und Zahlungsbedingungen",
+    "section4_desc": "Die Preise richten sich nach dem jeweiligen Angebot. Rechnungen sind innerhalb von 14 Tagen nach Erhalt ohne Abzug zahlbar, sofern nicht anders vereinbart.",
+    "section5_title": "§ 5 Haftung",
+    "section5_desc": "Der Dienstleister haftet für Schäden, die durch ihn oder seine Erfüllungsgehilfen vorsätzlich oder grob fahrlässig verursacht wurden. Bei einfacher Fahrlässigkeit haftet der Dienstleister nur bei Verletzung wesentlicher Vertragspflichten.",
+    "status_label": "Stand: Januar 2024"
+  },
+  "header": {
+    "opening_hours": "Mo–Fr 07:00–18:00",
+    "locations_summary": "Erlangen · Nürnberg · Bamberg",
+    "menu_aria": "Menü öffnen",
+    "our_services": "Unsere Leistungen",
+    "master_business": "Meisterbetrieb",
+    "free_cleaning_title": "Kostenlose Probereinigung",
+    "free_cleaning_desc": "Überzeugen Sie sich selbst. Wir reinigen einen Bereich Ihrer Wahl — kostenlos und unverbindlich.",
+    "test_now": "Jetzt testen",
+    "locations_region": "Unsere Standorte in Franken",
+    "learn_more": "Mehr erfahren",
+    "certified": "Zertifiziert",
+    "cert_tuv": "TÜV Geprüft",
+    "cert_iso": "DIN EN ISO 9001",
+    "cert_master": "Meisterbetrieb",
+    "cert_insured": "Vollversichert",
+    "headquarters": "Zentrale"
+  },
+  "footer": {
+    "direct_contact": "Direkten Kontakt aufnehmen",
+    "contact_hours": "Mo–Fr 07:00–18:00 Uhr · Notdienst 24/7",
+    "online_request": "Online Anfrage",
+    "brand_tagline": "Service GmbH · Meisterbetrieb",
+    "brand_desc": "Ihr zertifizierter Partner für infrastrukturelles Facility Management in der Metropolregion Nürnberg. Seit über 10 Jahren Präzision, Sauberkeit und Zuverlässigkeit.",
+    "cert_tuv": "TÜV Geprüft",
+    "cert_master": "Meisterbetrieb",
+    "cert_iso": "ISO 9001",
+    "newsletter_title": "Auf dem Laufenden bleiben",
+    "newsletter_desc": "Tipps zur Gebäudepflege und exklusive Angebote direkt in Ihr Postfach.",
+    "newsletter_success": "Erfolgreich angemeldet!",
+    "email_placeholder": "E-Mail Adresse",
+    "subscribe": "Anmelden",
+    "spam_note": "Kein Spam. Jederzeit abmeldbar. DSGVO-konform.",
+    "company": "Unternehmen",
+    "career": "Karriere",
+    "legal": "Rechtliches",
+    "all_rights": "Alle Rechte vorbehalten"
+  },
+
+  "blog": {
+    "badge": "Magazin & Ratgeber",
+    "title_1": "Wissen für Ihre",
+    "title_2": "Immobilie.",
+    "subtitle": "Tipps und Tricks rund um Gebäudereinigung, Pflege und Facility Management in unserem Experten-Blog.",
+    "read_more": "Weiterlesen",
+    "items": [
+      { "id": 1, "title": "5 Tipps für die perfekte Büroreinigung", "date": "12. Mai 2024", "category": "Reinigung", "excerpt": "Sauberkeit am Arbeitsplatz steigert die Produktivität. Hier erfahren Sie, worauf es ankommt." },
+      { "id": 2, "title": "Hausmeisterservice: Worauf Vermieter achten sollten", "date": "05. Mai 2024", "category": "Facility Management", "excerpt": "Eine gute Objektbetreuung sichert den Werterhalt Ihrer Immobilie langfristig." },
+      { "id": 3, "title": "Frühlingsputz für den Garten: Jetzt starten", "date": "28. April 2024", "category": "Gartenpflege", "excerpt": "So bereiten Sie Ihre Grünanlagen optimal auf die kommende Saison vor." }
+    ]
+  },
+  "chat": {
+    "online_status": "Online – Antwort in ~2 Min.",
+    "welcome": "Hallo! 👋 Wie können wir Ihnen helfen? Wählen Sie eine Option oder schreiben Sie uns direkt.",
+    "phone_label": "Jetzt anrufen",
+    "email_label": "E-Mail senden",
+    "faq_tab": "Häufige Fragen",
+    "direct_msg_tab": "Nachricht",
+    "back": "Zurück",
+    "sent_success": "Gesendet!",
+    "sent_desc": "Wir melden uns in Kürze bei Ihnen.",
+    "name_placeholder": "Ihr Name",
+    "email_placeholder": "E-Mail Adresse",
+    "msg_placeholder": "Ihre Nachricht...",
+    "send_btn": "Nachricht senden",
+    "legal_note": "100% DSGVO-konform • Antwort in ~2 Stunden",
+    "faqs": [
+      { "q": "Wie schnell können Sie starten?", "a": "In der Regel innerhalb von 24-48 Stunden nach Auftragsbestätigung." },
+      { "q": "Bieten Sie Probereinigungen an?", "a": "Ja, wir bieten eine kostenlose Probereinigung für Neukunden an." },
+      { "q": "Sind Sie versichert?", "a": "Ja, wir sind vollumfänglich haftpflichtversichert und TÜV-geprüft." }
+    ]
+  }
+}

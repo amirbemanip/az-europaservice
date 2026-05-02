@@ -1,0 +1,482 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Our Services",
+    "locations": "Locations",
+    "about": "About Us",
+    "contact": "Contact",
+    "cta": "Request Quote"
+  },
+  "hero": {
+    "badge": "Your Expert Partner in Franconia",
+    "title": "Premium Cleaning",
+    "subtitle": "& Facility Management.",
+    "desc": "We are your professional and experienced master business for cleaning of all kinds and further services in the regions of Bamberg, Coburg, Erlangen, Forchheim, Fürth, Nuremberg, Regensburg.",
+    "cta_primary": "Inquire Non-Bindingly Now",
+    "cta_secondary": "Our Services",
+    "trust": {
+      "tuv": "TÜV Certified",
+      "fast": "Fast Service",
+      "custom": "Tailored Offer",
+      "local": "Local Teams"
+    }
+  },
+  "cta_section": {
+    "badge": "Non-Binding Offer",
+    "title": "Ready for Real Quality?",
+    "desc": "Configure your tailored service package in just 60 seconds. Our local expert team will contact you within 2 hours.",
+    "points": [
+      { "label": "Free & Non-Binding", "sub": "No risk, no contract" },
+      { "label": "Response in 2 Hours", "sub": "Guaranteed reaction time" },
+      { "label": "100% GDPR Compliant", "sub": "Your data is safe" }
+    ],
+    "stats": [
+      { "value": "1500+", "label": "Projects" },
+      { "value": "10+", "label": "Years" },
+      { "value": "99%", "label": "Satisfaction" },
+      { "value": "120+", "label": "Specialist Staff" }
+    ]
+  },
+  "trust": {
+    "badge": "Trusted by Leading Companies in Franconia",
+    "stats": [
+      { "label": "Happy Clients", "value": "2500+" },
+      { "label": "Specialists", "value": "120+" },
+      { "label": "Years Experience", "value": "15+" }
+    ]
+  },
+  "services": {
+    "home_title": "Our Services",
+    "home_subtitle": "We take care of your property - with precision, expertise and state-of-the-art technology.",
+    "home_badge": "Comprehensive Services",
+    "home_stat": "500+ Objects managed",
+    "reinigung": {
+      "title": "Cleaning",
+      "description": "Professional building cleaning and maintenance cleaning for offices and private households.",
+      "bento_title": "Maintenance Cleaning",
+      "bento_desc": "Regular, systematic cleaning of your office and business premises at the highest level."
+    },
+    "hausmeisterservice": {
+      "title": "Janitorial Services",
+      "description": "Reliable property management, minor repairs and maintenance of your real estate.",
+      "bento_title": "Janitorial Services",
+      "bento_desc": "Technical building management and fast on-site help."
+    },
+    "renovierungen": {
+      "title": "Renovations",
+      "description": "Painting, floor laying and complete renovations for a fresh look.",
+      "bento_title": "Renovations",
+      "bento_desc": "Professional repair and modernization."
+    },
+    "abbrucharbeiten": {
+      "title": "Demolition",
+      "description": "Safe and efficient dismantling including planning and professional disposal.",
+      "bento_title": "Demolition",
+      "bento_desc": "Safe and environmentally friendly deconstruction."
+    },
+    "gartenpflege": {
+      "title": "Garden Maintenance",
+      "description": "Lawn mowing, hedge trimming and redesign for your green paradise.",
+      "bento_title": "Garden Maintenance",
+      "bento_desc": "Professional care of outdoor and green areas."
+    },
+    "entruempelung": {
+      "title": "Clearing",
+      "description": "Professional and swept-clean clearing of apartments, basements and offices.",
+      "bento_title": "Clearing",
+      "bento_desc": "Swept-clean clearing of apartments, basements and offices."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Answers to your most important questions about our services.",
+    "items": [
+      {
+        "question": "Which regions in Franconia are covered?",
+        "answer": "We are in action with local teams in Erlangen, Nuremberg, Bamberg, Coburg, Forchheim, Fürth, and Regensburg. This guarantees short travel distances and fast response times for our customers."
+      },
+      {
+        "question": "Are your employees permanently employed and insured?",
+        "answer": "Yes, as a certified master business, we place the highest value on quality and safety. All our employees are permanently employed, professionally trained, and fully liability-insured."
+      },
+      {
+        "question": "Do you also offer emergency cleaning?",
+        "answer": "Of course. For commercial customers and in acute cases (such as water damage or after construction work), we offer a fast 24/7 emergency service by prior contractual agreement."
+      },
+      {
+        "question": "How are the costs for maintenance cleaning calculated?",
+        "answer": "The costs are tailor-made and depend on the number of square meters, the degree of soiling, and the frequency of cleaning. We create a binding and transparent offer without hidden costs after a free on-site visit."
+      },
+      {
+        "question": "Do you bring the cleaning agents yourself?",
+        "answer": "Yes, we exclusively use professional, highly effective, and environmentally friendly cleaning equipment as well as our own cleaning agents. You don't have to worry about anything."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Customer Reviews",
+    "subtitle": "Your satisfaction is our greatest motivation.",
+    "google_reviews": "Google Reviews",
+    "all_reviews": "All Reviews",
+    "verified": "Verified",
+    "items": [
+      {
+        "id": 1,
+        "name": "Sybille H.",
+        "role": "Office Manager",
+        "service": "Office cleaning in Erlangen",
+        "content": "We are new customers. Very thorough cleaning, professional and very friendly. We are very satisfied.",
+        "rating": 5,
+        "span": "md:col-span-1"
+      },
+      {
+        "id": 2,
+        "name": "Dostapix Photography",
+        "role": "CEO",
+        "service": "Basic cleaning in Erlangen",
+        "content": "They are all super friendly, super fast and professional. Everything is sparkling clean. It runs officially with a contract and VAT. That was important to me. Price-performance is top! I am very satisfied and happy.",
+        "rating": 5,
+        "span": "md:col-span-2"
+      },
+      {
+        "id": 3,
+        "name": "Sasan",
+        "role": "Property Management",
+        "service": "Stairwell cleaning Erlangen",
+        "content": "Excellent cleaning service. I am absolutely satisfied with the work. The stairwells and surfaces are always sparkling clean and well-maintained.",
+        "rating": 5,
+        "span": "md:col-span-1"
+      }
+    ]
+  },
+  "form": {
+    "steps": {
+      "location": { "title": "Location", "subtitle": "Where do you need us?", "desc": "Select your location in Franconia." },
+      "service": { "title": "Service", "subtitle": "Which service do you need?", "desc": "Select the desired service." },
+      "contact": { "title": "Contact", "subtitle": "How can we reach you?", "desc": "Your data will be treated strictly confidentially." }
+    },
+    "fields": {
+      "name": "Name / Company *",
+      "name_placeholder": "Max Mustermann",
+      "phone": "Phone",
+      "phone_placeholder": "+49 ...",
+      "email": "Email Address *",
+      "email_placeholder": "max@example.com",
+      "message": "Message (optional)",
+      "message_placeholder": "Briefly describe your request..."
+    },
+    "buttons": {
+      "next": "Next",
+      "prev": "Back",
+      "submit": "Request Quote",
+      "submitting": "Sending..."
+    },
+    "trust": {
+      "ssl": "SSL Encrypted",
+      "gdpr": "GDPR Compliant",
+      "response": "Answer in 2h"
+    },
+    "success": {
+      "title": "Sent successfully!",
+      "desc": "Thank you for your inquiry. One of our experts will get back to you within 2 hours."
+    },
+    "validation": {
+      "city": "Please select a location",
+      "service": "Please select a service",
+      "email": "Please enter a valid email address",
+      "name": "Please enter your name"
+    },
+    "cities": ["Erlangen", "Nuremberg", "Bamberg", "Fürth", "Other Region"],
+    "services": ["Maintenance cleaning", "Basic cleaning", "Caretaker service", "Post-construction cleaning", "Renovation", "Other"]
+  },
+  "common": {
+    "open_details": "Open Details",
+    "all_services": "View All Services",
+    "contact_us": "Contact Us",
+    "send": "Send",
+    "more": "More",
+    "details_prices": "Details & Prices",
+    "verified": "Verified",
+    "meisterbetrieb": "Master Business",
+    "tuev_geprueft": "TÜV Certified",
+    "answer_2h": "Response in 2h"
+  },
+  "city_page": {
+    "hero_badge": "Local in {city}",
+    "hero_title_1": "Your Partner for",
+    "hero_title_2": "Quality in {city}",
+    "hero_desc": "As a certified master business, we offer first-class building cleaning, janitorial services, and renovation work in {city} and the surrounding area. Precision from Franconia.",
+    "service_catalog": "Service Catalog {city}",
+    "service_title": "Full-Service for Your Property",
+    "service_desc": "From maintenance cleaning to complex renovation — we cover the entire spectrum of facility management in {city}.",
+    "trust_title": "Why Customers in {city} Trust Us.",
+    "trust_points": [
+      { "title": "Regional Proximity", "desc": "We are not a remote agency, but based directly on site in Franconia." },
+      { "title": "Fair Fixed Prices", "desc": "Transparent offers without hidden costs or nasty surprises." },
+      { "title": "Qualified Personnel", "desc": "Regularly trained employees and state-of-the-art equipment." }
+    ],
+    "cta_title": "Request a Free Quote?",
+    "cta_subtitle": "Our local team in {city} will be happy to advise you.",
+    "cta_button": "Inquire Now",
+    "local_hotline": "Local Hotline",
+    "central_location": "Central Location",
+    "satisfied_customers": "Hundreds of satisfied customers throughout Franconia."
+  },
+  "service_page": {
+    "express_badge": "Express Service in {city}",
+    "hero_desc": "We guarantee the highest standards, punctuality, and absolute cleanliness directly on-site in {city}.",
+    "feature_points": [
+      "Fixed Price Guarantee",
+      "Certified Specialist Business",
+      "Short Travel Distances",
+      "Insured Services"
+    ],
+    "consultation_badge": "Consultation & Appointment",
+    "offer_card_title": "Non-binding Offer for {service}",
+    "offer_card_subtitle": "Free & risk-free in 60 seconds.",
+    "content_title": "Professional {service} in {city}",
+    "content_subtitle": "Quality You Can Trust.",
+    "content_p1": "Are you looking for a reliable cleaning company or a competent partner for {service} in {city}? At AZ-Europa Service, we stand for first-class results and customer-oriented service. Our team in {city} specializes in tailor-made solutions for private and business customers.",
+    "why_us_title": "Why AZ-Europa Service?",
+    "why_us_p1": "In the Nuremberg metropolitan region / {city}, we have made a name for ourselves through years of experience and the highest quality standards. Whether it is regular maintenance cleaning, demanding renovations, or short-term demolition work — we are your number 1 contact.",
+    "gepruefte_qualitaet_title": "Certified Quality",
+    "gepruefte_qualitaet_desc": "Regular controls and certified processes ensure your result.",
+    "meisterbetrieb_title": "Master Business",
+    "meisterbetrieb_desc": "Professional know-how and craftsmanship precision in every phase.",
+    "local_presence_title": "Local Presence",
+    "branch_label": "Branch",
+    "availability_label": "Availability",
+    "availability_days": "Mon-Fri: 07:00 - 18:00",
+    "notdienst_label": "24h Emergency Service available",
+    "reviews_title": "Customer Reviews",
+    "local_partner_label": "Your Local Partner",
+    "location_strip_text": "Fast arrival. Fair prices. Best results.",
+    "all_locations_link": "View all locations",
+    "in_city": "in {city}",
+    "numerous_customers": "Numerous satisfied customers in {city}.",
+    "surroundings": "& Surroundings",
+    "expertise_label": "Our Expertise",
+    "tailored": "Tailor-made.",
+    "desc_suffix": "We are your reliable partner throughout Franconia for professional results and sustainable care.",
+    "offer_title": "What we offer you",
+    "offer_desc_template": "Our {service} is characterized by maximum precision and reliability. As a master business, we rely on the latest techniques and environmentally friendly processes to ensure the long-term value of your property.",
+    "availability_title": "Availability near you",
+    "availability_desc": "Choose your location to receive specific details and local contact persons:",
+    "open_details": "Open details",
+    "request_now": "Request now",
+    "request_desc_template": "Receive an offer for {service}.",
+    "master_quality": "Master Quality",
+    "master_desc": "We work exclusively with trained personnel and guarantee compliance with all quality standards.",
+    "benefit1": "Individual advice on site",
+    "benefit2": "Transparent fixed price offer",
+    "benefit3": "Use of specialist personnel",
+    "benefit4": "Modern equipment & technology",
+    "benefit5": "Flexible time management",
+    "benefit6": "Liability insured & tested"
+  },
+  "region_map": {
+    "badge": "Local Presence",
+    "title_template": "Everywhere in {region} for you.",
+    "region_highlight": "Franconia",
+    "desc": "We are not just a name. We are directly on site. With our dedicated teams in Erlangen, Nuremberg and Bamberg, we guarantee response times that others can only promise.",
+    "teams_label": "100% Local Teams",
+    "teams_sub": "No long travel distances",
+    "branch_label": "Regional Location",
+    "open_page": "Open Page"
+  },
+  "geo_map": {
+    "badge": "Local Presence",
+    "title": "Everywhere in Franconia for you.",
+    "desc": "With dedicated teams in Erlangen, Nuremberg and Bamberg, we guarantee lightning-fast response times and absolute reliability.",
+    "emergency_active": "24/7 Emergency Service active",
+    "reaktionszeit_value": "<30 Min",
+    "reaktionszeit_label": "Response Time",
+    "lokale_teams_label": "Local Teams",
+    "zentrale": "Headquarters"
+  },
+  "leistungen": {
+    "hero_badge": "Master Business from Franconia",
+    "hero_title": "Full-Service for Your Property.",
+    "hero_desc": "We offer you a wide range of professional services around your building. Everything from a single source, in the highest quality.",
+    "service_points": ["Specialist Personnel", "State-of-the-art Technology", "Punctuality"],
+    "more_details": "More Details",
+    "cta_title": "Let's plan together.",
+    "cta_desc": "Each property is individual. Contact us for a tailored concept and a non-binding offer that is exactly tailored to your needs.",
+    "call_us": "Call us",
+    "write_us": "Email us"
+  },
+  "kontakt": {
+    "hero_badge": "Get in touch",
+    "hero_title": "We look forward to your message.",
+    "hero_desc": "Do you have questions about our services or would you like to make an appointment? We are here for you at any time.",
+    "direct_channels": "Direct Channels",
+    "hotline_label": "Central Hotline",
+    "email_label": "Email Address",
+    "locations_title": "Our Locations",
+    "form_title": "Quote Request",
+    "form_desc": "Describe your request — we will answer within 2 hours."
+  },
+  "about": {
+    "hero_badge": "Our Story",
+    "hero_title": "Masterful precision for over 10 years.",
+    "hero_desc": "AZ-Europa Service GmbH is your certified partner for infrastructural facility management in the metropolitan region of Nuremberg. We combine traditional craftsmanship with state-of-the-art management methods.",
+    "quality_title": "Quality is no coincidence, but the result of hard work.",
+    "quality_desc": "Our success is based on three pillars: reliability, transparency, and technical competence. As a master business, we place the highest value on the training of our employees and the use of the latest technology.",
+    "stats_projects": "Successful Projects",
+    "stats_experience": "Years of Experience",
+    "values": [
+      { "title": "Certified Business", "desc": "We work according to strict DIN ISO standards and are TÜV-certified." },
+      { "title": "Real Master Quality", "desc": "Technical know-how through qualified master management." },
+      { "title": "Local Expert Team", "desc": "Fixed contact persons directly in your region (Franconia)." }
+    ],
+    "cta_title": "Ready for the next step?",
+    "cta_desc": "Whether it's a large project or regular maintenance cleaning — we find the right solution for your requirements. Trust the experts at AZ-Europa."
+  },
+  "karriere": {
+    "hero_badge": "Career at AZ-Europa",
+    "hero_title": "Working in a strong team.",
+    "hero_desc": "We are looking for people with a passion for cleanliness and technology. Become part of a growing family business in Franconia.",
+    "open_positions": "Open Positions",
+    "apply_now": "Apply Now",
+    "benefits_title": "Your Benefits with Us",
+    "benefits_subtitle": "Why you should become part of the AZ-Europa family.",
+    "benefits": [
+      { "title": "Fair Pay", "desc": "We pay above the collective agreement and reward good performance." },
+      { "title": "Secure Job", "desc": "Crisis-proof workplace in a stable company." },
+      { "title": "Family Atmosphere", "desc": "Flat hierarchies and respectful treatment." }
+    ],
+    "jobs": [
+      { "title": "Cleaning Staff (m/f/d)", "location": "Nuremberg / Erlangen", "type": "Part-time / Full-time", "desc": "We are looking for reliable reinforcement for our properties in Franconia." },
+      { "title": "Janitor (m/f/d)", "location": "Bamberg", "type": "Full-time", "desc": "Property management and minor repair work." },
+      { "title": "Apprentice Building Cleaner (m/f/d)", "location": "Erlangen", "type": "Apprenticeship", "desc": "Start your career in facility management." }
+    ]
+  },
+  "legal": {
+    "impressum_title": "Legal Notice",
+    "impressum_desc": "Legal information and mandatory disclosures.",
+    "angaben_tmg": "Information according to § 5 TMG",
+    "vertretung": "Representation",
+    "vertreten_durch": "Represented by:",
+    "kontakt": "Contact",
+    "telefon": "Phone:",
+    "email": "Email:",
+    "register": "Register Entry",
+    "registergericht": "Registration Court:",
+    "registernummer": "Registration Number:",
+    "ust_id": "VAT ID",
+    "ust_id_desc": "VAT identification number according to § 27 a VAT Act:",
+    "streitschlichtung": "Dispute Resolution",
+    "streitschlichtung_desc": "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr. You can find our email address above in the legal notice.",
+    "streitschlichtung_disclaimer": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "have_questions": "Have questions?",
+    "questions_desc": "Contact us directly if you have legal questions.",
+    "send_email": "Send Email"
+  },
+  "privacy": {
+    "title": "Data Protection",
+    "subtitle": "Transparency in the handling of your data.",
+    "section1_title": "1. Data Protection at a Glance",
+    "section1_subtitle": "General Information",
+    "section1_desc": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. You can find detailed information on the subject of data protection in our privacy policy listed below this text.",
+    "section2_title": "2. Hosting and Content Delivery Networks (CDN)",
+    "section2_desc": "We host the content of our website with the following provider: [Hoster Name].",
+    "section3_title": "3. General Information and Mandatory Disclosures",
+    "section3_subtitle": "Data Protection",
+    "section3_desc": "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the legal data protection regulations and this privacy policy.",
+    "section4_title": "4. Data Collection on This Website",
+    "section4_subtitle": "Inquiry via Contact Form",
+    "section4_desc": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact data you provided there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent.",
+    "section5_title": "5. Plugins and Tools",
+    "section5_subtitle": "Google Fonts",
+    "section5_desc": "This page uses so-called Google Fonts provided by Google for the uniform display of fonts. When a page is called up, your browser loads the required fonts into its browser cache to display texts and fonts correctly.",
+    "status_label": "As of:",
+    "update_note": "This privacy policy is updated regularly."
+  },
+  "agb": {
+    "title": "T&C",
+    "subtitle": "General Terms and Conditions.",
+    "section1_title": "§ 1 Scope",
+    "section1_desc": "These General Terms and Conditions (hereinafter \"T&C\") apply to all contracts concluded between AZ-Europa Service GmbH (hereinafter \"Service Provider\") and its customers (hereinafter \"Customer\") for services in the field of building cleaning, janitorial services and related services.",
+    "section2_title": "§ 2 Conclusion of Contract",
+    "section2_desc": "A contract is concluded through the written acceptance of an offer from the Service Provider by the Customer or by the signing of a separate service contract.",
+    "section3_title": "§ 3 Scope of Services",
+    "section3_desc": "The exact scope of the services to be provided results from the respective offer or the underlying service contract.",
+    "section4_title": "§ 4 Remuneration and Terms of Payment",
+    "section4_desc": "The prices are based on the respective offer. Invoices are payable within 14 days of receipt without deduction, unless otherwise agreed.",
+    "section5_title": "§ 5 Liability",
+    "section5_desc": "The Service Provider is liable for damages caused by it or its vicarious agents intentionally or through gross negligence. In the case of simple negligence, the Service Provider is only liable in the event of a breach of essential contractual obligations.",
+    "status_label": "Status: January 2024"
+  },
+  "header": {
+    "opening_hours": "Mon–Fri 07:00–18:00",
+    "locations_summary": "Erlangen · Nuremberg · Bamberg",
+    "menu_aria": "Open Menu",
+    "our_services": "Our Services",
+    "master_business": "Master Business",
+    "free_cleaning_title": "Free Trial Cleaning",
+    "free_cleaning_desc": "Convince yourself. We will clean an area of your choice — free and without obligation.",
+    "test_now": "Test Now",
+    "locations_region": "Our Locations in Franconia",
+    "learn_more": "Learn More",
+    "certified": "Certified",
+    "cert_tuv": "TÜV Tested",
+    "cert_iso": "DIN EN ISO 9001",
+    "cert_master": "Master Business",
+    "cert_insured": "Fully Insured",
+    "headquarters": "Headquarters"
+  },
+  "footer": {
+    "direct_contact": "Get Direct Contact",
+    "contact_hours": "Mon–Fri 07:00–18:00 · Emergency 24/7",
+    "online_request": "Online Request",
+    "brand_tagline": "Service GmbH · Master Business",
+    "brand_desc": "Your certified partner for infrastructural facility management in the Nuremberg metropolitan region. Over 10 years of precision, cleanliness and reliability.",
+    "cert_tuv": "TÜV Tested",
+    "cert_master": "Master Business",
+    "cert_iso": "ISO 9001",
+    "newsletter_title": "Stay Up to Date",
+    "newsletter_desc": "Building maintenance tips and exclusive offers direct to your inbox.",
+    "newsletter_success": "Successfully registered!",
+    "email_placeholder": "E-Mail Address",
+    "subscribe": "Subscribe",
+    "spam_note": "No spam. Unsubscribe at any time. GDPR compliant.",
+    "company": "Company",
+    "career": "Careers",
+    "legal": "Legal",
+    "all_rights": "All rights reserved"
+  },
+
+  "blog": {
+    "badge": "Magazine & Guide",
+    "title_1": "Knowledge for your",
+    "title_2": "Property.",
+    "subtitle": "Tips and tricks around building cleaning, maintenance and facility management in our expert blog.",
+    "read_more": "Read more",
+    "items": [
+      { "id": 1, "title": "5 Tips for Perfect Office Cleaning", "date": "May 12, 2024", "category": "Cleaning", "excerpt": "Cleanliness at the workplace increases productivity. Find out here what matters." },
+      { "id": 2, "title": "Janitorial Services: What Landlords Should Watch Out For", "date": "May 5, 2024", "category": "Facility Management", "excerpt": "Good property management ensures the long-term value retention of your property." },
+      { "id": 3, "title": "Spring Cleaning for the Garden: Start Now", "date": "April 28, 2024", "category": "Garden Maintenance", "excerpt": "How to optimally prepare your green areas for the coming season." }
+    ]
+  },
+  "chat": {
+    "online_status": "Online – Answer in ~2 Min.",
+    "welcome": "Hello! 👋 How can we help you? Select an option or write to us directly.",
+    "phone_label": "Call now",
+    "email_label": "Send email",
+    "faq_tab": "Common questions",
+    "direct_msg_tab": "Message",
+    "back": "Back",
+    "sent_success": "Sent!",
+    "sent_desc": "We will get back to you shortly.",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Email address",
+    "msg_placeholder": "Your message...",
+    "send_btn": "Send message",
+    "legal_note": "100% GDPR compliant • Answer in ~2 hours",
+    "faqs": [
+      { "q": "How fast can you start?", "a": "Usually within 24-48 hours after order confirmation." },
+      { "q": "Do you offer trial cleanings?", "a": "Yes, we offer a free trial cleaning for new customers." },
+      { "q": "Are you insured?", "a": "Yes, we have full liability insurance and are TÜV-certified." }
+    ]
+  }
+}

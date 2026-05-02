@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Facility Management Nürnberg | AZ-Europa Service GmbH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#eec200",
+                        "inverse-primary": "#bec6e0",
+                        "background": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-fixed": "#231b00",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#271901",
+                        "on-secondary-container": "#6f5900",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed": "#271901",
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed": "#ffe083",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#fcdeb5",
+                        "primary-fixed": "#dae2fd",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed-dim": "#dec29a",
+                        "surface-tint": "#565e74",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#735c00",
+                        "on-tertiary-container": "#98805d",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline": "#76777d",
+                        "primary-container": "#131b2e",
+                        "surface": "#f7f9fb",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1e",
+                        "primary": "#000000",
+                        "secondary-container": "#fed01b",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-secondary": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        gutter: "32px",
+                        unit: "8px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "128px",
+                        "margin-page": "64px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px"
+                    },
+                    fontFamily: {
+                        display: ["Inter"],
+                        "body-md": ["Inter"],
+                        h2: ["Inter"],
+                        h3: ["Inter"],
+                        h1: ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        display: ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }],
+                        h2: ["30px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+                        h3: ["24px", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }],
+                        h1: ["48px", { lineHeight: "1.2", letterSpacing: "-0.015em", fontWeight: "700" }],
+                        "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-surface-variant bg-surface-container-lowest/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black tracking-tighter text-on-surface uppercase">AZ-Europa</div>
+<div class="hidden md:flex gap-8 items-center font-sans tracking-tight font-semibold">
+<a class="text-surface-tint font-medium hover:text-on-surface transition-colors duration-200" href="#">Leistungen</a>
+<a class="text-surface-tint font-medium hover:text-on-surface transition-colors duration-200" href="#">Branchen</a>
+<a class="text-surface-tint font-medium hover:text-on-surface transition-colors duration-200" href="#">Meisterbetrieb</a>
+<a class="text-surface-tint font-medium hover:text-on-surface transition-colors duration-200" href="#">Über uns</a>
+<a class="text-surface-tint font-medium hover:text-on-surface transition-colors duration-200" href="#">Kontakt</a>
+<a class="text-on-surface border-b-2 border-secondary-container pb-1" href="#">Standorte</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block px-8 py-4 border border-primary text-primary font-body-md font-semibold hover:bg-surface-container-low transition-colors duration-200">Login</button>
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container font-body-md font-semibold hover:opacity-80 transition-opacity duration-200">Angebot anfordern</button>
+</div>
+</div>
+</nav>
+<main class="pt-[100px]">
+<!-- Localized Hero Section -->
+<section class="w-full max-w-container-max mx-auto px-margin-page py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-lg">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-surface-tint font-label-caps text-label-caps uppercase">
+<span>Startseite</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span>Standorte</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Nürnberg</span>
+</div>
+<h1 class="font-display text-display text-on-surface">
+                        Ihr Partner für Facility Management in <span class="text-primary">Nürnberg</span>.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Höchste Standards, lokale Präsenz. AZ-Europa bietet infrastrukturelles und technisches Facility Management für gewerbliche Immobilien, Industrieanlagen und medizinische Einrichtungen in der Metropolregion Nürnberg.
+                    </p>
+<div class="flex gap-4 pt-stack-md">
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container font-body-md font-semibold hover:opacity-80 transition-opacity duration-200">Lokales Angebot einholen</button>
+</div>
+</div>
+<div class="relative h-[600px] bg-surface-container rounded-DEFAULT overflow-hidden border border-surface-variant">
+<img alt="Nürnberg Skyline" class="w-full h-full object-cover" data-alt="A highly professional architectural shot of the Nuremberg skyline at dawn, emphasizing modern corporate buildings contrasting with historic structures. The lighting is crisp and cool, reflecting a high-trust, sterile, and medical-grade corporate aesthetic. The palette is dominated by pristine whites, cold grays, and deep navy blues, projecting institutional clarity and engineered precision suitable for a premium facility management enterprise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7kyhRx-h2dtE3Y1yEQ-5BhzFSd64lN43akKGK9tvlO3CoOwaneI-2ySBMVWjkcmvIv47R6rNXXlJsjRr0uLwFB6vBCxuMJe-exGnRQCrHLJxVAnvCOjkafMhkcQo8ctmDbMuTAfzgjORSFLDRbWWRbK9iybIcTSoHoe-9nFoL4vRYQx8wUsTE-2KCNPREtuj_lprICfM3hzi__rRuBe65Ai2CuhVGjh7sl_t_qlsYW25MW5SBIJ0znBydYmgK7XdwvDsvDa2-UUM"/>
+</div>
+</div>
+</section>
+<!-- Stats/Trust Band -->
+<section class="bg-surface-container-low py-16 border-y border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-surface-variant">
+<div class="px-8 flex flex-col items-center text-center">
+<span class="font-display text-4xl text-primary mb-2">15+</span>
+<span class="font-label-caps text-label-caps text-surface-tint uppercase">Jahre in Nürnberg</span>
+</div>
+<div class="px-8 flex flex-col items-center text-center">
+<span class="font-display text-4xl text-primary mb-2">24/7</span>
+<span class="font-label-caps text-label-caps text-surface-tint uppercase">Notdienst Lokal</span>
+</div>
+<div class="px-8 flex flex-col items-center text-center">
+<span class="font-display text-4xl text-primary mb-2">120+</span>
+<span class="font-label-caps text-label-caps text-surface-tint uppercase">Betreute Objekte</span>
+</div>
+<div class="px-8 flex flex-col items-center text-center">
+<span class="font-display text-4xl text-primary mb-2">ISO</span>
+<span class="font-label-caps text-label-caps text-surface-tint uppercase">Zertifiziert</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section Bento Grid -->
+<section class="w-full max-w-container-max mx-auto px-margin-page py-section-gap">
+<div class="mb-16">
+<h2 class="font-h1 text-h1 text-on-surface mb-4">Leistungen am Standort Nürnberg</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Maßgeschneiderte Facility Management Lösungen mit schnellen Reaktionszeiten für den Nürnberger Raum.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service 1 -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest border border-surface-variant p-8 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="cleaning_services">cleaning_services</span>
+<h3 class="font-h2 text-h2 text-on-surface mb-4">Unterhaltsreinigung</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Regelmäßige, zertifizierte Reinigung für Bürokomplexe, Industrieanlagen und medizinische Einrichtungen in Nürnberg und Fürth.</p>
+</div>
+<ul class="space-y-3 mt-8 border-t border-surface-variant pt-6">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Medizinische Standards (Krankenhaushygiene)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Büro- und Verwaltungsgebäude</span>
+</li>
+</ul>
+</div>
+<!-- Service 2 -->
+<div class="col-span-1 bg-surface-container-lowest border border-surface-variant p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="engineering">engineering</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Technisches FM</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Wartung und Instandhaltung haustechnischer Anlagen durch zertifizierte Techniker vor Ort.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="col-span-1 bg-surface-container-lowest border border-surface-variant p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="security">security</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Sicherheitsdienste</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Werk- und Objektschutz, Empfangsdienste sowie Revierkontrolldienste im Großraum Nürnberg.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest border border-surface-variant p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="park">park</span>
+<h3 class="font-h2 text-h2 text-on-surface mb-4">Außenanlagen &amp; Winterdienst</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Professionelle Pflege von Grünanlagen und zuverlässiger Winterdienst gemäß den kommunalen Vorgaben der Stadt Nürnberg.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials/Reference Clients -->
+<section class="bg-surface-container-low py-section-gap border-y border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-page">
+<div class="mb-16">
+<h2 class="font-h1 text-h1 text-on-surface mb-4">Vertrauen in Nürnberg</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Renommierte Unternehmen aus der Region vertrauen auf unsere Expertise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-lowest p-8 border border-surface-variant">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-6" data-icon="format_quote" data-weight="fill">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface mb-8">"Die AZ-Europa betreut unsere Firmenzentrale im Nürnberger Norden seit über 5 Jahren. Besonders schätzen wir die absolute Zuverlässigkeit und das schnelle Eingreifen des lokalen Teams bei Störungen."</p>
+<div>
+<p class="font-h3 text-h3 text-on-surface">Leitung Facility Management</p>
+<p class="font-body-md text-body-md text-surface-tint">Industrieunternehmen, Nürnberg Nordostpark</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container-lowest p-8 border border-surface-variant">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-6" data-icon="format_quote" data-weight="fill">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface mb-8">"Für unser Medizinisches Zentrum in der Nürnberger Innenstadt benötigen wir höchste Hygienestandards. AZ-Europa liefert genau diese chirurgische Präzision jeden Tag."</p>
+<div>
+<p class="font-h3 text-h3 text-on-surface">Klinikverwaltung</p>
+<p class="font-body-md text-body-md text-surface-tint">Medizinisches Zentrum, Nürnberg Mitte</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Map / Location Block -->
+<section class="w-full max-w-container-max mx-auto px-margin-page py-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="order-2 lg:order-1 h-[500px] bg-surface-container border border-surface-variant relative">
+<img alt="Nürnberg Einsatzgebiet Karte" class="w-full h-full object-cover" data-alt="A highly detailed, minimalist vector-style map of Nuremberg, Germany, presented in a high-tech corporate interface style. The map uses a strictly sterile color palette of cool grays, deep navys, and crisp whites. High-contrast premium yellow accents highlight key operational zones and service hubs. The visual tone projects unshakeable reliability, precision engineering, and institutional authority." data-location="Nürnberg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFMdDqy-xgEq8j3_j7uJraGqN7qVRa-vpiWhDZZN6w7SdzAaeMjdulmv_xeDlpt5qv9a279Ch5wKJX3qgv-wF94e9tZUElONRCSMo2ltWoMychoYb6sa89rQrKHo5uPaw_cnTISEhH_I1uWxdzGu9fiWwUF7-WdS5yo9LTckapdvEJsQ8-S0okGUkxrR7CC05RV5imJs8gPQRjG4BsKPu5t5uC3fZM-37Bntin6XwRxTq4Ut6Ioos00_Kx0GTgileCtaRRBuRztNY"/>
+<!-- Decorative Map Overlay Elements -->
+<div class="absolute top-8 left-8 bg-surface-container-lowest border border-surface-variant p-4 shadow-sm">
+<p class="font-label-caps text-label-caps text-on-surface uppercase mb-2">Einsatzgebiet</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-body-md text-body-md text-surface-tint"><div class="w-2 h-2 bg-secondary-container rounded-full"></div> Nürnberg Stadtgebiet</li>
+<li class="flex items-center gap-2 font-body-md text-body-md text-surface-tint"><div class="w-2 h-2 bg-secondary-container rounded-full"></div> Fürth &amp; Erlangen</li>
+<li class="flex items-center gap-2 font-body-md text-body-md text-surface-tint"><div class="w-2 h-2 bg-secondary-container rounded-full"></div> Nürnberger Land</li>
+</ul>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<h2 class="font-h1 text-h1 text-on-surface">Lokal verwurzelt, überregional stark.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Unser lokales Management-Team in Nürnberg steuert alle Einsätze zentral. Durch kurze Wege garantieren wir schnelle Reaktionszeiten bei Notfällen und eine enge, persönliche Betreuung Ihrer Liegenschaften.</p>
+<div class="bg-surface-container-low border border-surface-variant p-6 mt-8">
+<h4 class="font-label-caps text-label-caps text-on-surface uppercase mb-4">Kontakt Regionalbüro Nürnberg</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md text-on-surface">Äußere Sulzbacher Str. 100, 90491 Nürnberg</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<span class="font-body-md text-body-md text-on-surface">+49 (0) 911 123 456 0</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="font-body-md text-body-md text-on-surface">nuernberg@az-europa.de</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Smart Lead Form Section -->
+<section class="bg-primary text-on-primary py-section-gap">
+<div class="max-w-4xl mx-auto px-margin-page text-center">
+<h2 class="font-h1 text-h1 text-on-primary mb-6">Unverbindliches Angebot für Ihr Objekt in Nürnberg</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-12">Kontaktieren Sie uns für eine kostenlose Objektbegehung und ein maßgeschneidertes FM-Konzept.</p>
+<form class="bg-surface-container-lowest p-8 border border-surface-variant text-left">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">Unternehmen</label>
+<input class="w-full bg-surface border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-body-md" placeholder="Ihr Firmenname" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">Ansprechpartner</label>
+<input class="w-full bg-surface border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-body-md" placeholder="Vor- und Nachname" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">E-Mail</label>
+<input class="w-full bg-surface border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-body-md" placeholder="email@unternehmen.de" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">Telefon</label>
+<input class="w-full bg-surface border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-body-md" placeholder="+49 ..." type="tel"/>
+</div>
+</div>
+<div class="mb-6">
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">Standort des Objekts</label>
+<select class="w-full bg-surface border-surface-variant focus:border-primary focus:ring-0 text-on-surface font-body-md">
+<option selected="" value="nuernberg">Nürnberg (Stadtgebiet)</option>
+<option value="fuerth">Fürth</option>
+<option value="erlangen">Erlangen</option>
+<option value="umland">Nürnberger Umland</option>
+</select>
+</div>
+<div class="mb-8">
+<label class="block font-label-caps text-label-caps text-surface-tint uppercase mb-2">Interesse an (Mehrfachauswahl möglich)</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex items-center gap-3 p-4 border border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="text-secondary-container border-surface-variant focus:ring-secondary-container" type="checkbox"/>
+<span class="font-body-md text-on-surface">Unterhaltsreinigung</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="text-secondary-container border-surface-variant focus:ring-secondary-container" type="checkbox"/>
+<span class="font-body-md text-on-surface">Technisches FM</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="text-secondary-container border-surface-variant focus:ring-secondary-container" type="checkbox"/>
+<span class="font-body-md text-on-surface">Sicherheitsdienste</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors">
+<input class="text-secondary-container border-surface-variant focus:ring-secondary-container" type="checkbox"/>
+<span class="font-body-md text-on-surface">Winterdienst</span>
+</label>
+</div>
+</div>
+<button class="w-full py-4 bg-secondary-container text-on-secondary-container font-body-md font-semibold hover:opacity-80 transition-opacity duration-200" type="button">Kostenlose Erstberatung anfordern</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 border-t border-slate-800 bg-slate-950 dark:bg-black text-slate-50 font-sans text-sm tracking-wide">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-bold text-yellow-400 mb-4">AZ-Europa</div>
+<p class="text-slate-400 mb-4">© 2024 AZ-Europa Service GmbH. Alle Rechte vorbehalten. Ihr Partner für infrastrukturelles Facility Management.</p>
+</div>
+<div>
+<h4 class="font-semibold mb-4 text-slate-50">Unternehmen</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">Über uns</a></li>
+<li><a class="text-yellow-400 hover:text-yellow-400 transition-colors" href="#">Standorte</a></li>
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">Karriere</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4 text-slate-50">Rechtliches</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">Impressum</a></li>
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">Datenschutz</a></li>
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">AGB</a></li>
+<li><a class="text-slate-400 hover:text-yellow-400 transition-colors" href="#">Compliance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold mb-4 text-slate-50">Kontakt</h4>
+<ul class="space-y-2 text-slate-400">
+<li>Zentrale München</li>
+<li>+49 (0) 89 123 456</li>
+<li>info@az-europa.de</li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
