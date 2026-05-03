@@ -1,5 +1,6 @@
 import React from 'react';
-import { SmartLeadForm } from '@/components/SmartLeadForm';
+import dynamic from 'next/dynamic';
+const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
 import { ShieldCheck, Zap, Phone, Star, CheckCircle2 } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -49,7 +50,20 @@ export default function PersianPillarPage() {
                 <div className="p-6 bg-white rounded-xl">
                   <h3 className="text-xl font-bold text-[#0a0a0a] mb-2 text-center">دریافت مشاوره رایگان (فارسی)</h3>
                   <p className="text-sm text-[#76777d] mb-6 text-center">فرم زیر را پر کنید تا در کمتر از ۲ ساعت با شما تماس بگیریم.</p>
-                  <SmartLeadForm />
+                  <SmartLeadForm locale="fa" dict={{
+                    form: {
+                      steps: {
+                        location: { title: 'Standort', subtitle: 'کجا نیاز دارید؟', desc: 'محل ارائه خدمات را انتخاب کنید.' },
+                        service: { title: 'خدمت', subtitle: 'چه خدماتی لازم دارید؟', desc: 'خدمت مورد نظر خود را انتخاب کنید.' },
+                        contact: { title: 'تماس', subtitle: 'چگونه با شما تماس بگیریم؟', desc: 'اطلاعات تماس خود را وارد کنید.' }
+                      },
+                      cities: ['Erlangen', 'Nürnberg', 'Bamberg', 'Fürth', 'Andere Region'],
+                      services: ['نظافت', 'خدمات سرایداری', 'نوسازی', 'تخلیه', 'فضای سبز', 'ساختمان'],
+                      buttons: { next: 'بعدی', prev: 'بازگشت', submit: 'ارسال درخواست', submitting: 'در حال ارسال...' },
+                      trust: { ssl: 'SSL رمزگذاری شده', gdpr: 'مطابق GDPR', response: 'پاسخ طی ۲ ساعت' },
+                      validation: { city: 'لطفاً مکان را انتخاب کنید', service: 'لطفاً خدمت را انتخاب کنید', email: 'ایمیل معتبر وارد کنید', name: 'لطفاً نام خود را وارد کنید' }
+                    }
+                  }} />
                 </div>
               </div>
             </div>

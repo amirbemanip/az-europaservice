@@ -45,7 +45,31 @@ export function LocalBusinessSchema({ city }: SchemaProps) {
       "opens": "07:00",
       "closes": "22:00"
     },
-    "priceRange": "€€"
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "238",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sybille H."
+        },
+        "datePublished": "2024-03-21",
+        "reviewBody": "Sehr gründliche Reinigung, professionell und sehr freundlich. Wir sind sehr zufrieden.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }
+    ]
   };
 
   return (

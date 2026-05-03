@@ -42,8 +42,9 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           alt="AZ Europa Premium Service" 
           fill 
           priority
-          quality={100}
+          quality={75}
           className="object-cover opacity-40 object-center"
+          sizes="100vw"
         />
         {/* Complex Gradient Overlays for Cinematic Depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />

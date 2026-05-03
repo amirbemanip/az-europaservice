@@ -4,6 +4,10 @@ export interface Location {
   city: string;
   phone: string;
   googleMapsUrl?: string;
+  coordinates?: {
+    latitude: number;
+    longitude: number;
+  };
 }
 
 export interface CityData {

@@ -97,6 +97,7 @@ export function AsymmetricHero() {
                 src="/hero-bg.png"
                 alt="Professionelle Reinigung – AZ-Europa Service GmbH"
                 fill
+                quality={75}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 priority

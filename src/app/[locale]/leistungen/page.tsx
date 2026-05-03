@@ -1,6 +1,7 @@
 import React from 'react';
 import { services } from '@/data/db';
-import { SmartLeadForm } from '@/components/SmartLeadForm';
+import dynamic from 'next/dynamic';
+const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
 import { ArrowRight, Sparkles, Wrench, PaintBucket, Trash2, TreePine, Package, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 import { getDictionary } from '@/lib/get-dictionary';

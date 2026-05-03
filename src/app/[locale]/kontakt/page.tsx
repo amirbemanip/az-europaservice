@@ -1,4 +1,5 @@
-import { SmartLeadForm } from '@/components/SmartLeadForm';
+import dynamic from 'next/dynamic';
+const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
 import { Phone, Mail, MapPin, Clock, ArrowRight, MessageSquare } from 'lucide-react';
 import { cities } from '@/data/db';
 import { getDictionary } from '@/lib/get-dictionary';
@@ -85,6 +86,34 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                       <p className="text-sm font-bold text-[#0a0a0a] mt-3 tracking-tighter">{city.location.phone}</p>
                     </div>
                   ))}
+                </div>
+
+                <div className="mt-6 p-6 bg-white border border-[#e0e3e5] rounded-[4px]">
+                  <div className={`flex items-center justify-between mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#76777d]">{dict.kontakt.locations_title}</p>
+                      <h4 className="text-lg font-bold text-[#0a0a0a] mt-2">{cities[0].name}</h4>
+                    </div>
+                    <a
+                      href={cities[0].location.googleMapsUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#0a0a0a] hover:text-[#fed01b]"
+                    >
+                      {dict.common?.open_details || 'Open in Google Maps'}
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                  <div className="overflow-hidden rounded-[10px] border border-[#d1d5db] bg-slate-100">
+                    <iframe
+                      title="AZ-Europa Service Google Map"
+                      src={`https://www.google.com/maps?q=${encodeURIComponent(`${cities[0].location.address}, ${cities[0].location.postalCode} ${cities[0].location.city}`)}&output=embed`}
+                      width="100%"
+                      height="220"
+                      loading="lazy"
+                      className="border-0"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

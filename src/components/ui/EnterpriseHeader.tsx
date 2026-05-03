@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Phone, Mail, Clock, MapPin, ChevronDown, ArrowRight,
@@ -27,11 +28,51 @@ export function EnterpriseHeader({ cities, services, dict, locale }: { cities: C
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMega, setActiveMega] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [languageOpen, setLanguageOpen] = useState(false);
+  const languageMenuRef = useRef<HTMLDivElement | null>(null);
 
-  const getLocalizedHref = (path: string) => {
-    if (locale === 'de') return path;
-    return `/${locale}${path === '/' ? '' : path}`;
-  };
+  const pathname = usePathname() || '/';
+  const searchParams = useSearchParams();
+  const searchString = searchParams?.toString();
+
+  const languageOptions = [
+    { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+    { code: 'en', label: 'English', flag: '🇬🇧' },
+    { code: 'fa', label: 'فارسی', flag: '🇮🇷' },
+    { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+    { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+    { code: 'uk', label: 'Українська', flag: '🇺🇦' },
+  ];
+
+  const currentLanguage = languageOptions.find((lang) => lang.code === locale) ?? languageOptions[0];
+
+  const getLocalizedHref = useCallback(
+    (path: string) => {
+      if (locale === 'de') {
+        return searchString ? `${path}?${searchString}` : path;
+      }
+
+      const localizedPath = path === '/' ? '' : path;
+      const href = `/${locale}${localizedPath}`;
+      return searchString ? `${href}?${searchString}` : href;
+    },
+    [locale, searchString]
+  );
+
+  const getLanguageHref = useCallback(
+    (lang: string) => {
+      const strippedPath = pathname.startsWith(`/${locale}/`)
+        ? pathname.slice(locale.length + 1)
+        : pathname === `/${locale}`
+        ? '/'
+        : pathname;
+
+      const normalizedPath = strippedPath === '' ? '/' : strippedPath;
+      const pathWithoutLocale = lang === 'de' ? normalizedPath : `/${lang}${normalizedPath === '/' ? '' : normalizedPath}`;
+      return searchString ? `${pathWithoutLocale}?${searchString}` : pathWithoutLocale;
+    },
+    [locale, pathname, searchString]
+  );
 
   const isRTL = locale === 'fa' || locale === 'ar';
 
@@ -47,6 +88,22 @@ export function EnterpriseHeader({ cities, services, dict, locale }: { cities: C
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
+        setLanguageOpen(false);
+      }
+    };
+
+    if (languageOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [languageOpen]);
 
   const closeMega = useCallback(() => setActiveMega(null), []);
 
@@ -164,15 +221,28 @@ export function EnterpriseHeader({ cities, services, dict, locale }: { cities: C
             {/* ── RIGHT ACTIONS ── */}
             <div className={`flex items-center gap-3 ${locale === 'fa' || locale === 'ar' ? 'flex-row-reverse' : ''}`}>
               {/* Language Switcher */}
-              <div className="relative group">
-                <button className="flex items-center gap-1 px-3 py-2 text-[11px] font-bold uppercase border border-[#e0e3e5] rounded-[4px] hover:bg-[#f7f9fb] transition-colors">
-                  {locale}
-                  <ChevronDown className="w-3 h-3" />
+              <div ref={languageMenuRef} className="relative">
+                <button
+                  type="button"
+                  onClick={() => setLanguageOpen((open) => !open)}
+                  className="flex items-center gap-2 px-3 py-2 text-[11px] font-bold uppercase border border-[#e0e3e5] rounded-[4px] hover:bg-[#f7f9fb] transition-colors"
+                  aria-expanded={languageOpen}
+                  aria-haspopup="menu"
+                >
+                  <span>{currentLanguage.flag}</span>
+                  <span>{currentLanguage.label}</span>
+                  <ChevronDown className={`w-3 h-3 transition-transform ${languageOpen ? 'rotate-180' : ''}`} />
                 </button>
-                <div className="absolute top-full right-0 mt-1 bg-white border border-[#e0e3e5] shadow-xl rounded-[4px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all py-2 min-w-[80px]">
-                  {['de', 'en', 'fa', 'ar', 'ru', 'uk'].map(l => (
-                    <Link key={l} href={l === 'de' ? '/' : `/${l}`} className="block px-4 py-2 text-[11px] font-bold hover:bg-[#fed01b]/10 hover:text-[#0a0a0a] uppercase">
-                      {l}
+                <div className={`absolute top-full right-0 mt-1 bg-white border border-[#e0e3e5] shadow-xl rounded-[4px] transition-all py-2 min-w-[140px] z-50 ${languageOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                  {languageOptions.map((lang) => (
+                    <Link
+                      key={lang.code}
+                      href={getLanguageHref(lang.code)}
+                      className="block px-4 py-2 text-[11px] font-bold hover:bg-[#fed01b]/10 hover:text-[#0a0a0a] uppercase"
+                      onClick={() => setLanguageOpen(false)}
+                    >
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.label}
                     </Link>
                   ))}
                 </div>

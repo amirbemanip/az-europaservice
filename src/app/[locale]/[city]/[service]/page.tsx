@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { cities, services, testimonials } from '@/data/db';
-import { SmartLeadForm } from '@/components/SmartLeadForm';
+import dynamic from 'next/dynamic';
+const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
 import { CheckCircle2, Phone, MapPin, ArrowRight, ShieldCheck, Award, Zap, Star } from 'lucide-react';
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import Link from 'next/link';
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   if (!city || !service) return { title: 'Nicht gefunden' };
   
-  const localizedServiceTitle = locale === 'fa' && service.title_fa ? service.title_fa : locale === 'ar' && service.title_ar ? service.title_ar : service.title;
+  const localizedServiceTitle = service.title;
   const title = dict.service_page.content_title.replace('{service}', localizedServiceTitle).replace('{city}', city.name);
 
   return {
@@ -51,8 +52,8 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
   const isRTL = locale === 'fa' || locale === 'ar';
   const relatedTestimonials = testimonials.filter(t => t.serviceId === service.id && t.cityId === city.id);
 
-  const localizedServiceTitle = locale === 'fa' && service.title_fa ? service.title_fa : locale === 'ar' && service.title_ar ? service.title_ar : service.title;
-  const localizedServiceDesc = locale === 'fa' && service.desc_fa ? service.desc_fa : locale === 'ar' && service.desc_ar ? service.desc_ar : service.description;
+  const localizedServiceTitle = service.title;
+  const localizedServiceDesc = service.description;
 
   const t = (val: string, vars: { [key: string]: string }) => {
     let res = val;

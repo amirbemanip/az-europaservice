@@ -3,7 +3,7 @@ import { CinematicHeroParallax } from '@/components/home/CinematicHeroParallax';
 import { TrustMarquee } from '@/components/home/TrustMarquee';
 import { AuthorityMatrix } from '@/components/home/AuthorityMatrix';
 import { TrueBentoGrid } from '@/components/home/TrueBentoGrid';
-import { SmartLeadForm } from '@/components/SmartLeadForm';
+const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
 import { getDictionary } from '@/lib/get-dictionary';
 
 // Lazy loaded below-the-fold components

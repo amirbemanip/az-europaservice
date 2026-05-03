@@ -2,91 +2,63 @@ import { MetadataRoute } from 'next';
 import { cities, services } from '@/data/db';
 
 const baseUrl = 'https://az-europaservice.de';
+const locales = ['de', 'en', 'fa', 'ar', 'ru', 'uk'];
+const staticPaths = ['', '/ueber-uns', '/leistungen', '/kontakt', '/impressum', '/datenschutz', '/agb', '/karriere', '/blog'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/ueber-uns`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/leistungen`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/kontakt`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/impressum`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/datenschutz`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/agb`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/karriere`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-  ];
+  const routes: MetadataRoute.Sitemap = [];
 
-  // Add Service Overviews
-  services.forEach((service) => {
-    routes.push({
-      url: `${baseUrl}/leistungen/${service.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+  locales.forEach((locale) => {
+    staticPaths.forEach((path) => {
+      const url = locale === 'de' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
+      routes.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency: path === '/blog' ? 'weekly' : path === '' ? 'weekly' : path === '/leistungen' ? 'monthly' : path === '/karriere' ? 'monthly' : 'yearly',
+        priority: path === '' ? 1.0 : path === '/leistungen' ? 0.9 : path === '/blog' ? 0.6 : 0.7,
+      });
     });
   });
 
-  // Add City Hubs
-  cities.forEach((city) => {
-    routes.push({
-      url: `${baseUrl}/${city.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    });
-
-    // Add Service Matrix Pages
-    services.forEach((service) => {
+  // Add Service Overviews
+  services.forEach((service) => {
+    locales.forEach((locale) => {
+      const url = locale === 'de'
+        ? `${baseUrl}/leistungen/${service.slug}`
+        : `${baseUrl}/${locale}/leistungen/${service.slug}`;
       routes.push({
-        url: `${baseUrl}/${city.slug}/${service.slug}`,
+        url,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      });
+    });
+  });
+
+  // Add City Hubs and Service Matrix Pages
+  cities.forEach((city) => {
+    locales.forEach((locale) => {
+      const cityBase = locale === 'de'
+        ? `${baseUrl}/${city.slug}`
+        : `${baseUrl}/${locale}/${city.slug}`;
+
+      routes.push({
+        url: cityBase,
         lastModified: new Date(),
         changeFrequency: 'weekly',
-        priority: 0.8,
+        priority: 0.9,
+      });
+
+      services.forEach((service) => {
+        const url = locale === 'de'
+          ? `${cityBase}/${service.slug}`
+          : `${cityBase}/${service.slug}`;
+        routes.push({
+          url,
+          lastModified: new Date(),
+          changeFrequency: 'weekly',
+          priority: 0.8,
+        });
       });
     });
   });

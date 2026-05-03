@@ -86,6 +86,8 @@ export function CleanHeroSection() {
               src="/hero-bg.png" 
               alt="AZ Europa Premium Reinigung" 
               fill 
+              quality={75}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
               priority
             />

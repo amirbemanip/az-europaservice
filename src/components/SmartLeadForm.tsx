@@ -9,6 +9,7 @@ export function SmartLeadForm({ locale, dict }: { locale: string; dict: any }) {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({ city: '', service: '', email: '', name: '', phone: '', message: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submissionError, setSubmissionError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const isRTL = locale === 'fa' || locale === 'ar';
 
@@ -41,13 +42,42 @@ export function SmartLeadForm({ locale, dict }: { locale: string; dict: any }) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const result = formSchema.safeParse(formData);
+
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.issues.forEach((issue: z.ZodIssue) => {
+        if (issue.path[0]) fieldErrors[issue.path[0].toString()] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setErrors({});
+    setSubmissionError('');
+    setIsSubmitting(true);
+
     try {
-      formSchema.parse(formData);
-      setErrors({});
-      setIsSubmitting(true);
-      await new Promise(r => setTimeout(r, 1500));
-      
-      // GTM Data Layer Push (Requirement 6.2)
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(result.data),
+      });
+
+      const payload = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        if (payload?.errors) {
+          const fieldErrors: Record<string, string> = {};
+          if (payload.errors.fieldErrors) {
+            Object.assign(fieldErrors, payload.errors.fieldErrors);
+          }
+          setErrors(fieldErrors);
+        }
+
+        throw new Error(payload?.message || 'Fehler beim Senden der Anfrage.');
+      }
+
       if (typeof window !== 'undefined' && (window as any).dataLayer) {
         (window as any).dataLayer.push({
           event: 'lead_form_success',
@@ -57,14 +87,8 @@ export function SmartLeadForm({ locale, dict }: { locale: string; dict: any }) {
       }
 
       setStep(4);
-    } catch (err) {
-      if (err instanceof z.ZodError) {
-        const fieldErrors: Record<string, string> = {};
-        err.issues.forEach((issue: z.ZodIssue) => {
-          if (issue.path[0]) fieldErrors[issue.path[0].toString()] = issue.message;
-        });
-        setErrors(fieldErrors);
-      }
+    } catch (error: any) {
+      setSubmissionError(error?.message || 'Fehler beim Senden der Anfrage.');
     } finally {
       setIsSubmitting(false);
     }

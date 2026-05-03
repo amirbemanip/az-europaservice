@@ -15,6 +15,8 @@ interface Service { id: string; title: string; slug: string; description: string
 export function EnterpriseFooter({ cities, services, dict, locale }: { cities: City[]; services: Service[]; dict: any; locale: string }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [newsletterState, setNewsletterState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [newsletterError, setNewsletterError] = useState('');
 
   const getLocalizedHref = (path: string) => {
     if (locale === 'de') return path;
@@ -23,9 +25,33 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
 
   const isRTL = locale === 'fa' || locale === 'ar';
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) { setSubscribed(true); setEmail(''); }
+    if (!email) return;
+
+    setNewsletterState('loading');
+    setNewsletterError('');
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      const payload = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(payload?.message || 'Fehler beim Abonnieren des Newsletters.');
+      }
+
+      setSubscribed(true);
+      setEmail('');
+      setNewsletterState('success');
+    } catch (error: any) {
+      setNewsletterState('error');
+      setNewsletterError(error?.message || 'Fehler beim Abonnieren des Newsletters.');
+    }
   };
 
   return (
@@ -110,21 +136,32 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
                   </span>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubscribe} className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <form onSubmit={handleSubscribe} className={`flex flex-col gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <input
                     type="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     placeholder={dict.footer.email_placeholder}
                     required
+                    aria-label={dict.footer.email_placeholder}
                     className="flex-1 px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-[4px] text-[13px] text-white placeholder:text-[#565e74] focus:outline-none focus:border-[#fed01b]/50 focus:bg-white/[0.06] transition-all"
                   />
-                  <button type="submit" className="px-5 py-3 bg-[#fed01b] text-[#0a0a0a] rounded-[4px] hover:bg-[#eec200] transition-colors flex items-center gap-1.5">
-                    <Send className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
-                    <span className="text-[11px] font-bold tracking-[0.06em] uppercase hidden sm:inline">
-                      {dict.footer.subscribe}
-                    </span>
-                  </button>
+                  <div className="flex gap-2 items-center">
+                    <button
+                      type="submit"
+                      disabled={newsletterState === 'loading'}
+                      aria-label={dict.footer.subscribe}
+                      className="px-5 py-3 bg-[#fed01b] text-[#0a0a0a] rounded-[4px] hover:bg-[#eec200] transition-colors flex items-center gap-1.5 disabled:opacity-60"
+                    >
+                      <Send className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
+                      <span className="text-[11px] font-bold tracking-[0.06em] uppercase hidden sm:inline">
+                        {newsletterState === 'loading' ? dict.footer.subscribing || 'Bitte warten...' : dict.footer.subscribe}
+                      </span>
+                    </button>
+                    {newsletterState === 'error' && (
+                      <p className="text-[11px] text-red-300">{newsletterError}</p>
+                    )}
+                  </div>
                 </form>
               )}
               <p className="text-[10px] text-[#565e74]/70 mt-2.5">

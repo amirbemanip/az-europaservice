@@ -1,23 +1,26 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import '../globals.css';
 import { cn } from '@/lib/utils';
 import { cities, services } from '@/data/db';
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { EnterpriseHeader } from '@/components/ui/EnterpriseHeader';
 import { EnterpriseFooter } from '@/components/ui/EnterpriseFooter';
-import { FloatingChatWidget } from '@/components/ui/FloatingChatWidget';
+import dynamic from 'next/dynamic';
+// FloatingChatWidget is a client-side widget; import after dynamic is available
+const FloatingChatWidget = dynamic(() => import('@/components/ui/FloatingChatWidget').then(mod => mod.FloatingChatWidget), { ssr: false });
+import { CookieConsentBanner } from '@/components/ui/CookieConsentBanner';
 import { getDictionary } from '@/lib/get-dictionary';
-import Script from 'next/script';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// GTM is loaded on consent by the client-side GtmLoader
+const GtmLoader = dynamic(() => import('@/components/ui/GtmLoader'), { ssr: false });
+import { Suspense } from 'react';
 
 export async function generateStaticParams() {
   return ['de', 'en', 'fa', 'ar', 'ru', 'uk'].map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const locale = params.locale;
   const dict = await getDictionary(locale);
   
   const titles: Record<string, string> = {
@@ -60,6 +63,26 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       index: true,
       follow: true,
     },
+    openGraph: {
+      title: titles[locale] || titles.de,
+      description: descriptions[locale] || descriptions.de,
+      type: 'website',
+      locale: locale === 'de' ? 'de_DE' : locale === 'en' ? 'en_GB' : locale === 'fa' ? 'fa_IR' : locale === 'ar' ? 'ar-SA' : locale === 'ru' ? 'ru-RU' : 'uk-UA',
+      images: [
+        {
+          url: '/logo.png',
+          width: 1200,
+          height: 630,
+          alt: 'AZ-Europa Service GmbH',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[locale] || titles.de,
+      description: descriptions[locale] || descriptions.de,
+      images: ['/logo.png'],
+    },
   };
 }
 
@@ -68,46 +91,41 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const locale = params.locale;
   const dict = await getDictionary(locale);
   const isRTL = locale === 'fa' || locale === 'ar';
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-XXXXXXX';
 
   return (
     <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'} className="scroll-smooth">
-      <head>
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');`,
-          }}
-        />
-      </head>
-      <body className={cn(inter.variable, 'font-sans antialiased min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]')}>
+      <head />
+      <body className={cn('font-sans antialiased min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]')}>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#fed01b] focus:text-[#0a0a0a] focus:shadow-lg">
+          {dict.common.skip_to_content || 'Skip to content'}
+        </a>
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
         <LocalBusinessSchema city={cities[0]} />
-        
-        <EnterpriseHeader cities={cities} services={services} dict={dict} locale={locale} />
-        
-        <main className="flex-grow pt-[112px]">
+        <BreadcrumbSchema locale={locale} />
+        <GtmLoader gtmId={gtmId} />
+        <Suspense fallback={null}>
+          <EnterpriseHeader cities={cities} services={services} dict={dict} locale={locale} />
+        </Suspense>
+        <main id="main-content" className="flex-grow pt-[112px]">
           {children}
         </main>
 
         <FloatingChatWidget locale={locale} dict={dict} />
         <EnterpriseFooter cities={cities} services={services} dict={dict} locale={locale} />
+        <CookieConsentBanner locale={locale} />
       </body>
     </html>
   );
