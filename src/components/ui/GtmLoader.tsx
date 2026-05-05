@@ -7,32 +7,22 @@ export default function GtmLoader({ gtmId }: { gtmId: string }) {
 
   useEffect(() => {
     function injectGtm() {
-      if (!gtmId || injectedRef.current) return;
+      if (!gtmId || gtmId === 'GTM-XXXXXXX' || injectedRef.current) return;
       try {
         // dataLayer init
         (window as any).dataLayer = (window as any).dataLayer || [];
         ;(window as any).dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-        // inject script
+        // inject script only (no iframe to avoid CSP issues)
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
         script.id = 'az-gtm-script';
         document.head.appendChild(script);
 
-        // inject noscript iframe for completeness (won't work if JS disabled, but harmless)
-        const noscriptId = 'az-gtm-noscript';
-        if (!document.getElementById(noscriptId)) {
-          const ns = document.createElement('div');
-          ns.id = noscriptId;
-          ns.style.display = 'none';
-          ns.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
-          document.body.appendChild(ns);
-        }
-
         injectedRef.current = true;
       } catch (e) {
-        // ignore
+        console.warn('[GTM] Failed to inject:', e);
       }
     }
 
@@ -62,3 +52,4 @@ export default function GtmLoader({ gtmId }: { gtmId: string }) {
 
   return null;
 }
+

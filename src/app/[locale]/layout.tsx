@@ -19,8 +19,8 @@ export async function generateStaticParams() {
   return ['de', 'en', 'fa', 'ar', 'ru', 'uk'].map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const locale = params.locale;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const dict = await getDictionary(locale);
   
   const titles: Record<string, string> = {
@@ -91,28 +91,19 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale;
+  const { locale } = await params;
   const dict = await getDictionary(locale);
   const isRTL = locale === 'fa' || locale === 'ar';
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-XXXXXXX';
 
   return (
-    <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'} className="scroll-smooth">
-      <head />
-      <body className={cn('font-sans antialiased min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]')}>
+    <>
+      <div lang={locale} dir={isRTL ? 'rtl' : 'ltr'} className="scroll-smooth">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#fed01b] focus:text-[#0a0a0a] focus:shadow-lg">
           {dict.common.skip_to_content || 'Skip to content'}
         </a>
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         <LocalBusinessSchema city={cities[0]} />
         <BreadcrumbSchema locale={locale} />
         <GtmLoader gtmId={gtmId} />
@@ -126,7 +117,7 @@ export default async function LocaleLayout({
         <FloatingChatWidget locale={locale} dict={dict} />
         <EnterpriseFooter cities={cities} services={services} dict={dict} locale={locale} />
         <CookieConsentBanner locale={locale} />
-      </body>
-    </html>
+      </div>
+    </>
   );
 }
