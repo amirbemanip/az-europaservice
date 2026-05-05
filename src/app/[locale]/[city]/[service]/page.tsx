@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { cities, services, testimonials } from '@/data/db';
-import dynamic from 'next/dynamic';
-const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
+import { SmartLeadForm } from '@/components/SmartLeadForm';
 import { CheckCircle2, Phone, MapPin, ArrowRight, ShieldCheck, Award, Zap, Star } from 'lucide-react';
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import Link from 'next/link';

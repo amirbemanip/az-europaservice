@@ -8,11 +8,11 @@ import { EnterpriseHeader } from '@/components/ui/EnterpriseHeader';
 import { EnterpriseFooter } from '@/components/ui/EnterpriseFooter';
 import dynamic from 'next/dynamic';
 // FloatingChatWidget is a client-side widget; import after dynamic is available
-const FloatingChatWidget = dynamic(() => import('@/components/ui/FloatingChatWidget').then(mod => mod.FloatingChatWidget), { ssr: false });
+import { FloatingChatWidget } from '@/components/ui/FloatingChatWidget';
 import { CookieConsentBanner } from '@/components/ui/CookieConsentBanner';
 import { getDictionary } from '@/lib/get-dictionary';
 // GTM is loaded on consent by the client-side GtmLoader
-const GtmLoader = dynamic(() => import('@/components/ui/GtmLoader'), { ssr: false });
+import GtmLoader from '@/components/ui/GtmLoader';
 import { Suspense } from 'react';
 
 export async function generateStaticParams() {

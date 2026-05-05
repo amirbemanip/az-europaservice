@@ -1,6 +1,5 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
-const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
+import { SmartLeadForm } from '@/components/SmartLeadForm';
 import { ShieldCheck, Zap, Phone, Star, CheckCircle2 } from 'lucide-react';
 import { Metadata } from 'next';
 

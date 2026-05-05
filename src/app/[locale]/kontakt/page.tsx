@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic';
-const SmartLeadForm = dynamic(() => import('@/components/SmartLeadForm').then(mod => mod.SmartLeadForm), { ssr: false });
+import { SmartLeadForm } from '@/components/SmartLeadForm';
 import { Phone, Mail, MapPin, Clock, ArrowRight, MessageSquare } from 'lucide-react';
 import { cities } from '@/data/db';
 import { getDictionary } from '@/lib/get-dictionary';
