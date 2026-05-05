@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head />
-      <body className={cn('font-sans antialiased min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]')}>
+      <body suppressHydrationWarning className={cn('font-sans antialiased min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]')}>
         {children}
       </body>
     </html>

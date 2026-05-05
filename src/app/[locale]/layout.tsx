@@ -60,8 +60,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     robots: {
-      index: true,
-      follow: true,
+      index: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true',
+      follow: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true',
+      nocache: process.env.NEXT_PUBLIC_ALLOW_INDEXING !== 'true',
+      googleBot: {
+        index: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true',
+        follow: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true',
+      },
     },
     openGraph: {
       title: titles[locale] || titles.de,
