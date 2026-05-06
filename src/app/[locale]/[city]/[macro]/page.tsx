@@ -1,10 +1,16 @@
 import { notFound } from 'next/navigation';
-import { cities, services, testimonials } from '@/data/db';
+import { cities, macroServices, testimonials } from '@/data/db';
 import { SmartLeadForm } from '@/components/SmartLeadForm';
 import { CheckCircle2, Phone, MapPin, ArrowRight, ShieldCheck, Award, Zap, Star } from 'lucide-react';
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getDictionary } from '@/lib/get-dictionary';
+import { BreadcrumbSchema } from '@/components/ui/BreadcrumbSchema';
+import { CinematicHeroParallax } from '@/components/ui/CinematicHeroParallax';
+import { StructuredFAQ } from '@/components/ui/StructuredFAQ';
+import { ServiceSchema } from '@/components/seo/ServiceSchema';
+import { LocationMapSection } from '@/components/ui/LocationMapSection';
 
 export const revalidate = 3600; // ISR: Revalidate every hour
 
@@ -13,117 +19,153 @@ export async function generateStaticParams() {
   const params = [];
   for (const locale of locales) {
     for (const city of cities) {
-      for (const service of services) {
-        params.push({ locale, city: city.slug, service: service.slug });
+      for (const macro of macroServices) {
+        params.push({ locale, city: city.slug, macro: macro.slug });
       }
     }
   }
   return params;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string, city: string, service: string }> }) {
-  const { city: citySlug, service: serviceSlug, locale } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string, city: string, macro: string }> }) {
+  const { city: citySlug, macro: macroSlug, locale } = await params;
   const city = cities.find(c => c.slug === citySlug);
-  const service = services.find(s => s.slug === serviceSlug);
+  const macro = macroServices.find(s => s.slug === macroSlug);
   const dict = await getDictionary(locale);
   
-  if (!city || !service) return { title: 'Nicht gefunden' };
+  if (!city || !macro) return { title: 'Nicht gefunden' };
   
-  const localizedServiceTitle = service.title;
-  const title = dict.service_page.content_title.replace('{service}', localizedServiceTitle).replace('{city}', city.name);
+  // Helper to get city+service specific content
+  const getMatrixContent = (key: string, fallback: string) => {
+    const override = dict.matrix?.[city.id]?.[macro.id]?.[key];
+    if (override) return override;
+    return fallback.replace(/{service}/g, macro.title).replace(/{city}/g, city.name);
+  };
+
+  const title = getMatrixContent('hero_title', dict.service_page.content_title);
+  const description = getMatrixContent('hero_desc', dict.service_page.hero_desc);
 
   return {
-    title: `${title} | AZ-Europa Service`,
-    description: dict.service_page.hero_desc.replace('{city}', city.name),
+    title: title,
+    description: description,
   };
 }
 
-export default async function ServiceMatrixPage({ params }: { params: Promise<{ locale: string, city: string, service: string }> }) {
-  const { city: citySlug, service: serviceSlug, locale } = await params;
+export default async function ServiceMatrixPage({ params }: { params: Promise<{ locale: string, city: string, macro: string }> }) {
+  const { city: citySlug, macro: macroSlug, locale } = await params;
   const city = cities.find(c => c.slug === citySlug);
-  const service = services.find(s => s.slug === serviceSlug);
+  const macro = macroServices.find(s => s.slug === macroSlug);
   const dict = await getDictionary(locale);
   
-  if (!city || !service) {
+  if (!city || !macro) {
     notFound();
   }
 
   const isRTL = locale === 'fa' || locale === 'ar';
-  const relatedTestimonials = testimonials.filter(t => t.serviceId === service.id && t.cityId === city.id);
+  const relatedTestimonials = testimonials.filter(t => t.serviceId === macro.id && t.cityId === city.id);
 
-  const localizedServiceTitle = service.title;
-  const localizedServiceDesc = service.description;
+  const getLocalizedHref = (path: string) => {
+    if (locale === 'de') return path;
+    return `/${locale}${path === '/' ? '' : path}`;
+  };
 
-  const t = (val: string, vars: { [key: string]: string }) => {
-    let res = val;
+  // Helper to get city+service specific content
+  const getMatrixContent = (key: string, fallback: string) => {
+    const override = dict.matrix?.[city.id]?.[macro.id]?.[key];
+    if (override) return override;
+    
+    // Fallback logic for general placeholders
+    let res = fallback;
+    const vars = { service: macro.title, city: city.name };
     for (const [k, v] of Object.entries(vars)) {
       res = res.replace(`{${k}}`, v);
     }
     return res;
   };
 
+  const localizedServiceTitle = getMatrixContent('hero_title', '{service}');
+  const localizedServiceDesc = getMatrixContent('hero_desc', dict.service_page.hero_desc);
+  const contentTitle = getMatrixContent('hero_title', dict.service_page.content_title);
+  const contentP1 = getMatrixContent('content_p1', dict.service_page.content_p1);
+  const matrixFeatures = dict.matrix?.[city.id]?.[macro.id]?.features;
+  const featuresToDisplay = matrixFeatures || dict.service_page.feature_points;
+  const ctaTitle = getMatrixContent('cta_title', dict.service_page.offer_card_title.replace('{service}', macro.title));
+
   return (
     <div className={`flex flex-col min-h-screen bg-[#f7f9fb] overflow-x-hidden ${isRTL ? 'text-right' : 'text-left'}`}>
-      <LocalBusinessSchema city={city} />
+      <LocalBusinessSchema city={city} service={{ id: macro.id, title: macro.title, description: macro.description }} />
+      <ServiceSchema 
+        serviceName={macro.title}
+        description={macro.description}
+        providerName="AZ-Europa Service GmbH"
+        providerUrl="https://az-europaservice.de"
+        areaServed={city.name}
+        category={macro.title}
+      />
       
-      {/* ── 1. CONVERSION HERO ── */}
-      <section className="relative pt-24 pb-32 bg-[#0a0a0a] overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`, backgroundSize: '80px 80px' }} />
-        
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#fed01b]/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[#fed01b]/3 rounded-full blur-[80px] pointer-events-none" />
+      <CinematicHeroParallax
+        locale={locale}
+        isRTL={isRTL}
+        badge={dict.service_page.express_badge.replace('{city}', city.name)}
+        title={localizedServiceTitle}
+        description={localizedServiceDesc}
+        backgroundImage={macro.cover_image}
+        ctaPrimary={{ label: dict.hero.cta_primary, href: '#contact' }}
+        ctaSecondary={{ label: dict.hero.cta_secondary, href: '/leistungen' }}
+        align="start"
+        breadcrumbs={
+          <BreadcrumbSchema 
+            locale={locale} 
+            items={[
+              { label: city.name, href: getLocalizedHref(`/${city.slug}`) },
+              { label: macro.title, href: getLocalizedHref(`/${city.slug}/${macro.slug}`) }
+            ]} 
+          />
+        }
+      />
 
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-16 relative z-10">
-          <div className={`grid lg:grid-cols-2 gap-16 items-center ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
+      <section className="py-24 bg-[#f7f9fb]">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
+          <div className={`grid lg:grid-cols-2 gap-16 items-start ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
             <div className="space-y-8">
-              <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#fed01b]/10 border border-[#fed01b]/20 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <Zap className="w-3.5 h-3.5 text-[#fed01b]" />
-                <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-[#fed01b]">
-                  {t(dict.service_page.express_badge, { city: city.name })}
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-black text-white tracking-[-0.03em] leading-[1.08]">
-                {localizedServiceTitle} <br />
-                <span className="text-[#fed01b]">
-                  {t(dict.service_page.in_city, { city: city.name })}
-                </span>
-              </h1>
-              
-              <p className="text-lg text-[#7c839b] leading-relaxed max-w-xl">
-                {localizedServiceDesc} {t(dict.service_page.hero_desc, { city: city.name })}
-              </p>
-              
+              <h2 className="text-3xl font-black text-[#0a0a0a] tracking-tight">
+                {dict.service_page.expertise_label} {localizedServiceTitle}
+              </h2>
               <ul className={`grid grid-cols-1 sm:grid-cols-2 gap-4 ${isRTL ? 'rtl' : 'ltr'}`}>
-                {dict.service_page.feature_points.map((item: string, i: number) => (
-                  <li key={i} className={`flex items-center gap-3 text-[14px] font-semibold text-[#bec6e0] ${isRTL ? 'flex-row-reverse' : ''}`}>
+                {featuresToDisplay.map((item: string, i: number) => (
+                  <li key={i} className={`flex items-center gap-3 text-[14px] font-semibold text-[#45464d] ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <CheckCircle2 className="text-[#fed01b] w-4.5 h-4.5 flex-shrink-0" /> {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="pt-6">
-                <div className={`flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 inline-flex ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+              <div className="pt-4">
+                <div className={`flex items-center gap-4 bg-white p-6 rounded-2xl border border-[#e0e3e5] shadow-sm inline-flex ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                   <Phone className="text-[#fed01b] w-6 h-6" />
                   <div>
-                    <p className="text-[10px] font-bold tracking-[0.1em] uppercase text-[#7c839b] mb-0.5">{dict.service_page.consultation_badge}</p>
-                    <a href={`tel:${city.location.phone.replace(/\s+/g, '')}`} className="text-xl font-bold text-white hover:text-[#fed01b] transition-colors">
+                    <p className="text-[10px] font-bold tracking-[0.1em] uppercase text-[#76777d] mb-0.5">{dict.service_page.consultation_badge}</p>
+                    <a href={`tel:${city.location.phone.replace(/\s+/g, '')}`} className="text-xl font-bold text-[#0a0a0a] hover:text-[#fed01b] transition-colors">
                       {city.location.phone}
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="bg-white p-1 rounded-[6px] shadow-[0_30px_100px_rgba(0,0,0,0.15)] overflow-hidden">
+
+            <div id="contact" className="relative">
+              <div className="bg-white p-1 rounded-[6px] shadow-[0_30px_100px_rgba(0,0,0,0.15)] overflow-hidden border border-[#e0e3e5]">
                 <div className={`bg-[#f7f9fb] px-6 py-4 border-b border-[#e0e3e5] ${isRTL ? 'text-right' : 'text-left'}`}>
                   <h3 className="text-sm font-bold text-[#0a0a0a]">
-                    {t(dict.service_page.offer_card_title, { service: localizedServiceTitle })}
+                    {ctaTitle}
                   </h3>
                   <p className="text-[11px] text-[#76777d]">{dict.service_page.offer_card_subtitle}</p>
                 </div>
-                <SmartLeadForm locale={locale} dict={dict} />
+                <SmartLeadForm 
+                  locale={locale} 
+                  dict={dict} 
+                  initialCity={city.name}
+                  initialService={macro.title}
+                />
               </div>
             </div>
           </div>
@@ -136,15 +178,26 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
           <div className={`grid lg:grid-cols-3 gap-16 ${isRTL ? 'rtl' : ''}`}>
             <div className={`lg:col-span-2 prose prose-slate max-w-none ${isRTL ? 'text-right' : 'text-left'}`}>
               <h2 className="text-3xl font-black text-[#0a0a0a] tracking-tight mb-8">
-                {t(dict.service_page.content_title, { service: localizedServiceTitle, city: city.name })}: <br />
-                {dict.service_page.content_subtitle}
+                {contentTitle}
               </h2>
-              <p className="text-lg text-[#45464d] leading-relaxed mb-6">
-                {t(dict.service_page.content_p1, { service: localizedServiceTitle, city: city.name })}
-              </p>
+              <div className="space-y-6">
+                <p className="text-lg text-[#45464d] leading-relaxed">
+                  {contentP1}
+                </p>
+                {getMatrixContent('content_p2', '') && (
+                  <p className="text-lg text-[#45464d] leading-relaxed">
+                    {getMatrixContent('content_p2', '')}
+                  </p>
+                )}
+                {getMatrixContent('content_p3', '') && (
+                  <p className="text-lg text-[#45464d] leading-relaxed">
+                    {getMatrixContent('content_p3', '')}
+                  </p>
+                )}
+              </div>
               <h3 className="text-xl font-bold text-[#0a0a0a] mt-10 mb-4">{dict.service_page.why_us_title}</h3>
               <p className="text-[#45464d] leading-relaxed mb-6">
-                {t(dict.service_page.why_us_p1, { city: city.name })}
+                {dict.service_page.why_us_p1.replace('{city}', city.name)}
               </p>
               
               <div className={`grid sm:grid-cols-2 gap-6 mt-12 not-prose ${isRTL ? 'rtl' : ''}`}>
@@ -190,7 +243,7 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
                       <div className={`flex items-center gap-0.5 text-[#fed01b] mb-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                         {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-[#fed01b]" />)}
                       </div>
-                      <p className="text-sm text-[#45464d] italic mb-2">"{t.content}"</p>
+                      <p className="text-sm text-[#45464d] italic mb-2">&ldquo;{t.content}&rdquo;</p>
                       <p className="text-[11px] font-bold text-[#0a0a0a]">
                         {isRTL ? '— ' : '— '}{t.author}
                       </p>
@@ -198,7 +251,7 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
                   ))
                 ) : (
                   <p className="text-sm text-[#76777d]">
-                    {t(dict.service_page.numerous_customers, { city: city.name })}
+                    {dict.service_page.numerous_customers.replace('{city}', city.name)}
                   </p>
                 )}
               </div>
@@ -227,6 +280,23 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
           </Link>
         </div>
       </section>
+
+      {/* ── 4. DYNAMIC FAQ SECTION ── */}
+      <StructuredFAQ 
+        locale={locale}
+        isRTL={isRTL}
+        title={dict.faq.title}
+        subtitle={`${dict.faq.subtitle} ${dict.service_page.in_city.replace('{city}', city.name)}`}
+        items={dict.faq.items}
+      />
+
+      {/* ── 5. LOCAL MAP SECTION ── */}
+      <LocationMapSection 
+        city={city}
+        dict={dict}
+        locale={locale}
+        isRTL={isRTL}
+      />
     </div>
   );
 }

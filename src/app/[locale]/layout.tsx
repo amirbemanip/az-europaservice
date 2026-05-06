@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../globals.css';
 import { cn } from '@/lib/utils';
-import { cities, services } from '@/data/db';
+import { cities, macroServices, microServices } from '@/data/db';
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { EnterpriseHeader } from '@/components/ui/EnterpriseHeader';
@@ -113,14 +113,14 @@ export default async function LocaleLayout({
         <BreadcrumbSchema locale={locale} />
         <GtmLoader gtmId={gtmId} />
         <Suspense fallback={null}>
-          <EnterpriseHeader cities={cities} services={services} dict={dict} locale={locale} />
+          <EnterpriseHeader cities={cities} macroServices={macroServices} microServices={microServices} dict={dict} locale={locale} />
         </Suspense>
-        <main id="main-content" className="flex-grow pt-[112px]">
+        <main id="main-content" className="flex-grow">
           {children}
         </main>
 
         <FloatingChatWidget locale={locale} dict={dict} />
-        <EnterpriseFooter cities={cities} services={services} dict={dict} locale={locale} />
+        <EnterpriseFooter cities={cities} services={macroServices} dict={dict} locale={locale} />
         <CookieConsentBanner locale={locale} />
       </div>
     </>

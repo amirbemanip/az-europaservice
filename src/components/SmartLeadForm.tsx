@@ -5,9 +5,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Briefcase, Mail, ArrowRight, ArrowLeft, CheckCircle2, Loader2, Lock, Clock } from 'lucide-react';
 import { z } from 'zod';
 
-export function SmartLeadForm({ locale, dict }: { locale: string; dict: any }) {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({ city: '', service: '', email: '', name: '', phone: '', message: '' });
+export function SmartLeadForm({ 
+  locale, 
+  dict,
+  initialCity = '',
+  initialService = ''
+}: { 
+  locale: string; 
+  dict: any;
+  initialCity?: string;
+  initialService?: string;
+}) {
+  const [step, setStep] = useState(initialCity && initialService ? 3 : initialCity ? 2 : 1);
+  const [formData, setFormData] = useState({ 
+    city: initialCity || '', 
+    service: initialService || '', 
+    email: '', 
+    name: '', 
+    phone: '', 
+    message: '' 
+  });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submissionError, setSubmissionError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);

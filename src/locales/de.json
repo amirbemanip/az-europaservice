@@ -317,20 +317,29 @@
     "form_desc": "Beschreiben Sie Ihr Anliegen — wir antworten in 2 Stunden."
   },
   "about": {
-    "hero_badge": "Unsere Geschichte",
-    "hero_title": "Meisterhafte Präzision seit über 10 Jahren.",
-    "hero_desc": "AZ-Europa Service GmbH ist Ihr zertifizierter Partner für infrastrukturelles Facility Management in der Metropolregion Nürnberg. Wir verbinden handwerkliche Tradition mit modernsten Management-Methoden.",
-    "quality_title": "Qualität ist kein Zufall, sondern das Ergebnis harter Arbeit.",
-    "quality_desc": "Unser Erfolg basiert auf drei Grundpfeilern: Zuverlässigkeit, Transparenz und Fachkompetenz. Als Meisterbetrieb legen wir größten Wert auf die Ausbildung unserer Mitarbeiter und den Einsatz modernster Technik.",
+    "hero_badge": "Über AZ-Europa Service",
+    "hero_title": "Ihr zertifizierter Meisterbetrieb für exzellentes Gebäudemanagement in Franken",
+    "hero_desc": "Seit über einem Jahrzehnt sind wir stolz darauf, in der Region Franken tätig zu sein. Wir verstehen uns nicht als einfache Putzfirma, sondern als Ihren strategischen Partner für das Facility Management.",
+    "quality_title": "Meisterqualität, Sicherheit und Transparenz",
+    "quality_desc": "Für uns ist Gebäudereinigung weitaus mehr als das bloße Beseitigen von Schmutz. Es ist eine Frage des Respekts gegenüber den Menschen und eine Verantwortung gegenüber den Werten unserer Kunden.",
     "stats_projects": "Erfolgreiche Projekte",
     "stats_experience": "Jahre Erfahrung",
     "values": [
-      { "title": "Zertifizierter Betrieb", "desc": "Wir arbeiten nach strengen DIN ISO Standards und sind TÜV-geprüft." },
-      { "title": "Echte Meisterqualität", "desc": "Handwerkliches Know-how durch qualifizierte Meisterführung." },
-      { "title": "Lokales Experten-Team", "desc": "Feste Ansprechpartner direkt in Ihrer Region (Franken)." }
+      {
+        "title": "Meistergeführte Expertise",
+        "desc": "Als anerkannter Meisterbetrieb arbeiten wir streng nach den höchsten Branchenstandards und garantieren meisterhafte Ergebnisse."
+      },
+      {
+        "title": "Digitales Management",
+        "desc": "Traditionelles Handwerk trifft auf modernste Technologie. Wir nutzen ein volldigitalisiertes Projektmanagement für 100% Präzision."
+      },
+      {
+        "title": "Garantierte Sicherheit",
+        "desc": "Wir verfügen über eine umfassende Betriebshaftpflichtversicherung, die alle potenziellen Sach- und Personenschäden abdeckt."
+      }
     ],
-    "cta_title": "Bereit für den nächsten Schritt?",
-    "cta_desc": "Ob Großprojekt oder regelmäßige Unterhaltsreinigung — wir finden die passende Lösung für Ihre Anforderungen. Vertrauen Sie auf die Experten von AZ-Europa."
+    "cta_title": "Erleben Sie den Unterschied mit einem Meisterbetrieb",
+    "cta_desc": "Lassen Sie uns gemeinsam beweisen, wie ein meisterhaft gereinigtes Gebäude die Motivation Ihres Teams steigert und den Wert Ihrer Immobilie erhält."
   },
   "karriere": {
     "hero_badge": "Karriere bei AZ-Europa",
@@ -408,7 +417,7 @@
     "status_label": "Stand: Januar 2024"
   },
   "header": {
-    "opening_hours": "Mo–Fr 07:00–18:00",
+    "opening_hours": "Mo–Do 07:00–20:00, Fr 17:00, Sa 15:00",
     "locations_summary": "Erlangen · Nürnberg · Bamberg",
     "menu_aria": "Menü öffnen",
     "our_services": "Unsere Leistungen",
@@ -427,7 +436,7 @@
   },
   "footer": {
     "direct_contact": "Direkten Kontakt aufnehmen",
-    "contact_hours": "Mo–Fr 07:00–18:00 Uhr · Notdienst 24/7",
+    "contact_hours": "Mo–Do 07:00–20:00, Fr 17:00, Sa 15:00 · Notdienst 24/7",
     "online_request": "Online Anfrage",
     "brand_tagline": "Service GmbH · Meisterbetrieb",
     "brand_desc": "Ihr zertifizierter Partner für infrastrukturelles Facility Management in der Metropolregion Nürnberg. Seit über 10 Jahren Präzision, Sauberkeit und Zuverlässigkeit.",
@@ -478,5 +487,177 @@
       { "q": "Bieten Sie Probereinigungen an?", "a": "Ja, wir bieten eine kostenlose Probereinigung für Neukunden an." },
       { "q": "Sind Sie versichert?", "a": "Ja, wir sind vollumfänglich haftpflichtversichert und TÜV-geprüft." }
     ]
+  },
+  "cities": {
+    "erlangen": {
+      "hero_badge": "Vor Ort in Erlangen",
+      "hero_title_2": "Gebäudereinigung Erlangen & Umgebung",
+      "hero_desc": "Wir sind Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Erlangen und Umgebung. Unser umfassendes Angebot umfasst Fensterreinigung, Büroreinigung, Kindergartenreinigung, Arztpraxisreinigung, Grundreinigung und Treppenhausreinigung.",
+      "service_catalog": "Service-Portfolio Erlangen",
+      "service_title": "Maßgeschneiderte Services für Erlangen",
+      "service_desc": "Von der sterilen Praxisreinigung bis zum Hausmeisterservice für Wohnanlagen – wir kennen die Anforderungen in der Hugenottenstadt genau.",
+      "trust_title": "Warum wir die Nr. 1 in Erlangen sind.",
+      "cta_subtitle": "Unser lokales Team in Erlangen berät Sie gerne."
+    },
+    "nuernberg": {
+      "hero_badge": "Meisterqualität für Nürnberg",
+      "hero_title_2": "Gebäudereinigung Nürnberg - Ihr Partner",
+      "hero_desc": "Als erfahrenes Reinigungsunternehmen in Nürnberg bieten wir professionelle Gebäudereinigung für Firmen, Praxen, Fitnessstudios und Privathaushalte. Unser Team sorgt für saubere Büros, gepflegte Treppenhäuser und streifenfreie Fenster.",
+      "service_catalog": "Dienstleistungen für Nürnberg",
+      "service_title": "Professionelles Facility Management Nürnberg",
+      "service_desc": "Wir bieten Full-Service-Lösungen für Nürnberger Unternehmen, Logistikzentren und Immobilienverwaltungen – zuverlässig, diskret und effizient.",
+      "trust_title": "Qualität, der Nürnberger Unternehmen vertrauen.",
+      "cta_subtitle": "Unser Expertenteam in Nürnberg berät Sie gerne."
+    },
+    "bamberg": {
+      "hero_badge": "Experten in Bamberg",
+      "hero_title_2": "Gebäudereinigung Bamberg & Umland",
+      "hero_desc": "AZ - Europa Service GmbH Bamberg ist Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Bamberg und Umgebung. Wir bieten Büroreinigung, Fensterreinigung, Treppenhausreinigung und Praxisreinigung mit meisterhafter Qualität.",
+      "service_catalog": "Bamberg Service-Katalog",
+      "service_title": "Exzellente Pflege für Bamberger Immobilien",
+      "service_desc": "Ob Hotelreinigung, Denkmalpflege oder klassischer Hausmeisterservice – wir sind Ihr lokaler Ansprechpartner in der Domstadt Bamberg.",
+      "trust_title": "Meisterhafte Objektbetreuung in ganz Bamberg.",
+      "cta_subtitle": "Kontaktieren Sie unsere Experten in Bamberg."
+    }
+  },
+  "matrix": {
+    "erlangen": {
+      "unterhaltsreinigung": {
+        "hero_title": "Unterhaltsreinigung in Erlangen: Höchste Hygienestandards für Büros & Forschung",
+        "hero_desc": "Präzision für die Hugenottenstadt: AZ-Europa Service bietet meisterhafte Büroreinigung in Bruck, Tennenlohe und im Zentrum Erlangens – ökologisch, gründlich und zuverlässig.",
+        "content_p1": "Erlangen ist das Herz der medizinischen Forschung und High-Tech-Innovation in Bayern. Unternehmen, die in Vierteln wie Bruck, Alterlangen, dem Gewerbegebiet Tennenlohe oder rund um das Zentrum in Frauenaurach ansässig sind, haben naturgemäß höchste Ansprüche an Sauberkeit und Präzision. AZ-Europa Service bringt genau diese Präzision in Ihre tägliche Unterhaltsreinigung.",
+        "content_p2": "Standardlösungen reichen in einer Stadt wie Erlangen nicht aus. Ob es sich um moderne Großraumbüros, sensible Laborvorräume oder Verwaltungsgebäude von Start-ups handelt – wir entwickeln ein Reinigungskonzept, das sich nahtlos in Ihren Arbeitsalltag integriert. Unsere Turnusreinigung sorgt dafür, dass Kontaktflächen, Sanitärbereiche und Küchen täglich oder wöchentlich auf einem konstant hohen Hygieneniveau gehalten werden.",
+        "content_p3": "Als etablierter Meisterbetrieb in der Metropolregion bieten wir Erlangener Unternehmen eine Qualität, die messbar und verlässlich ist. Das Label 'Meisterbetrieb' steht für fundiertes materialwissenschaftliches Fachwissen und rechtliche Absicherung. Wenn unsere geschulten Teams in Tennenlohe oder Bruck im Einsatz sind, können Sie sich darauf verlassen, dass teure Büromöbel und empfindliche IT-Ausstattung fachgerecht und schonend behandelt werden."
+      },
+      "praxisreinigung": {
+        "hero_title": "Praxisreinigung Erlangen: Hygiene-Exzellenz im Medical Valley",
+        "hero_desc": "Spitzenstandards für die Medizinstadt: AZ-Europa Service garantiert meisterhafte Praxisreinigung و Desinfektion für Labore, Radiologien und Fachärzte in Erlangen.",
+        "content_p1": "Als Zentrum des 'Medical Valley' und Heimat führender Kliniken und Medizintechnikunternehmen hat Erlangen höchste Ansprüche an das Gesundheitswesen. Ob es sich um moderne Fachpraxen in der Nördlichen Stadtmauerstraße, radiologische Zentren in Alterlangen oder Forschungslabore in Bruck handelt – AZ-Europa Service ist Ihr verlässlicher Partner für eine Praxisreinigung, die wissenschaftlichen und medizinischen Spitzenstandards entspricht.",
+        "content_p2": "In Erlangener Praxen und Laboren stehen oft hochsensible und extrem teure medizinische Geräte. Die Reinigung dieser Räumlichkeiten erfordert nicht nur hygienisches Fachwissen, sondern auch technisches Verständnis. Aggressive Desinfektionsmittel können die Displays oder Gehäuse von Ultraschallgeräten, MRTs oder zahnmedizinischen Stühlen irreparabel beschädigen. Unser Fachpersonal weiß exakt, welche materialschonenden und dennoch hochwirksamen Präparate zugelassen sind.",
+        "content_p3": "Wir entlasten Sie und Ihr medizinisches Personal komplett, damit Sie sich zu 100 % auf die Patientenversorgung konzentrieren können. Für Ihre internen Qualitätsaudits und Begehungen durch das Gesundheitsamt dokumentieren wir alle durchgeführten Reinigungs- und Desinfektionsmaßnahmen detailliert. Wo es die Hygienevorschriften zulassen, arbeiten wir zudem mit umwelt- und gesundheitsschonenden Mitteln.",
+        "features": ["Lückenlose Dokumentation", "Materialschonende Präparate", "Medical Valley Standards", "Flexible Einsatzzeiten"],
+        "cta_title": "Vereinbaren Sie jetzt einen Beratungstermin für Ihre Praxis in Erlangen!"
+      },
+      "treppenhausreinigung": {
+        "hero_title": "Erlangen: Strahlende Sauberkeit für Wohn- und Geschäftshäuser",
+        "hero_desc": "Von Bruck bis Tennenlohe – wir bringen höchste Reinigungsstandards direkt in Ihre Erlangener Immobilien. Sauberkeit, die den Wert Ihres Objekts schützt.",
+        "content_p1": "In Erlangen setzen wir auf fortschrittliche Reinigungskonzepte und umweltfreundliche Mittel. Unsere Teams arbeiten leise und effizient, um die Privatsphäre der Bewohner zu wahren und ein frisches Wohngefühl zu schaffen."
+      },
+      "baureinigung": {
+        "hero_title": "Baureinigung Erlangen: Spezialisierte Sauberkeit für Forschung & Medizin",
+        "hero_desc": "Präzision für Erlangens Bauprojekte: AZ-Europa Service bietet professionelle Bauendreinigung für Klinikbauten, Labore und exklusive Wohnanlagen in Bruck und Tennenlohe.",
+        "content_p1": "Als Zentrum für Innovation und Spitzenmedizin wächst Erlangen rasant. Neue Forschungslabore in Tennenlohe, moderne Klinik-Erweiterungsbauten oder exklusive Wohnanlagen in Bruck und Alterlangen erfordern eine Baureinigung, die weit über das Standardmaß hinausgeht. AZ-Europa Service bietet Ihnen in Erlangen eine Bauendreinigung, die höchste technische und hygienische Anforderungen erfüllt.",
+        "content_p2": "Präzision bis in den letzten Winkel: Besonders bei Gebäuden mit sensibler Infrastruktur – wie Laboren, Reinräumen oder IT-Zentren – ist eine gewöhnliche Reinigung nicht ausreichend. Feinstaub in Lüftungsanlagen oder auf antistatischen Böden kann teure Folgen haben. Unser geschultes Team entfernt mikroskopischen Baustaub aus jeder Ritze und sorgt dafür, dass die empfindliche Haustechnik reibungslos in Betrieb genommen werden kann.",
+        "content_p3": "Ein Bauprojekt ist eine enorme Investition. Überlassen Sie den letzten, entscheidenden Schritt – die Präsentation – nicht dem Zufall. Wir setzen leistungsstarke Industriestaubsauger mit HEPA-Filtern und spezielle Scheuersaugmaschinen ein, um auch auf großen Flächen in Tennenlohe oder Bruck perfekte Ergebnisse zu erzielen. Dabei arbeiten wir strikt nach den Vorgaben der Berufsgenossenschaft.",
+        "features": ["Reinraum-Expertise", "HEPA-Filter Technik", "Gefahrstoff-Management", "Termingarantie"],
+        "cta_title": "Fordern Sie jetzt Ihr Angebot für die Baureinigung in Erlangen an!"
+      },
+      "glasreinigung": {
+        "hero_title": "Glasreinigung Erlangen - Kristallklarer Durchblick",
+        "hero_desc": "Professionelle Fensterreinigung für Erlangener Unternehmen und Privathaushalte. Wir sorgen für streifenfreien Glanz bei jeder Gebäudehöhe.",
+        "content_p1": "Von Schaufenstern in der Innenstadt bis zu großen Glasfassaden: Unsere Glasreinigung in Erlangen nutzt modernste Technik und ökologische Mittel für ein perfektes Ergebnis."
+      },
+      "hausmeisterservice": {
+        "hero_title": "Hausmeisterservice Erlangen: Technische Präzision & Grünanlagenpflege",
+        "hero_desc": "Rundum-Service für die Hugenottenstadt: Von der Techniküberwachung in Tennenlohe bis zur Gartenpflege in Bruck – wir kümmern uns um Ihre Erlanger Immobilien.",
+        "content_p1": "Immobilien in Erlangen – sei es im dynamischen Gewerbegebiet Tennenlohe, in den Wohnvierteln von Bruck oder rund um die Technologiezentren in Frauenaurach – sind oft mit anspruchsvoller Haustechnik und gepflegten Außenanlagen ausgestattet. AZ-Europa Service bietet Ihnen einen modernen Hausmeisterservice, der sich durch technische Präzision, Zuverlässigkeit und einen ausgeprägten grünen Daumen auszeichnet.",
+        "content_p2": "Das äußere Erscheinungsbild Ihrer Immobilie ist die Visitenkarte für Mieter und Investoren. Neben der klassischen Gebäudeüberwachung und der Mülltonnenbereitstellung liegt unser Fokus in Erlangen stark auf der professionellen Grünanlagenpflege. Wir mähen Rasenflächen, schneiden Hecken und Sträucher fachgerecht zurück, entfernen Laub im Herbst und sorgen dafür, dass Ihre Außenanlagen in Tennenlohe oder Bruck das ganze Jahr über einen repräsentativen Eindruck hinterlassen.",
+        "content_p3": "Als innovativer Meisterbetrieb passen wir perfekt zur Innovationsstadt Erlangen. Alle Kontrollgänge, Zählerstandsablesungen und durchgeführten Kleinreparaturen werden bei uns digital erfasst. So haben Sie als Eigentümer oder Verwalter jederzeit absolute Transparenz. Durch regelmäßige Inspektionen der Bausubstanz und Technik verhindern wir zudem teure Folgeschäden und garantieren die Einhaltung der kommunalen Räum- und Streupflichten.",
+        "features": ["Grünanlagenpflege", "Digitale Dokumentation", "Präventive Wartung", "Umweltschonender Winterdienst"],
+        "cta_title": "Vereinbaren Sie jetzt ein Beratungsgespräch für Ihren Hausmeisterservice in Erlangen!"
+      }
+    },
+    "nuernberg": {
+      "unterhaltsreinigung": {
+        "hero_title": "Unterhaltsreinigung Nürnberg: Meisterhafte Pflege für Ihr Business",
+        "hero_desc": "Büroreinigung in Nürnberg mit System: Ob Gostenhof, Langwasser oder Nordstadt – wir sorgen für repräsentative Sauberkeit und Werterhalt in Ihren Geschäftsräumen.",
+        "content_p1": "In einer wirtschaftlich dynamischen Metropole wie Nürnberg ist der erste Eindruck oft entscheidend. Ob es sich um kreative Agenturen im aufstrebenden Gostenhof, etablierte Industrie- und Logistikzentren in Langwasser oder um renommierte Kanzleien und Praxen in der Nordstadt und Südstadt handelt – gepflegte Räumlichkeiten sind die Visitenkarte Ihres Unternehmens. AZ-Europa Service bietet Ihnen eine professionelle Unterhaltsreinigung, die exakt auf die Rhythmen und Bedürfnisse Ihres Nürnberger Betriebs abgestimmt ist.",
+        "content_p2": "Unterhaltsreinigung bedeutet die regelmäßige, systematische Pflege Ihrer Büros, Sanitäranlagen und Gemeinschaftsräume. Es geht nicht nur darum, dass die Schreibtische staubfrei sind. Es geht um den nachhaltigen Werterhalt Ihres Inventars, die Schaffung einer hygienischen Arbeitsumgebung und die Reduzierung des Krankenstands Ihrer Mitarbeiter. In Nürnberg signalisieren Sie mit einem tadellosen Arbeitsplatz echte Wertschätzung gegenüber Ihrem Team.",
+        "content_p3": "Warum sollten Sie die Reinigung Ihrer wertvollen Immobilien einem zertifizierten Meisterbetrieb anvertrauen? Die Antwort ist Sicherheit und Konstanz. Bei AZ-Europa Service arbeiten wir mit festangestelltem, intensiv geschultem Fachpersonal, das die spezifischen Anforderungen unterschiedlicher Oberflächen kennt – vom antistatischen Teppichboden in Serverräumen bis zum empfindlichen Naturstein im Empfangsbereich. Als Meisterbetrieb garantieren wir nicht nur die Einhaltung strengster Hygiene- und Arbeitsschutzrichtlinien."
+      },
+      "baureinigung": {
+        "hero_title": "Baureinigung Nürnberg: Termingerechte Sauberkeit für Ihr Bauprojekt",
+        "hero_desc": "Nürnberg im Wandel: Ob Langwasser, Gostenhof oder Südstadt – AZ-Europa Service ist Ihr Partner für effiziente Baugrob- und Baufeinreinigung bei Großprojekten.",
+        "content_p1": "Nürnberg ist eine Stadt im stetigen Wandel. Ob gewerbliche Neubauten in den Industriezonen von Langwasser, moderne Wohnkomplexe im aufstrebenden Gostenhof oder umfassende Sanierungsprojekte in der historischen Südstadt – wo gebaut wird, fallen Schutt, Staub und hartnäckige Verschmutzungen an. AZ-Europa Service ist Ihr verlässlicher Partner für die professionelle Baureinigung, damit Ihr Bauprojekt in Nürnberg termingerecht und in makellosem Zustand an die Eigentümer oder Mieter übergeben werden kann.",
+        "content_p2": "Der reibungslose Übergang vom Bau zur Nutzung: Bauverzögerungen kosten Geld. Deshalb muss die Reinigungsphase nach Abschluss der Gewerke absolut präzise und zeitkritisch geplant werden. Wir unterscheiden zwischen der Baugrobreinigung (während der Bauphase zur Unfallvermeidung) und der Baufeinreinigung (Bauendreinigung). Bei der Baufeinreinigung entfernen wir feinsten Bohrstaub, Zementschleier, Farb- und Klebereste sowie Schutzfolien. Das Ziel: Ein bezugsfertiges Objekt, das den höchsten Qualitätsansprüchen gerecht wird.",
+        "content_p3": "Die Reinigung von Neubauten erfordert spezielle Kenntnisse über moderne Baumaterialien, um Kratzer oder chemische Beschädigungen auf brandneuen Oberflächen zu vermeiden. Als Meisterbetrieb wissen wir genau, wie frischer Naturstein, kratzempfindliche Verglasungen oder frisch verlegtes Parkett gereinigt werden müssen, ohne die Garantie der Hersteller zu gefährden. Wir arbeiten flexibel und passen uns dem dynamischen Bauzeitenplan an.",
+        "features": ["Baugrob- & Feinreinigung", "Materialschonende Verfahren", "Termingerechte Übergabe", "Entsorgungs-Service"],
+        "cta_title": "Fordern Sie jetzt Ihr Angebot für die Baureinigung in Nürnberg an!"
+      },
+      "praxisreinigung": {
+        "hero_title": "Praxisreinigung Nürnberg: Höchste Hygienestandards für Arztpraxen & Kliniken",
+        "hero_desc": "Kompromisslose Hygiene für die Metropolregion: Wir bieten zertifizierte Praxisreinigung nach RKI-Richtlinien für Fachärzte und Kliniken in der Nordstadt, Südstadt und am Plärrer.",
+        "content_p1": "In medizinischen Einrichtungen ist Sauberkeit keine Ermessensfrage, sondern eine absolute Notwendigkeit. Für niedergelassene Ärzte, Zahnärzte und Physiotherapeuten in den dicht besiedelten Vierteln der Nordstadt, den medizinischen Versorgungszentren der Südstadt oder den Facharztpraxen am Plärrer ist eine einwandfreie Hygiene entscheidend für den Patientenschutz und das Vertrauen in die Praxis. AZ-Europa Service bietet Ihnen in Nürnberg eine spezialisierte Praxisreinigung, die den strengen Vorgaben des Infektionsschutzes gerecht wird.",
+        "content_p2": "Eine Arztpraxis ist täglich Keimen, Bakterien und Viren ausgesetzt. Eine herkömmliche Büroreinigung reicht hier nicht aus. Behandlungsräume, Wartebereiche, Sanitäranlagen und hochfrequentierte Kontaktflächen (wie Türklinken, Empfangstresen und EC-Terminals) erfordern eine fachgerechte und nachweisbare Desinfektionsreinigung. Wir durchbrechen potenzielle Infektionsketten und sorgen für ein keimfreies Umfeld, in dem sich Ihre Patienten sicher und Ihr Personal wohlfühlt.",
+        "content_p3": "Die Reinigung von medizinischen Einrichtungen erfordert spezialisiertes Fachwissen und absolutes Vertrauen. Unsere Reinigungsprozesse basieren auf den strengen Richtlinien des Robert Koch-Instituts (RKI) und den Vorgaben des Infektionsschutzgesetzes (IfSG). Wir setzen ausschließlich festangestelltes Personal ein, das speziell in der Anwendung von gelisteten Flächendesinfektionsmitteln (VAH/DGHM) und dem korrekten Farbcodierungssystem geschult ist.",
+        "features": ["RKI-Konformität", "Desinfektionsreinigung", "Farbcodierungssystem", "VAH/DGHM Desinfektion"],
+        "cta_title": "Fordern Sie jetzt Ihr Angebot für die Praxisreinigung in Nürnberg an!"
+      },
+      "glasreinigung": {
+        "hero_title": "Glasreinigung Nürnberg - Glanz für die Frankenmetropole",
+        "hero_desc": "Streifenfreie Fensterreinigung für Büros, Shops und Wohngebäude in ganz Nürnberg. Wir bringen Licht und Sauberkeit in Ihre Räume.",
+        "content_p1": "Ob Glasfassaden an der Messe oder Fenster in Gostenhof: Unsere Glasreinigung in Nürnberg steht für Präzision und Zuverlässigkeit. Wir reinigen auch schwer zugängliche Flächen professionell."
+      },
+      "hausmeisterservice": {
+        "hero_title": "Hausmeisterservice Nürnberg: Professionelle Objektbetreuung & Winterdienst",
+        "hero_desc": "Ihr Werterhalt in besten Händen: Wir bieten kompletten Hausmeisterservice für Wohnanlagen und Bürokomplexe in Langwasser, Gostenhof und ganz Nürnberg.",
+        "content_p1": "Die Instandhaltung von Immobilien in einer Großstadt wie Nürnberg erfordert ständige Präsenz und technisches Know-how. Ob es sich um weitläufige Wohnanlagen in Langwasser, moderne Bürokomplexe am Schoppershof oder Altbauten in Gostenhof handelt – ein Gebäude lebt und benötigt kontinuierliche Pflege. Mit dem Hausmeisterservice von AZ-Europa Service legen Sie den Werterhalt Ihrer Nürnberger Immobilien in die Hände eines zertifizierten Meisterbetriebs.",
+        "content_p2": "Ein professioneller Hausmeister ist das Auge und Ohr Ihrer Immobilie. Unser Service umfasst die regelmäßige Überwachung der Haustechnik, das Auswechseln von Leuchtmitteln, kleinere Reparaturen sowie die Pflege der Gemeinschaftsflächen. Besonders wichtig in Nürnberg: Unser verlässlicher Winterdienst. Wir befreien Gehwege, Zufahrten und Parkplätze pünktlich von Schnee und Eis und bewahren Sie als Eigentümer vor gesetzlichen Haftungsrisiken.",
+        "content_p3": "Hausverwaltungen und Eigentümergemeinschaften in Nürnberg profitieren von unserer strukturierten Arbeitsweise. Unsere geschulten Hausmeister überwachen Ihre komplexen Anlagen fachgerecht und koordinieren bei Bedarf externe Handwerker. Bei Rohrbrüchen, Stromausfällen oder Sturmschäden sind wir zudem für Ihre Mieter über unsere 24/7 Notfallbereitschaft jederzeit erreichbar und schnell vor Ort.",
+        "features": ["Technisches Verständnis", "24/7 Notfallbereitschaft", "Verlässlicher Winterdienst", "Strukturierte Arbeitsweise"],
+        "cta_title": "Fordern Sie jetzt Ihr Angebot für den Hausmeisterservice in Nürnberg an!"
+      },
+      "treppenhausreinigung": {
+        "hero_title": "Nürnberg: Zuverlässige Treppenhausreinigung für Wohnanlagen",
+        "hero_desc": "Ob in Langwasser, Gostenhof oder der Nordstadt – AZ-Europa Service sorgt im gesamten Nürnberger Stadtgebiet für einen einladenden ersten Eindruck Ihrer Immobilie.",
+        "content_p1": "Unsere spezialisierte Turnusreinigung in Nürnberg nimmt Hausverwaltungen und Eigentümern die komplette Belastung ab. Mit festen Reinigungsintervallen und geschultem Stammpersonal garantieren wir eine konstante Meisterqualität, die Bewohner und Gäste gleichermaßen überzeugt."
+      }
+    },
+    "bamberg": {
+      "unterhaltsreinigung": {
+        "hero_title": "Unterhaltsreinigung Bamberg: Werterhalt zwischen Tradition & Moderne",
+        "hero_desc": "Exzellente Büroreinigung in der Welterbestadt Bamberg. Wir pflegen Ihre Immobilien in der Altstadt, Gaustadt und im Hafen mit Meisterqualität und Feingefühl.",
+        "content_p1": "Bamberg fasziniert durch seinen einzigartigen Mix aus historischem Weltkulturerbe und moderner Wirtschaftsdynamik. Ob Ihre Geschäftsräume in altehrwürdigen Gebäuden der Inselstadt, im repräsentativen Berggebiet, in den aufstrebenden Gewerbeflächen von Gaustadt oder in der Gartenstadt liegen – AZ-Europa Service ist Ihr regionaler Partner für eine anspruchsvolle und werterhaltende Unterhaltsreinigung.",
+        "content_p2": "Die Unterhaltsreinigung in Bamberg erfordert oft ein besonderes Maß an Feingefühl. Wer Büros in historischen Bauten unterhält, weiß: Altes Parkett, historische Fliesen oder Stuckelemente verzeihen keine falsche Behandlung mit aggressiven Chemikalien. Genau hier setzt unsere Expertise an. Wir kombinieren traditionelles handwerkliches Können mit modernsten Reinigungstechnologien.",
+        "content_p3": "Transparenz, Diskretion und Zuverlässigkeit sind die Grundpfeiler unserer Arbeit. Wenn Sie AZ-Europa Service in Bamberg beauftragen, profitieren Sie von den strengen Qualitätsstandards eines echten Meisterbetriebs. Wir stellen Ihnen feste Reinigungsteams zur Seite, sodass Sie immer wissen, wer sich in Ihren Räumlichkeiten aufhält. Dies schafft Vertrauen und Sicherheit."
+      },
+      "baureinigung": {
+        "hero_title": "Baureinigung Bamberg: Behutsame Pflege für Altbau & Welterbe",
+        "hero_desc": "Meisterhaftes Handwerk für die Domstadt: Wir bieten spezialisierte Baufeinreinigung für historische Sanierungen in der Inselstadt und Neubauten in Gaustadt.",
+        "content_p1": "Bamberg, mit seinem Status als UNESCO-Weltkulturerbe, stellt Bauherren und Architekten vor besondere Herausforderungen. Die Sanierung historischer Gebäude in der Inselstadt oder im Berggebiet erfordert ebenso viel Fingerspitzengefühl wie der Bau moderner Gewerbeeinheiten in Gaustadt. AZ-Europa Service verbindet meisterhaftes Reinigungshandwerk mit dem nötigen Respekt vor der Bamberger Architektur.",
+        "content_p2": "Werterhalt durch schonende Baufeinreinigung: Nach einer intensiven Sanierungsphase in einem Altbau muss die Reinigung extrem behutsam erfolgen. Alter Stuck, aufgearbeitete Dielenböden oder historische Bleiglasfenster dürfen unter keinen Umständen durch aggressive Baureiniger oder harte Schwämme beschädigt werden. Wir entwickeln für jedes Bauprojekt in Bamberg ein individuelles, materialschonendes Reinigungskonzept, das den historischen Charme bewahrt.",
+        "content_p3": "Als Meisterbetrieb aus der Region verstehen wir die Bedeutung des Werterhalts. Wir nutzen pH-neutrale, ökologisch zertifizierte Reinigungsmittel, die Schmutz effektiv lösen, aber die Substanz schonen. Ob es um die Entfernung von Zementschleier auf altem Naturstein oder die Pflege von modernen Glasfronten geht – wir sorgen dafür, dass Ihr Projekt im Weltkulturerbe Bamberg im besten Licht erscheint.",
+        "features": ["Denkmalpflege-Expertise", "Materialschonende Reinigung", "Ökologische Reinigungsmittel", "Präzision & Werterhalt"],
+        "cta_title": "Fordern Sie jetzt Ihr Angebot für die Baureinigung in Bamberg an!"
+      },
+      "glasreinigung": {
+        "hero_title": "Glasreinigung Bamberg - Streifenfreier Durchblick",
+        "hero_desc": "Klare Sicht auf das Welterbe: Unsere Glasreinigung in Bamberg sorgt für glänzende Fensterfronten und saubere Schaufenster, egal ob in der Altstadt oder im Gewerbegebiet.",
+        "content_p1": "Wir reinigen Fenster, Glasfassaden und Wintergärten in ganz Bamberg. Mit modernster Technik und umweltfreundlichen Mitteln garantieren wir ein Ergebnis ohne Schlieren."
+      },
+      "praxisreinigung": {
+        "hero_title": "Praxisreinigung Bamberg: Vertrauensvolle Sauberkeit für Ihre Praxisräume",
+        "hero_desc": "Tiefenreine Atmosphäre für Ihre Patienten: Wir bieten spezialisierte Hygiene-Lösungen für Praxen in der Bamberger Altstadt, im Berggebiet und in Gaustadt.",
+        "content_p1": "Ein Arztbesuch beginnt lange vor der Behandlung – im Wartezimmer. Für Praxen im historischen Ambiente der Bamberger Inselstadt, im Berggebiet oder in den modernen Gesundheitszentren in der Gartenstadt gilt: Die optische und hygienische Sauberkeit prägt das Vertrauen der Patienten maßgeblich. AZ-Europa Service sorgt dafür, dass Ihre Praxis in Bamberg jeden Tag durch eine beruhigende, tiefenreine Atmosphäre überzeugt.",
+        "content_p2": "Besonders in historischen Gebäuden Bambergs ist die Praxisreinigung eine Kunst für sich. Altes Parkett im Wartezimmer oder stilvolle Empfangsbereiche müssen optisch ansprechend gepflegt werden, während in den Behandlungsräumen kompromisslose klinische Reinheit herrschen muss. Wir vereinen diese beiden Anforderungen durch unsere systematische Desinfektionsreinigung und materialschonende Pflege.",
+        "content_p3": "Vertrauen ist die Währung im Gesundheitswesen. Das gilt auch für die Wahl Ihres Facility-Partners. Als Meisterbetrieb kümmern wir uns um die fachgerechte und sichere Handhabung von medizinischem Abfall gemäß den gesetzlichen Vorgaben. Wir minimieren das Risiko von Kreuzkontaminationen und schaffen gleichzeitig ein Ambiente, das Ihren Patienten die Anspannung vor der Behandlung nimmt.",
+        "features": ["Klinische Reinheit", "Sicheres Abfallmanagement", "Werterhalt historischer Bauten", "Minimierung von Kreuzkontamination"],
+        "cta_title": "Buchen Sie jetzt meisterhafte Praxisreinigung in Bamberg!"
+      },
+      "treppenhausreinigung": {
+        "hero_title": "Bamberg: Werterhaltende Pflege für historische und moderne Gebäude",
+        "hero_desc": "Ob im Berggebiet, der Inselstadt oder Gaustadt – die Architektur Bambergs verlangt nach einem Partner, der Historie und Moderne gleichermaßen versteht.",
+        "content_p1": "Die Treppenhausreinigung in Bamberg erfordert fachmännische Pflege, um den Charakter sensibler Materialien zu bewahren. Wir fokussieren uns auf nachhaltigen Werterhalt und materialschonende Systeme für ein makelloses Ergebnis."
+      },
+      "hausmeisterservice": {
+        "hero_title": "Hausmeisterservice Bamberg: Respektvolle Objektpflege für Altbau & Moderne",
+        "hero_desc": "Erfahrung trifft Denkmalschutz: Wir bieten spezialisierte Objektbetreuung für Immobilien in der Bamberger Altstadt, im Berggebiet und Gaustadt.",
+        "content_p1": "Bamberg verzaubert durch seine historische Bausubstanz. Wer Immobilien in der Inselstadt, im malerischen Berggebiet oder in den neueren Quartieren von Gaustadt verwaltet, trägt eine besondere Verantwortung. Der Hausmeisterservice von AZ-Europa Service in Bamberg verbindet handwerkliches Geschick mit dem nötigen Respekt vor der Bamberger Architektur und dem UNESCO-Weltkulturerbe.",
+        "content_p2": "In Bamberg betreuen wir sowohl denkmalgeschützte Altbauten als auch moderne Wohnkomplexe. Historische Gebäude benötigen eine aufmerksamere Betreuung: Alte Holzfenster, historische Türen oder spezielle Heizsysteme erfordern regelmäßige Kontrollen. Wir übernehmen die Überwachung der Hausordnung, koordinieren Handwerkstermine und sorgen dafür, dass Gehwege und Innenhöfe in der Altstadt stets sicher begehbar sind.",
+        "content_p3": "Die Betreuung von Immobilien erfordert enormes Vertrauen. Als Meisterbetrieb rechtfertigen wir dieses Vertrauen täglich durch Pünktlichkeit, Gründlichkeit und absolute Zuverlässigkeit. Unser Team in Bamberg ist fest in der Region verwurzelt und kennt die lokalen Anforderungen genau. Von der Mülltonnenbereitstellung bis zum Notfallmanagement bei technischen Störungen sind wir Ihr Partner vor Ort.",
+        "features": ["Denkmalschutz-Expertise", "Abfallmanagement", "Handwerkliches Geschick", "Regelmäßige Objektkontrolle"],
+        "cta_title": "Sichern Sie den Wert Ihrer Bamberger Immobilien mit unserem Service!"
+      }
+    }
   }
 }

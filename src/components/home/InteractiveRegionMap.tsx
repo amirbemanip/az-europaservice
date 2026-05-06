@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowUpRight, Navigation, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cities } from '@/data/db';
 
 export function InteractiveRegionMap({ locale, dict }: { locale: string; dict: any }) {
@@ -75,7 +76,19 @@ export function InteractiveRegionMap({ locale, dict }: { locale: string; dict: a
                   transition={{ delay: i * 0.15, type: "spring", stiffness: 100 }}
                 >
                   <Link href={getLocalizedHref(`/${city.slug}`)} className="block group">
-                    <div className="bg-[#111827]/80 p-8 rounded-3xl h-full flex flex-col relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(254,208,27,0.1)] border border-white/5 hover:border-[#fed01b]/30">
+                    <div className="bg-[#111827]/80 p-8 rounded-3xl h-full flex flex-col relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(254,208,27,0.1)] border border-white/5 hover:border-[#fed01b]/30 group">
+                      {/* Map Background Overlay */}
+                      <div className="absolute inset-0 opacity-[0.1] group-hover:opacity-[0.2] transition-opacity duration-500 pointer-events-none">
+                        <Image 
+                          src={`/photos/map_${city.id}.jpg`} 
+                          alt=""
+                          fill
+                          className="object-cover mix-blend-luminosity grayscale"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#111827] via-transparent to-[#111827]/90" />
+                      </div>
+                      
+                      <div className="relative z-10 flex flex-col h-full w-full">
                       
                       {/* Animated Ping Marker */}
                       <div className={`absolute top-8 ${isRTL ? 'left-8' : 'right-8'}`}>
@@ -104,7 +117,8 @@ export function InteractiveRegionMap({ locale, dict }: { locale: string; dict: a
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </div>
+                </Link>
                 </motion.div>
               ))}
             </div>

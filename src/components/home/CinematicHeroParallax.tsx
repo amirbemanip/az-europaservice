@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Shield, Clock, MapPin, CheckCircle2 } from 'lucide-react';
+import { Shield, Clock, MapPin, CheckCircle2, ChevronRight, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,23 +16,22 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
   const isRTL = locale === 'fa' || locale === 'ar';
 
   // Parallax effects
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   const trustItems = [
     { icon: Shield, text: dict.hero.trust.tuv },
     { icon: Clock, text: dict.hero.trust.fast },
-    { icon: CheckCircle2, text: dict.hero.trust.custom },
     { icon: MapPin, text: dict.hero.trust.local }
   ];
 
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
+      className="relative min-h-[100vh] md:min-h-[110vh] flex flex-col items-center justify-center overflow-hidden bg-[#050505]"
     >
-      {/* Parallax Background */}
+      {/* ── BACKGROUND LAYER (CINEMATIC) ── */}
       <motion.div 
         style={{ y: yBg }}
         className="absolute inset-0 z-0 w-full h-[120%]"
@@ -43,96 +42,123 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           fill 
           priority
           quality={75}
-          className="object-cover opacity-40 object-center"
+          className="object-cover opacity-20 object-center mix-blend-luminosity"
           sizes="100vw"
         />
-        {/* Complex Gradient Overlays for Cinematic Depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a]/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#0a0a0a_100%)]" />
+        {/* Subtle grid pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+        
+        {/* Deep shadows and gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505]" />
+        
+        {/* Ambient Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#fed01b]/5 rounded-full blur-[150px] pointer-events-none" />
       </motion.div>
 
-      {/* Floating Glowing Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#fed01b]/10 rounded-full blur-[100px] pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#fed01b]/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
-
-      {/* Main Content */}
+      {/* ── CONTENT LAYER ── */}
       <motion.div 
         style={{ opacity: opacityText, y: yText }}
-        className="container mx-auto px-6 relative z-10 pt-20"
+        className="container mx-auto px-6 relative z-10 pt-32 pb-20 flex flex-col items-center text-center"
       >
-        <div className={`max-w-5xl mx-auto text-center space-y-10 ${isRTL ? 'rtl' : 'ltr'}`}>
+        <div className={`max-w-[1000px] w-full flex flex-col items-center ${isRTL ? 'rtl' : 'ltr'}`}>
           
-          {/* Micro-Interaction Badge */}
+          {/* Top Badge (Liquid Glass) */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_0_20px_rgba(255,255,255,0.05)] ${isRTL ? 'flex-row-reverse' : ''}`}
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-[#121212]/60 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8 ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fed01b] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#fed01b]"></span>
+            <div className="flex gap-0.5">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <Star key={star} className="w-3.5 h-3.5 fill-[#fed01b] text-[#fed01b]" />
+              ))}
             </div>
-            <span className="text-white text-sm font-semibold tracking-widest uppercase">
+            <span className="w-px h-3 bg-white/20" />
+            <span className="text-[#a1a1aa] text-[11px] font-bold tracking-[0.15em] uppercase">
               {dict.hero.badge}
             </span>
           </motion.div>
 
           {/* Epic Typography */}
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-6xl md:text-8xl lg:text-[100px] font-extrabold leading-[1.05] tracking-tight text-white"
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl md:text-7xl lg:text-[90px] font-black leading-[1.05] tracking-tight text-white mb-8"
           >
             {dict.hero.title} <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fed01b] to-yellow-600 text-glow inline-block mt-2">
-              {dict.hero.subtitle}
+            <span className="relative inline-block mt-2">
+              <span className="absolute inset-0 bg-gradient-to-r from-white via-[#fed01b] to-[#fed01b] blur-2xl opacity-20" />
+              <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-white via-[#fed01b] to-[#f59e0b]">
+                {dict.hero.subtitle}
+              </span>
             </span>
           </motion.h1>
 
-          {/* Original Site SEO Text - Enhanced */}
+          {/* Description */}
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light"
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg md:text-2xl text-[#a1a1aa] max-w-3xl mx-auto leading-[1.6] font-medium"
           >
             {dict.hero.desc}
           </motion.p>
 
-          {/* High-End Trust Indicators */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+          {/* Buttons & CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className={`flex flex-wrap items-center justify-center gap-6 pt-6 ${isRTL ? 'flex-row-reverse' : ''}`}
+            transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 w-full ${isRTL ? 'sm:flex-row-reverse' : ''}`}
+          >
+            <Link 
+              href={getLocalizedHref('/kontakt')} 
+              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#fed01b] text-[#0a0a0a] rounded-full font-black text-[13px] tracking-[0.1em] uppercase overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(254,208,27,0.2)] hover:shadow-[0_0_60px_rgba(254,208,27,0.4)] ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+              {dict.hero.cta_primary}
+              <ChevronRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+            </Link>
+
+            <Link 
+              href={getLocalizedHref('/leistungen')} 
+              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-[13px] tracking-[0.1em] uppercase backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              {dict.hero.cta_secondary}
+              <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                <ChevronRight className={`w-3 h-3 ${isRTL ? 'rotate-180' : ''}`} />
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Minimal Trust Indicators */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 1 }}
+            className={`flex flex-wrap items-center justify-center gap-8 mt-16 pt-8 border-t border-white/5 w-full max-w-4xl ${isRTL ? 'flex-row-reverse' : ''}`}
           >
             {trustItems.map((item, idx) => (
-              <div key={idx} className={`flex items-center gap-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-xl border border-white/5 hover:border-[#fed01b]/30 hover:bg-white/10 transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <item.icon className="w-5 h-5 text-[#fed01b]" />
-                <span className="text-sm font-medium text-slate-200">{item.text}</span>
+              <div key={idx} className={`flex items-center gap-3 text-[#71717a] ${isRTL ? 'flex-row-reverse' : ''}`}>
+                <item.icon className="w-4 h-4 text-[#fed01b]/70" />
+                <span className="text-[13px] font-bold uppercase tracking-wider">{item.text}</span>
               </div>
             ))}
           </motion.div>
 
-          {/* Primary CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="pt-8"
-          >
-            <Link href={locale === 'de' ? '/kontakt' : `/${locale}/kontakt`} className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#fed01b] text-[#0a0a0a] rounded-2xl font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(254,208,27,0.3)]">
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-              {dict.hero.cta_primary}
-              <span className={`group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`}>→</span>
-            </Link>
-          </motion.div>
-
         </div>
       </motion.div>
+
+      {/* ── BOTTOM FADE OUT ── */}
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white to-transparent z-10" />
     </section>
   );
+
+  function getLocalizedHref(path: string) {
+    if (locale === 'de') return path;
+    return `/${locale}${path === '/' ? '' : path}`;
+  }
 }

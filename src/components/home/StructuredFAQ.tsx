@@ -10,8 +10,26 @@ export function StructuredFAQ({ locale, dict }: { locale: string; dict: any }) {
 
   const localizedFaqs = dict.faq.items || [];
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": localizedFaqs.map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <section className={`py-32 relative bg-[#0a0a0a] z-20 ${isRTL ? 'text-right' : 'text-left'}`}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      <section className={`py-32 relative bg-[#0a0a0a] z-20 ${isRTL ? 'text-right' : 'text-left'}`}>
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-0 w-1/2 h-1/2 bg-white/5 blur-[120px] pointer-events-none" />
       
@@ -82,5 +100,6 @@ export function StructuredFAQ({ locale, dict }: { locale: string; dict: any }) {
         </div>
       </div>
     </section>
+    </>
   );
 }

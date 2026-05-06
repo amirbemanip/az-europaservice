@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Hammer, Trash2, Leaf, Home, ShieldCheck } from 'lucide-react';
-import { services } from '@/data/db';
+import { Sparkles, Hammer, Trash2, Leaf, Home, ShieldCheck, Zap } from 'lucide-react';
+import Link from 'next/link';
+import { macroServices } from '@/data/db';
 
 const icons = [Sparkles, Home, Hammer, Trash2, Leaf, ShieldCheck];
 
@@ -33,16 +34,16 @@ export function AdvancedBentoGrid() {
 
         {/* The Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
-          {services.map((service, index) => {
-            const Icon = icons[index % icons.length];
+          {macroServices.slice(0, 6).map((macro, index) => {
+            const Icon = icons[index % icons.length] || Zap;
             // Determine bento sizing rules to create an asymmetric, modern look
             let spanClass = "md:col-span-1 md:row-span-1";
-            if (index === 0) spanClass = "md:col-span-2 md:row-span-2"; // Featured 1 (Reinigung)
+            if (index === 0) spanClass = "md:col-span-2 md:row-span-2"; // Featured 1
             else if (index === 1) spanClass = "md:col-span-2 md:row-span-1"; // Featured 2
             
             return (
               <motion.div 
-                key={service.id}
+                key={macro.id}
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -59,17 +60,17 @@ export function AdvancedBentoGrid() {
                       <Icon className="w-7 h-7 text-brand-yellow group-hover:text-brand-black transition-colors" />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                      {service.title}
+                      {macro.title}
                     </h3>
                   </div>
                   
                   <div className="transform transition-transform duration-500 group-hover:-translate-y-2">
                     <p className={`text-slate-400 font-light ${index === 0 ? 'text-lg line-clamp-4' : 'text-sm line-clamp-2'}`}>
-                      {service.description}
+                      {macro.description}
                     </p>
-                    <div className="mt-6 flex items-center text-brand-yellow text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Link href={`/de/leistungen/${macro.slug}`} className="mt-6 flex items-center text-brand-yellow text-sm font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       Mehr erfahren <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 

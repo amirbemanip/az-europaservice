@@ -24,6 +24,8 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
   };
 
   const isRTL = locale === 'fa' || locale === 'ar';
+  const footer = dict?.footer ?? {};
+  const nav = dict?.nav ?? {};
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,8 +67,8 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
               <Phone className="w-4 h-4 text-[#fed01b]" />
             </div>
             <div>
-              <p className="text-[13px] font-bold text-[#0a0a0a]">{dict.footer.direct_contact}</p>
-              <p className="text-[12px] text-[#0a0a0a]/60">{dict.footer.contact_hours}</p>
+              <p className="text-[13px] font-bold text-[#0a0a0a]">{footer.direct_contact || 'Get in touch directly'}</p>
+              <p className="text-[12px] text-[#0a0a0a]/60">{footer.contact_hours || 'Mon-Sat 07:00 - 20:00'}</p>
             </div>
           </div>
           <div className={`flex items-center gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -75,7 +77,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
               09131 6146235
             </a>
             <Link href={getLocalizedHref('/kontakt')} className="flex items-center gap-2 px-6 py-3 bg-white/90 text-[#0a0a0a] text-[11px] font-bold tracking-[0.08em] uppercase rounded-[4px] hover:bg-white transition-colors border border-[#0a0a0a]/10">
-              {dict.footer.online_request}
+              {footer.online_request || 'Online request'}
               <ArrowRight className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
             </Link>
           </div>
@@ -93,24 +95,24 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             {/* Brand */}
             <div className="max-w-sm">
               <div className={`flex items-center gap-3 mb-5 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <div className="relative h-10 w-12">
-                  <Image src="/logo.png" alt="AZ-Europa Service GmbH" fill sizes="48px" className="object-contain object-left" />
+                <div className="relative h-20 w-32">
+                  <Image src="/logo_new2.png" alt="AZ-Europa Service GmbH" fill sizes="128px" className="object-contain object-left" />
                 </div>
                 <div className={`flex flex-col ${isRTL ? 'items-end' : 'items-start'}`}>
                   <span className="text-[16px] font-black tracking-[-0.02em] text-white leading-none">AZ-EUROPA</span>
-                  <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-[#565e74] leading-none mt-[3px]">{dict.footer.brand_tagline}</span>
+                  <span className="text-[9px] font-semibold tracking-[0.2em] uppercase text-[#565e74] leading-none mt-[3px]">{footer.brand_tagline || 'Building Services'}</span>
                 </div>
               </div>
               <p className="text-[14px] text-[#565e74] leading-relaxed mb-6">
-                {dict.footer.brand_desc}
+                {footer.brand_desc || 'Professional cleaning and facility services in Franconia.'}
               </p>
 
               {/* Trust Badges */}
               <div className={`flex flex-wrap gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 {[
-                  { icon: ShieldCheck, label: dict.footer.cert_tuv },
-                  { icon: Award, label: dict.footer.cert_master },
-                  { icon: CheckCircle, label: dict.footer.cert_iso },
+                  { icon: ShieldCheck, label: footer.cert_tuv || 'TUV' },
+                  { icon: Award, label: footer.cert_master || 'Master Company' },
+                  { icon: CheckCircle, label: footer.cert_iso || 'ISO Standards' },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className={`flex items-center gap-1.5 px-3 py-1.5 bg-white/[0.03] border border-white/[0.06] rounded-[4px] ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <Icon className="w-3 h-3 text-[#fed01b]" />
@@ -123,16 +125,16 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             {/* Newsletter */}
             <div className={`w-full lg:w-auto lg:min-w-[400px] ${isRTL ? 'text-right' : ''}`}>
               <h4 className="text-[13px] font-bold text-white mb-1.5">
-                {dict.footer.newsletter_title}
+                {footer.newsletter_title || 'Newsletter'}
               </h4>
               <p className="text-[12px] text-[#565e74] mb-4">
-                {dict.footer.newsletter_desc}
+                {footer.newsletter_desc || 'Get practical tips and updates by email.'}
               </p>
               {subscribed ? (
                 <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} className={`flex items-center gap-2 px-4 py-3 bg-green-500/10 border border-green-500/20 rounded-[4px] ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <CheckCircle className="w-4 h-4 text-green-400" />
                   <span className="text-[13px] font-semibold text-green-400">
-                    {dict.footer.newsletter_success}
+                    {footer.newsletter_success || 'Thanks for subscribing.'}
                   </span>
                 </motion.div>
               ) : (
@@ -141,21 +143,21 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
                     type="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    placeholder={dict.footer.email_placeholder}
+                    placeholder={footer.email_placeholder || 'Email address'}
                     required
-                    aria-label={dict.footer.email_placeholder}
+                    aria-label={footer.email_placeholder || 'Email address'}
                     className="flex-1 px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-[4px] text-[13px] text-white placeholder:text-[#565e74] focus:outline-none focus:border-[#fed01b]/50 focus:bg-white/[0.06] transition-all"
                   />
                   <div className="flex gap-2 items-center">
                     <button
                       type="submit"
                       disabled={newsletterState === 'loading'}
-                      aria-label={dict.footer.subscribe}
+                      aria-label={footer.subscribe || 'Subscribe'}
                       className="px-5 py-3 bg-[#fed01b] text-[#0a0a0a] rounded-[4px] hover:bg-[#eec200] transition-colors flex items-center gap-1.5 disabled:opacity-60"
                     >
                       <Send className={`w-3.5 h-3.5 ${isRTL ? 'rotate-180' : ''}`} />
                       <span className="text-[11px] font-bold tracking-[0.06em] uppercase hidden sm:inline">
-                        {newsletterState === 'loading' ? dict.footer.subscribing || 'Bitte warten...' : dict.footer.subscribe}
+                        {newsletterState === 'loading' ? footer.subscribing || 'Please wait...' : footer.subscribe || 'Subscribe'}
                       </span>
                     </button>
                     {newsletterState === 'error' && (
@@ -165,7 +167,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
                 </form>
               )}
               <p className="text-[10px] text-[#565e74]/70 mt-2.5">
-                {dict.footer.spam_note}
+                {footer.spam_note || 'No spam. Unsubscribe any time.'}
               </p>
             </div>
           </div>
@@ -176,7 +178,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             <div>
               <h5 className={`text-[10px] font-bold tracking-[0.2em] uppercase text-[#7c839b] mb-5 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="w-4 h-px bg-[#fed01b]/40" />
-                {dict.nav.services}
+                {nav.services || 'Services'}
               </h5>
               <div className="flex flex-col gap-2.5">
                 {services.map(s => (
@@ -192,7 +194,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             <div>
               <h5 className={`text-[10px] font-bold tracking-[0.2em] uppercase text-[#7c839b] mb-5 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="w-4 h-px bg-[#fed01b]/40" />
-                {dict.nav.locations}
+                {nav.locations || 'Locations'}
               </h5>
               <div className="flex flex-col gap-2.5">
                 {cities.map(c => (
@@ -208,13 +210,13 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             <div>
               <h5 className={`text-[10px] font-bold tracking-[0.2em] uppercase text-[#7c839b] mb-5 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="w-4 h-px bg-[#fed01b]/40" />
-                {dict.footer.company}
+                {footer.company || 'Company'}
               </h5>
               <div className="flex flex-col gap-2.5">
                 {[
-                  { label: dict.nav.about, href: '/ueber-uns' },
-                  { label: dict.footer.career, href: '/karriere' },
-                  { label: dict.nav.contact, href: '/kontakt' },
+                  { label: nav.about || 'About', href: '/ueber-uns' },
+                  { label: footer.career || 'Careers', href: '/karriere' },
+                  { label: nav.contact || 'Contact', href: '/kontakt' },
                   { label: 'Blog', href: '/blog' },
                 ].map(link => (
                   <Link key={link.href} href={getLocalizedHref(link.href)} className="text-[13px] text-[#565e74] hover:text-white transition-colors duration-200 font-medium">
@@ -228,7 +230,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             <div>
               <h5 className={`text-[10px] font-bold tracking-[0.2em] uppercase text-[#7c839b] mb-5 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="w-4 h-px bg-[#fed01b]/40" />
-                {dict.footer.legal}
+                {footer.legal || 'Legal'}
               </h5>
               <div className="flex flex-col gap-2.5">
                 {[
@@ -247,7 +249,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
             <div className="col-span-2 sm:col-span-4 lg:col-span-1">
               <h5 className={`text-[10px] font-bold tracking-[0.2em] uppercase text-[#7c839b] mb-5 flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="w-4 h-px bg-[#fed01b]/40" />
-                {dict.nav.contact}
+                {nav.contact || 'Contact'}
               </h5>
               <div className="space-y-4">
                 <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -276,7 +278,7 @@ export function EnterpriseFooter({ cities, services, dict, locale }: { cities: C
           {/* ── 4. BOTTOM BAR ── */}
           <div className={`py-8 flex flex-col sm:flex-row items-center justify-between gap-4 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
             <p className="text-[11px] text-[#565e74] font-medium">
-              © {new Date().getFullYear()} AZ-Europa Service GmbH · {dict.footer.all_rights}
+              © {new Date().getFullYear()} AZ-Europa Service GmbH · {footer.all_rights || 'All rights reserved'}
             </p>
             <div className={`flex items-center gap-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <span className="text-[11px] text-[#565e74]/60 font-medium">

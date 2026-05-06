@@ -1,7 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), var(--font-vazir), ui-sans-serif, system-ui, sans-serif;
+  --font-vazir: var(--font-vazir), ui-sans-serif, system-ui, sans-serif;
   
   /* AZ-Europa Enterprise Design Tokens */
   --color-brand-white: #FFFFFF;

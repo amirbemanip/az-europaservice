@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-import { cities, services } from '@/data/db';
+import { cities, macroServices, microServices } from '@/data/db';
+import { blogPosts } from '@/data/blog';
 
 const baseUrl = 'https://az-europaservice.de';
 const locales = ['de', 'en', 'fa', 'ar', 'ru', 'uk'];
@@ -8,6 +9,7 @@ const staticPaths = ['', '/ueber-uns', '/leistungen', '/kontakt', '/impressum', 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
 
+  // 1. Static Pages for all Locales
   locales.forEach((locale) => {
     staticPaths.forEach((path) => {
       const url = locale === 'de' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
@@ -20,8 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Add Service Overviews
-  services.forEach((service) => {
+  // 2. Service Overview Pages
+  [...macroServices, ...microServices].forEach((service) => {
     locales.forEach((locale) => {
       const url = locale === 'de'
         ? `${baseUrl}/leistungen/${service.slug}`
@@ -35,13 +37,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Add City Hubs and Service Matrix Pages
+  // Add city-service pages (Macro)
+  cities.forEach(city => {
+    macroServices.forEach(macro => {
+      locales.forEach(locale => {
+        const isDefault = locale === 'de';
+        const path = isDefault ? `/${city.slug}/${macro.slug}` : `/${locale}/${city.slug}/${macro.slug}`;
+        
+        routes.push({
+          url: `${baseUrl}${path}`,
+          lastModified: new Date(),
+          changeFrequency: 'weekly',
+          priority: 0.8,
+        });
+      });
+    });
+  });
+
+  // 3. City Hubs and Service Matrix Pages
   cities.forEach((city) => {
     locales.forEach((locale) => {
       const cityBase = locale === 'de'
         ? `${baseUrl}/${city.slug}`
         : `${baseUrl}/${locale}/${city.slug}`;
 
+      // City Main Page
       routes.push({
         url: cityBase,
         lastModified: new Date(),
@@ -49,16 +69,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
       });
 
-      services.forEach((service) => {
-        const url = locale === 'de'
-          ? `${cityBase}/${service.slug}`
-          : `${cityBase}/${service.slug}`;
-        routes.push({
-          url,
-          lastModified: new Date(),
-          changeFrequency: 'weekly',
-          priority: 0.8,
-        });
+      // Removed legacy City + Service Matrix Pages
+    });
+  });
+
+
+  // 4. Blog Posts
+  blogPosts.forEach((post) => {
+    locales.forEach((locale) => {
+      const url = locale === 'de'
+        ? `${baseUrl}/blog/${post.slug}`
+        : `${baseUrl}/${locale}/blog/${post.slug}`;
+      routes.push({
+        url,
+        lastModified: new Date(post.date),
+        changeFrequency: 'monthly',
+        priority: 0.6,
       });
     });
   });

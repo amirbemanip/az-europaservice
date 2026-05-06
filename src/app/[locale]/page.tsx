@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { CinematicHeroParallax } from '@/components/home/CinematicHeroParallax';
+import { CinematicHeroParallax } from '@/components/ui/CinematicHeroParallax';
 import { TrustMarquee } from '@/components/home/TrustMarquee';
 import { AuthorityMatrix } from '@/components/home/AuthorityMatrix';
 import { TrueBentoGrid } from '@/components/home/TrueBentoGrid';
@@ -8,8 +8,8 @@ import { getDictionary } from '@/lib/get-dictionary';
 
 // Lazy loaded below-the-fold components
 const InteractiveRegionMap = dynamic(() => import('@/components/home/InteractiveRegionMap').then(mod => mod.InteractiveRegionMap), { ssr: true });
-const CleanGeoMap = dynamic(() => import('@/components/home/CleanGeoMap').then(mod => mod.CleanGeoMap), { ssr: true });
-const StructuredFAQ = dynamic(() => import('@/components/home/StructuredFAQ').then(mod => mod.StructuredFAQ), { ssr: true });
+const LocationBanners = dynamic(() => import('@/components/home/LocationBanners').then(mod => mod.LocationBanners), { ssr: true });
+const StructuredFAQ = dynamic(() => import('@/components/ui/StructuredFAQ').then(mod => mod.StructuredFAQ), { ssr: true });
 const CleanMasonryTestimonials = dynamic(() => import('@/components/home/CleanMasonryTestimonials').then(mod => mod.CleanMasonryTestimonials), { ssr: true });
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -21,7 +21,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <div className="flex flex-col min-h-screen bg-white overflow-x-hidden">
       
       {/* Layer 1: Cinematic Parallax Hero */}
-      <CinematicHeroParallax locale={locale} dict={dict} />
+      <CinematicHeroParallax 
+        locale={locale} 
+        isRTL={isRTL}
+        badge={dict.hero.badge}
+        title={dict.hero.title}
+        subtitle={dict.hero.subtitle}
+        description={dict.hero.desc}
+        backgroundImage="/hero-bg.png"
+        ctaPrimary={{ label: dict.hero.cta_primary, href: '/kontakt' }}
+        ctaSecondary={{ label: dict.hero.cta_secondary, href: '/leistungen' }}
+      />
 
       {/* Layer 2: Social Proof Strip */}
       <TrustMarquee dict={dict} />
@@ -35,11 +45,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* Layer 5: Interactive Region Map (Premium) */}
       <InteractiveRegionMap locale={locale} dict={dict} />
 
-      {/* Layer 6: Static City Cards (Clean) */}
-      <CleanGeoMap locale={locale} dict={dict} />
+      {/* Layer 6: Stylized Location Banners (Premium) */}
+      <LocationBanners locale={locale} dict={dict} />
 
       {/* Layer 7: Structured FAQ */}
-      <StructuredFAQ locale={locale} dict={dict} />
+      <StructuredFAQ 
+        locale={locale} 
+        isRTL={isRTL}
+        title={dict.faq.title}
+        subtitle={dict.faq.subtitle}
+        items={dict.faq.items}
+      />
 
       {/* Layer 8: Testimonials */}
       <CleanMasonryTestimonials locale={locale} dict={dict} />

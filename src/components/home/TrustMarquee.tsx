@@ -7,9 +7,9 @@ const clients = ['DATEV', 'Siemens', 'FAU Erlangen', 'adidas', 'PUMA', 'Schaeffl
 
 export function TrustMarquee({ dict }: { dict: any }) {
   return (
-    <section className="border-y border-[#c6c6cd]/60 bg-[#eceef0] py-10 overflow-hidden">
+    <section className="border-y border-white/5 bg-[#0a0a0a] py-10 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
-        <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#76777d] text-center mb-8">
+        <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#71717a] text-center mb-8">
           {dict.trust.badge}
         </p>
         <div className="relative overflow-hidden">
@@ -21,7 +21,7 @@ export function TrustMarquee({ dict }: { dict: any }) {
             {[...clients, ...clients].map((name, i) => (
               <span
                 key={i}
-                className="text-xl font-black tracking-tight text-[#191c1e] opacity-20 hover:opacity-40 transition-opacity duration-300 flex-shrink-0"
+                className="text-xl font-black tracking-tight text-white opacity-20 hover:opacity-50 transition-opacity duration-300 flex-shrink-0"
               >
                 {name}
               </span>
