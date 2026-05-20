@@ -1,0 +1,488 @@
+Meta Title: Datenschutzerklärung | AZ-Europa Service GmbH
+Meta Description: Informationen zum Datenschutz und zur Verarbeitung Ihrer personenbezogenen Daten bei der AZ-Europa Service GmbH gemäß DSGVO.
+URL Slug: /datenschutz
+
+Datenschutzerklärung
+
+Der Schutz Ihrer persönlichen Daten ist für die AZ-Europa Service GmbH nicht nur eine gesetzliche Pflicht, sondern ein zentraler Bestandteil unseres Qualitäts- und Vertrauensversprechens. In dieser Datenschutzerklärung informieren wir Sie umfassend und transparent darüber, wie wir mit Ihren personenbezogenen Daten umgehen, wenn Sie unsere Website besuchen oder unsere Dienstleistungen in Anspruch nehmen.
+
+1. Datenschutz auf einen Blick
+
+Allgemeine Hinweise
+Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
+
+Datenerfassung auf dieser Website
+Wer ist verantwortlich für die Datenerfassung auf dieser Website?
+Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
+
+Wie erfassen wir Ihre Daten?
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+
+Wofür nutzen wir Ihre Daten?
+Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Daten aus Kontaktformularen nutzen wir zur Bearbeitung Ihrer Anfrage und zur Angebotserstellung.
+
+2. Allgemeine Hinweise und Pflichtinformationen
+
+Datenschutz
+Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.
+
+Hinweis zur verantwortlichen Stelle
+Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+
+AZ-Europa Service GmbH
+
+[Straße und Hausnummer]
+
+[PLZ] [Stadt]
+
+Telefon: [Ihre Telefonnummer]
+
+E-Mail: info@az-europaservice.de
+
+Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+
+Widerruf Ihrer Einwilligung zur Datenverarbeitung
+Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+
+Ihre Nutzerrechte gemäß DSGVO
+Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
+
+Auskunft (Art. 15 DSGVO): Kostenlose Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger und den Zweck der Datenverarbeitung.
+
+Berichtigung (Art. 16 DSGVO): Recht auf Berichtigung unrichtiger oder unvollständiger Daten.
+
+Löschung (Art. 17 DSGVO): Recht auf Löschung Ihrer bei uns gespeicherten Daten ("Recht auf Vergessenwerden").
+
+Einschränkung der Verarbeitung (Art. 18 DSGVO): Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+
+Datenübertragbarkeit (Art. 20 DSGVO): Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.
+
+Zur Ausübung dieser Rechte sowie für weitere Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+
+SSL- bzw. TLS-Verschlüsselung
+Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+
+3. Datenerfassung auf unserer Website
+
+Cookies
+Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+
+Technisch notwendige Cookies: Cookies, die zur Durchführung des elektronischen Kommunikationsvorgangs oder zur Bereitstellung bestimmter, von Ihnen erwünschter Funktionen erforderlich sind, werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Wir haben ein berechtigtes Interesse an der Speicherung von Cookies zur technisch fehlerfreien und optimierten Bereitstellung unserer Dienste.
+
+Zustimmungspflichtige Cookies: Soweit andere Cookies (z. B. Cookies zur Analyse Ihres Surfverhaltens) gespeichert werden, benötigen wir hierfür Ihre ausdrückliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Diese können Sie über unser Cookie-Consent-Banner verwalten.
+
+Server-Log-Dateien
+Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+
+Browsertyp und Browserversion
+
+verwendetes Betriebssystem
+
+Referrer URL
+
+Hostname des zugreifenden Rechners
+
+Uhrzeit der Serveranfrage
+
+IP-Adresse
+
+Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+
+Kontaktformular und E-Mail-Anfragen
+Wenn Sie uns per Kontaktformular, E-Mail oder Telefon Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist (z.B. Erstellung eines Angebots für Gebäudereinigung). In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+
+Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
+
+4. Umgang mit Bewerberdaten
+
+Da wir auf unserer Karriereseite offene Stellen anbieten, erheben und verarbeiten wir personenbezogene Daten von Bewerbern zum Zwecke der Abwicklung des Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege erfolgen (z.B. per E-Mail).
+Schließt die AZ-Europa Service GmbH einen Anstellungsvertrag mit einem Bewerber, werden die übermittelten Daten zum Zwecke der Abwicklung des Beschäftigungsverhältnisses unter Beachtung der gesetzlichen Vorschriften gespeichert. Wird kein Vertrag geschlossen, werden die Bewerbungsunterlagen 6 Monate nach Bekanntgabe der Absageentscheidung automatisch gelöscht, sofern einer Löschung keine sonstigen berechtigten Interessen (z.B. Beweispflicht in einem Verfahren nach dem Allgemeinen Gleichbehandlungsgesetz) entgegenstehen. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. b DSGVO sowie § 26 BDSG.
+
+Meta Title: Privacy Policy | AZ-Europa Service GmbH
+Meta Description: Information on data protection and the processing of your personal data at AZ-Europa Service GmbH in accordance with the GDPR.
+URL Slug: /en/privacy-policy
+
+Privacy Policy
+
+For AZ-Europa Service GmbH, protecting your personal data is not just a legal obligation, but a core component of our commitment to quality and digital trust. In this Privacy Policy, we inform you comprehensively and transparently about how we handle your personal data when you visit our website or use our facility management services.
+
+1. Data Protection at a Glance
+
+General Information
+The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you could be personally identified. Detailed information on the subject of data protection can be found in our Privacy Policy below.
+
+Data Collection on this Website
+Who is responsible for the data collection on this website?
+The data processing on this website is carried out by the website operator. You can find their contact details in the "Legal Notice" (Impressum) of this website.
+
+How do we collect your data?
+Some data is collected when you provide it to us. This could, for example, be data you enter into a contact form. Other data is collected automatically by our IT systems when you visit the website. This data is primarily technical data (e.g., the browser and operating system you are using or the time the page was accessed).
+
+What do we use your data for?
+Part of the data is collected to ensure the error-free provision of the website. Data from contact forms is used exclusively to process your service requests and provide you with business quotes.
+
+2. General Information and Mandatory Information
+
+Data Protection
+The operators of this website take the protection of your personal data very seriously. We treat your personal data as confidential and in accordance with the statutory data protection regulations (GDPR/DSGVO) and this Privacy Policy.
+
+Responsible Party (Controller)
+The responsible party for data processing on this website is:
+
+AZ-Europa Service GmbH
+
+[Street and House Number]
+
+[Zip Code] [City]
+
+Phone: [Your Phone Number]
+
+Email: info@az-europaservice.de
+
+Revocation of your Consent to Data Processing
+Many data processing operations are only possible with your express consent. You can revoke your consent at any time. The legality of the data processing carried out before the revocation remains unaffected.
+
+Your User Rights under the GDPR
+Under applicable legal provisions, you have the right at any time to:
+
+Right of Access (Art. 15 GDPR): Request information about your stored personal data, its origin, recipients, and the purpose of data processing.
+
+Right to Rectification (Art. 16 GDPR): Demand the correction of incorrect or incomplete data.
+
+Right to Erasure (Art. 17 GDPR): Request the deletion of your data stored by us ("Right to be forgotten").
+
+Right to Restriction of Processing (Art. 18 GDPR): Request the restriction of processing of your personal data.
+
+Right to Data Portability (Art. 20 GDPR): Have data that we process automatically based on your consent or in fulfillment of a contract handed over to you or to a third party in a standard, machine-readable format.
+
+To exercise these rights, please contact us at the address provided in the Legal Notice. You also have the right to lodge a complaint with the competent supervisory authority.
+
+SSL or TLS Encryption
+For security reasons and to protect the transmission of confidential content, such as inquiries you send to us, this site uses SSL or TLS encryption. You can recognize an encrypted connection by the fact that the address line of the browser changes from "http://" to "https://" and by the lock symbol in your browser line.
+
+3. Data Collection on Our Website
+
+Cookies
+Our website uses so-called "cookies". Cookies are small text files that do not cause any damage to your device. They are either stored temporarily for the duration of a session (session cookies) or permanently (permanent cookies).
+
+Technically Necessary Cookies: Cookies that are required to carry out the electronic communication process or to provide certain functions you require are stored on the basis of Art. 6 (1) (f) GDPR. We have a legitimate interest in storing cookies for the technically error-free and optimized provision of our services.
+
+Consent-based Cookies: If other cookies (e.g., for analyzing your surfing behavior) are stored, we require your explicit consent (Art. 6 (1) (a) GDPR). You can manage these via our Cookie Consent Banner.
+
+Server Log Files
+The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us. These are:
+
+Browser type and version
+
+Operating system used
+
+Referrer URL
+
+Hostname of the accessing computer
+
+Time of the server request
+
+IP address
+
+These data are not merged with other data sources. This data is recorded on the basis of Art. 6 (1) (f) GDPR.
+
+Contact Form and Email Inquiries
+If you send us inquiries via the contact form, email, or telephone, your details, including the contact details you provided, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. The processing of this data is based on Art. 6 (1) (b) GDPR, provided your request is related to the execution of a contract or is necessary to carry out pre-contractual measures (e.g., creating a facility management quote).
+
+The data you enter in the contact form will remain with us until you ask us to delete it, revoke your consent to store it, or the purpose for data storage no longer applies. Mandatory statutory provisions—in particular retention periods—remain unaffected.
+
+4. Handling of Applicant Data (Career Page)
+
+We collect and process the personal data of applicants for the purpose of managing the application process. Processing may also be carried out electronically (e.g., via email).
+If AZ-Europa Service GmbH concludes an employment contract with an applicant, the submitted data will be stored for the purpose of processing the employment relationship in compliance with statutory regulations. If no contract is concluded, the application documents will be automatically deleted 6 months after notification of the rejection, provided no other legitimate interests prevent deletion. The legal basis for this is Art. 6 (1) (b) GDPR and § 26 BDSG (German Federal Data Protection Act).
+
+Meta Title: سیاست حفظ حریم خصوصی | شرکت AZ-Europa Service
+Meta Description: اطلاعات مربوط به حفاظت از داده‌ها و پردازش اطلاعات شخصی شما در شرکت AZ-Europa مطابق با مقررات عمومی حفاظت از داده‌های اروپا (GDPR).
+URL Slug: /fa/privacy-policy
+
+سیاست حفظ حریم خصوصی (Datenschutzerklärung)
+
+برای AZ-Europa Service GmbH، محافظت از اطلاعات شخصی شما تنها یک الزام قانونی نیست، بلکه بخش مرکزی تعهد ما به کیفیت و "اعتماد دیجیتال" است. در این سیاست حفظ حریم خصوصی، ما به طور جامع و شفاف به شما اطلاع می‌دهیم که هنگام بازدید از وب‌سایت ما یا استفاده از خدمات مدیریت تاسیسات ما، چگونه با داده‌های شخصی شما برخورد می‌شود.
+
+۱. نگاهی اجمالی به حفاظت از داده‌ها
+
+نکات عمومی
+نکات زیر یک نمای کلی ساده از آنچه برای اطلاعات شخصی شما هنگام بازدید از این وب‌سایت اتفاق می‌افتد، ارائه می‌دهد. اطلاعات شخصی، هرگونه داده‌ای است که بتوان با آن شما را به طور شخصی شناسایی کرد.
+
+جمع‌آوری داده‌ها در این وب‌سایت
+چه کسی مسئول جمع‌آوری داده‌ها در این وب‌سایت است؟
+پردازش داده‌ها در این وب‌سایت توسط اپراتور وب‌سایت انجام می‌شود. جزئیات تماس آنها را می‌توانید در بخش "اطلاعات حقوقی" (Impressum) این وب‌سایت بیابید.
+
+ما چگونه داده‌های شما را جمع‌آوری می‌کنیم؟
+بخشی از داده‌ها زمانی جمع‌آوری می‌شوند که شما آنها را در اختیار ما قرار می‌دهید (مثلاً داده‌هایی که در فرم تماس وارد می‌کنید). سایر داده‌ها به طور خودکار یا پس از رضایت شما هنگام بازدید از وب‌سایت توسط سیستم‌های IT ما جمع‌آوری می‌شوند (مانند مرورگر، سیستم عامل یا زمان بازدید).
+
+ما از داده‌های شما برای چه منظوری استفاده می‌کنیم؟
+بخشی از داده‌ها برای اطمینان از ارائه بدون خطای وب‌سایت جمع‌آوری می‌شود. از داده‌های فرم تماس منحصراً برای پردازش درخواست‌های خدمات شما و ارائه پیش‌فاکتور استفاده می‌گردد.
+
+۲. اطلاعات عمومی و حقوق کاربر
+
+محافظت از داده‌ها
+اپراتورهای این وب‌سایت محافظت از اطلاعات شخصی شما را بسیار جدی می‌گیرند. ما با داده‌های شخصی شما به صورت محرمانه و مطابق با مقررات قانونی حفاظت از داده‌های اروپا (GDPR / DSGVO) رفتار می‌کنیم.
+
+نهاد مسئول (Controller)
+نهاد مسئول پردازش داده‌ها در این وب‌سایت عبارت است از:
+AZ-Europa Service GmbH
+
+[خیابان و پلاک]
+
+[کد پستی] [شهر]
+
+ایمیل: info@az-europaservice.de
+
+حقوق شما به عنوان کاربر بر اساس GDPR
+شما در هر زمان تحت مقررات قانونی نافذ، از حقوق زیر برخوردارید:
+
+حق دسترسی (Art. 15 GDPR): درخواست اطلاعات درباره داده‌های شخصی ذخیره شده خود، منشأ آنها، دریافت‌کنندگان و هدف پردازش.
+
+حق اصلاح (Art. 16 GDPR): درخواست اصلاح داده‌های نادرست یا ناقص.
+
+حق حذف (Art. 17 GDPR): درخواست حذف داده‌های شما ("حق فراموش شدن").
+
+حق محدودیت پردازش (Art. 18 GDPR) و حق انتقال پذیری داده‌ها (Art. 20 GDPR).
+
+برای اعمال این حقوق، لطفاً از طریق آدرس موجود در بخش اطلاعات حقوقی با ما تماس بگیرید.
+
+رمزنگاری SSL / TLS
+این سایت به دلایل امنیتی و برای محافظت از انتقال محتوای محرمانه (مانند درخواست‌های پیش‌فاکتور نظافت صنعتی)، از رمزنگاری SSL/TLS استفاده می‌کند.
+
+۳. جمع‌آوری داده‌ها در وب‌سایت ما
+
+کوکی‌ها (Cookies)
+وب‌سایت ما از کوکی‌ها استفاده می‌کند. کوکی‌ها فایل‌های متنی کوچکی هستند که به دستگاه شما آسیبی نمی‌رسانند.
+
+کوکی‌های ضروری از نظر فنی: بر اساس ماده 6 بند 1 (f) GDPR برای ارائه بدون خطای خدمات ما ذخیره می‌شوند.
+
+کوکی‌های نیازمند رضایت: در صورت استفاده از کوکی‌های تحلیلی، ما صراحتاً به رضایت شما نیاز داریم (Art. 6 (1) (a) GDPR) که می‌توانید آن را از طریق بنر کوکی ما مدیریت کنید.
+
+فایل‌های لاگ سرور
+ارائه‌دهنده هاست (Host) سایت، اطلاعاتی مانند نوع مرورگر، سیستم عامل، آدرس IP و زمان درخواست سرور را به طور خودکار جمع‌آوری می‌کند تا امنیت و پایداری سایت تامین شود.
+
+فرم تماس و درخواست‌های ایمیلی
+اگر از طریق فرم تماس، ایمیل یا تلفن برای ما درخواستی ارسال کنید، جزئیات شما به منظور پردازش درخواست و در صورت وجود سوالات بعدی توسط ما ذخیره می‌شود. پردازش این داده‌ها بر اساس ماده 6 بند 1 (b) GDPR انجام می‌شود تا امکان ارائه خدمات و تنظیم قرارداد برای مدیریت املاک شما فراهم گردد.
+
+۴. رسیدگی به داده‌های متقاضیان کار (بخش استخدام)
+
+از آنجایی که ما در صفحه "فرصت‌های شغلی" موقعیت‌های کاری ارائه می‌دهیم، داده‌های شخصی متقاضیان را به منظور مدیریت فرآیند درخواست شغل جمع‌آوری و پردازش می‌کنیم.
+اگر AZ-Europa Service GmbH با متقاضی قرارداد استخدام ببندد، داده‌ها طبق مقررات قانونی نگهداری می‌شوند. در صورت عدم عقد قرارداد، مدارک درخواست کار به طور خودکار ۶ ماه پس از اعلام رد درخواست، حذف خواهند شد (مگر اینکه دلایل قانونی دیگری برای نگهداری وجود داشته باشد). مبنای حقوقی این امر ماده 6 بند 1 (b) GDPR و قانون فدرال حفاظت از داده‌های آلمان (§ 26 BDSG) است.
+
+Meta Title: سياسة الخصوصية | شركة AZ-Europa Service
+Meta Description: معلومات حول حماية البيانات ومعالجة بياناتك الشخصية في شركة AZ-Europa Service GmbH وفقاً للائحة العامة لحماية البيانات (GDPR).
+URL Slug: /ar/privacy-policy
+
+سياسة الخصوصية (Datenschutzerklärung)
+
+بالنسبة لشركة AZ-Europa Service GmbH، لا تعتبر حماية بياناتك الشخصية مجرد التزام قانوني، بل هي عنصر أساسي في التزامنا بالجودة وبناء "الثقة الرقمية". في سياسة الخصوصية هذه، نعلمك بشكل شامل وشفاف بكيفية تعاملنا مع بياناتك الشخصية عندما تزور موقعنا الإلكتروني أو تستخدم خدمات إدارة المرافق الخاصة بنا.
+
+1. حماية البيانات في لمحة
+
+معلومات عامة
+توفر الملاحظات التالية نظرة عامة بسيطة عما يحدث لبياناتك الشخصية عند زيارة هذا الموقع. البيانات الشخصية هي أي بيانات يمكن من خلالها التعرف عليك شخصياً.
+
+جمع البيانات على هذا الموقع
+من المسؤول عن جمع البيانات على هذا الموقع؟
+تتم معالجة البيانات على هذا الموقع بواسطة مشغل الموقع. يمكنك العثور على تفاصيل الاتصال الخاصة بهم في "الإشعار القانوني" (Impressum) الخاص بهذا الموقع.
+
+كيف نجمع بياناتك؟
+يتم جمع بعض البيانات عندما تقدمها لنا بنفسك (على سبيل المثال، البيانات التي تدخلها في نموذج الاتصال). يتم جمع بيانات أخرى تلقائياً بواسطة أنظمة تكنولوجيا المعلومات لدينا عند زيارة الموقع (مثل نوع المتصفح ونظام التشغيل ووقت الوصول).
+
+فيم نستخدم بياناتك؟
+يتم جمع جزء من البيانات لضمان التوفير الخالي من الأخطاء للموقع. تُستخدم البيانات المستمدة من نماذج الاتصال حصرياً لمعالجة طلبات الخدمة الخاصة بك وتقديم عروض الأسعار التجارية.
+
+2. المعلومات العامة وحقوق المستخدم
+
+حماية البيانات
+يأخذ مشغلو هذا الموقع حماية بياناتك الشخصية على محمل الجد. نحن نتعامل مع بياناتك الشخصية بسرية تامة ووفقاً للوائح القانونية لحماية البيانات (GDPR / DSGVO) وسياسة الخصوصية هذه.
+
+الجهة المسؤولة
+الجهة المسؤولة عن معالجة البيانات على هذا الموقع هي:
+AZ-Europa Service GmbH
+
+[الشارع ورقم المبنى]
+
+[الرمز البريدي] [المدينة]
+
+البريد الإلكتروني: info@az-europaservice.de
+
+حقوق المستخدم الخاصة بك بموجب اللائحة العامة لحماية البيانات (GDPR)
+بموجب الأحكام القانونية المعمول بها، يحق لك في أي وقت:
+
+حق الوصول (المادة 15): طلب معلومات حول بياناتك الشخصية المخزنة ومصدرها والغرض من معالجتها.
+
+حق التصحيح (المادة 16): المطالبة بتصحيح البيانات غير الصحيحة أو غير المكتملة.
+
+حق الحذف (المادة 17): طلب حذف بياناتك المخزنة لدينا ("الحق في النسيان").
+
+حق تقييد المعالجة (المادة 18) و حق إمكانية نقل البيانات (المادة 20).
+
+تشفير SSL أو TLS
+لأسباب أمنية ولحماية نقل المحتوى السري، مثل الاستفسارات أو طلبات عروض الأسعار، يستخدم هذا الموقع تشفير SSL أو TLS.
+
+3. جمع البيانات على موقعنا
+
+ملفات تعريف الارتباط (Cookies)
+يستخدم موقعنا ما يسمى بـ "ملفات تعريف الارتباط". وهي ملفات نصية صغيرة لا تسبب أي ضرر لجهازك.
+
+ملفات تعريف الارتباط الضرورية تقنياً: يتم تخزينها بناءً على المادة 6 (1) (f) من GDPR لضمان توفير خدماتنا بشكل خالٍ من الأخطاء.
+
+ملفات تعريف الارتباط القائمة على الموافقة: إذا تم استخدام ملفات تعريف ارتباط أخرى (مثل التحليلات)، فإننا نطلب موافقتك الصريحة (المادة 6 (1) (a) GDPR).
+
+ملفات سجل الخادم (Server Log Files)
+يقوم مزود الاستضافة بجمع وتخزين المعلومات تلقائياً مثل نوع المتصفح، وعنوان IP، ووقت طلب الخادم. يتم تسجيل هذه البيانات لضمان أمان واستقرار الموقع.
+
+نموذج الاتصال واستفسارات البريد الإلكتروني
+إذا أرسلت إلينا استفسارات عبر نموذج الاتصال أو البريد الإلكتروني، فسيتم تخزين التفاصيل الخاصة بك لغرض معالجة الاستفسار. تعتمد معالجة هذه البيانات على المادة 6 (1) (b) من GDPR، لأنها ضرورية لتنفيذ الإجراءات السابقة للتعاقد (مثل إعداد عرض أسعار لخدمات تنظيف المباني).
+
+4. التعامل مع بيانات المتقدمين للوظائف (صفحة الوظائف)
+
+نظراً لأننا نقدم وظائف شاغرة على صفحة "الوظائف" الخاصة بنا، فإننا نجمع ونعالج البيانات الشخصية للمتقدمين لغرض إدارة عملية التوظيف.
+إذا أبرمت الشركة عقد عمل مع أحد المتقدمين، فسيتم تخزين البيانات وفقاً للوائح القانونية. في حال عدم إبرام عقد، سيتم حذف مستندات التقديم تلقائياً بعد 6 أشهر من الإخطار بالرفض (ما لم تمنع مصالح مشروعة أخرى الحذف). الأساس القانوني لذلك هو المادة 6 (1) (b) من GDPR وقانون حماية البيانات الفيدرالي الألماني (§ 26 BDSG).
+
+Meta Title: Политика конфиденциальности | AZ-Europa Service GmbH
+Meta Description: Информация о защите данных и обработке ваших персональных данных в компании AZ-Europa Service GmbH в соответствии с GDPR (DSGVO).
+URL Slug: /ru/privacy-policy
+
+Политика конфиденциальности (Datenschutzerklärung)
+
+Для AZ-Europa Service GmbH защита ваших персональных данных — это не просто юридическое обязательство, а ключевой элемент нашего стремления к качеству и «цифровому доверию». В этой Политике конфиденциальности мы прозрачно и всесторонне информируем вас о том, как мы обращаемся с вашими личными данными, когда вы посещаете наш веб-сайт или пользуетесь нашими услугами по управлению недвижимостью.
+
+1. Защита данных: краткий обзор
+
+Общая информация
+Следующие примечания дают простой обзор того, что происходит с вашими персональными данными при посещении этого веб-сайта. Персональные данные — это любые данные, с помощью которых вас можно идентифицировать лично.
+
+Сбор данных на этом сайте
+Кто несет ответственность за сбор данных на этом сайте?
+Обработка данных на этом сайте осуществляется оператором сайта. Его контактные данные вы можете найти в разделе «Выходные данные» (Impressum) этого сайта.
+
+Как мы собираем ваши данные?
+Некоторые данные собираются, когда вы предоставляете их нам (например, данные, которые вы вводите в контактную форму). Другие данные собираются нашими ИТ-системами автоматически при посещении вами веб-сайта (например, данные о браузере, операционной системе или времени посещения).
+
+Для чего мы используем ваши данные?
+Часть данных собирается для обеспечения безошибочной работы сайта. Данные из контактных форм используются исключительно для обработки ваших запросов на услуги и подготовки коммерческих предложений.
+
+2. Общая информация и права пользователя
+
+Защита данных
+Операторы этих страниц очень серьезно относятся к защите ваших персональных данных. Мы обращаемся с вашими персональными данными конфиденциально и в соответствии с установленными законом правилами защиты данных (GDPR / DSGVO), а также настоящей Политикой конфиденциальности.
+
+Ответственный орган (Контролер)
+Ответственным органом за обработку данных на этом сайте является:
+AZ-Europa Service GmbH
+
+[Улица и номер дома]
+
+[Почтовый индекс] [Город]
+
+Email: info@az-europaservice.de
+
+Ваши права пользователя согласно GDPR
+В рамках действующего законодательства вы имеете право в любое время на:
+
+Право на доступ (Ст. 15 GDPR): Запрашивать информацию о ваших сохраненных личных данных, их происхождении, получателях и цели обработки.
+
+Право на исправление (Ст. 16 GDPR): Требовать исправления неверных или неполных данных.
+
+Право на удаление (Ст. 17 GDPR): Требовать удаления ваших данных, хранящихся у нас («Право на забвение»).
+
+Право на ограничение обработки (Ст. 18 GDPR) и Право на переносимость данных (Ст. 20 GDPR).
+
+Шифрование SSL или TLS
+Из соображений безопасности и для защиты передачи конфиденциального контента (например, ваших запросов на услуги клининга) этот сайт использует шифрование SSL или TLS.
+
+3. Сбор данных на нашем сайте
+
+Файлы cookie
+На нашем сайте используются так называемые «файлы cookie». Cookie — это небольшие текстовые файлы, которые не наносят вреда вашему устройству.
+
+Технически необходимые файлы cookie: сохраняются на основании Ст. 6 (1) (f) GDPR. Мы имеем законный интерес в их хранении для безошибочного предоставления наших услуг.
+
+Файлы cookie, требующие согласия: Для использования других cookie (например, аналитических) нам необходимо ваше явное согласие (Ст. 6 (1) (a) GDPR), которым вы можете управлять через наш баннер cookie.
+
+Файлы журнала сервера (Server Log Files)
+Провайдер страниц автоматически собирает и сохраняет информацию (тип браузера, IP-адрес, время запроса) для обеспечения безопасности работы сервера.
+
+Контактная форма и запросы по электронной почте
+Если вы отправляете нам запросы через контактную форму или по электронной почте, ваши данные сохраняются у нас для обработки запроса. Обработка этих данных осуществляется на основании Ст. 6 (1) (b) GDPR, так как это необходимо для выполнения преддоговорных мер (например, составления сметы на обслуживание здания).
+
+4. Обработка данных соискателей (раздел Карьера)
+
+Поскольку на нашей странице «Карьера» мы предлагаем вакансии, мы собираем и обрабатываем персональные данные соискателей с целью управления процессом найма.
+Если AZ-Europa Service GmbH заключает трудовой договор с кандидатом, переданные данные сохраняются в соответствии с законодательством. Если договор не заключен, документы заявки автоматически удаляются через 6 месяцев после уведомления об отказе (если удалению не препятствуют другие законные интересы). Правовой основой для этого является Ст. 6 (1) (b) GDPR и § 26 Федерального закона о защите данных Германии (BDSG).
+
+Meta Title: Політика конфіденційності | AZ-Europa Service GmbH
+Meta Description: Інформація про захист даних та обробку ваших персональних даних у компанії AZ-Europa Service GmbH відповідно до GDPR (DSGVO).
+URL Slug: /uk/privacy-policy
+
+Політика конфіденційності (Datenschutzerklärung)
+
+Для AZ-Europa Service GmbH захист ваших персональних даних — це не просто юридичне зобов'язання, а ключовий елемент нашого прагнення до якості та «цифрової довіри». У цій Політиці конфіденційності ми прозоро та всебічно інформуємо вас про те, як ми поводимося з вашими особистими даними, коли ви відвідуєте наш веб-сайт або користуєтеся нашими послугами з фасіліті-менеджменту.
+
+1. Захист даних: короткий огляд
+
+Загальна інформація
+Наступні примітки дають простий огляд того, що відбувається з вашими персональними даними під час відвідування цього веб-сайту. Персональні дані — це будь-які дані, за допомогою яких вас можна ідентифікувати особисто.
+
+Збір даних на цьому сайті
+Хто несе відповідальність за збір даних на цьому сайті?
+Обробка даних на цьому сайті здійснюється оператором сайту. Його контактні дані ви можете знайти в розділі «Вихідні дані» (Impressum) цього сайту.
+
+Як ми збираємо ваші дані?
+Деякі дані збираються, коли ви надаєте їх нам (наприклад, дані, які ви вводите в контактну форму). Інші дані збираються нашими ІТ-системами автоматично під час відвідування вами веб-сайту (наприклад, дані про браузер, операційну систему або час відвідування).
+
+Для чого ми використовуємо ваші дані?
+Частина даних збирається для забезпечення безпомилкової роботи сайту. Дані з контактних форм використовуються виключно для обробки ваших запитів на послуги та підготовки комерційних пропозицій.
+
+2. Загальна інформація та права користувача
+
+Захист даних
+Оператори цих сторінок дуже серйозно ставляться до захисту ваших персональних даних. Ми поводимося з вашими персональними даними конфіденційно і відповідно до встановлених законом правил захисту даних (GDPR / DSGVO), а також цієї Політики конфіденційності.
+
+Відповідальний орган (Контролер)
+Відповідальним органом за обробку даних на цьому сайті є:
+AZ-Europa Service GmbH
+
+[Вулиця та номер будинку]
+
+[Поштовий індекс] [Місто]
+
+Email: info@az-europaservice.de
+
+Ваші права користувача згідно з GDPR
+В рамках чинного законодавства ви маєте право в будь-який час на:
+
+Право на доступ (Ст. 15 GDPR): Запитувати інформацію про ваші збережені особисті дані, їхнє походження, одержувачів та мету обробки.
+
+Право на виправлення (Ст. 16 GDPR): Вимагати виправлення невірних або неповних даних.
+
+Право на видалення (Ст. 17 GDPR): Вимагати видалення ваших даних, що зберігаються у нас («Право на забуття»).
+
+Право на обмеження обробки (Ст. 18 GDPR) та Право на перенесення даних (Ст. 20 GDPR).
+
+Шифрування SSL або TLS
+З міркувань безпеки і для захисту передачі конфіденційного контенту (наприклад, ваших запитів на послуги) цей сайт використовує шифрування SSL або TLS.
+
+3. Збір даних на нашому сайті
+
+Файли cookie
+На нашому сайті використовуються так звані «файли cookie». Cookie — це невеликі текстові файли, які не завдають шкоди вашому пристрою.
+
+Технічно необхідні файли cookie: зберігаються на підставі Ст. 6 (1) (f) GDPR.
+
+Файли cookie, що потребують згоди: Для використання інших cookie (наприклад, аналітичних) нам потрібна ваша явна згода (Ст. 6 (1) (a) GDPR).
+
+Файли журналу сервера (Server Log Files)
+Провайдер сторінок автоматично збирає і зберігає інформацію (тип браузера, IP-адресу, час запиту) для забезпечення безпеки роботи сервера.
+
+Контактна форма та запити електронною поштою
+Якщо ви надсилаєте нам запити через контактну форму або електронною поштою, ваші дані зберігаються у нас для обробки запиту. Обробка цих даних здійснюється на підставі Ст. 6 (1) (b) GDPR, оскільки це необхідно для виконання переддоговірних заходів.
+
+4. Обробка даних претендентів (розділ Кар'єра)
+
+Оскільки на нашій сторінці «Кар'єра» ми пропонуємо вакансії, ми збираємо та обробляємо персональні дані претендентів з метою управління процесом найму.
+Якщо AZ-Europa Service GmbH укладає трудовий договір з кандидатом, передані дані зберігаються відповідно до законодавства. Якщо договір не укладено, документи заявки автоматично видаляються через 6 місяців після повідомлення про відмову. Правовою основою для цього є Ст. 6 (1) (b) GDPR та § 26 Федерального закону про захист даних Німеччини (BDSG).
+

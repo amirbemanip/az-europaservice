@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Wrench, ArrowRight, Building2, ClipboardCheck, Stethoscope, GlassWater } from 'lucide-react';
+import { Sparkles, Wrench, ArrowRight, Building2, Hammer, Truck, TreePine } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -46,7 +46,7 @@ export function TrueBentoGrid({ locale, dict }: { locale: string; dict: any }) {
     },
     {
       id: 'gartenpflege',
-      icon: GlassWater,
+      icon: TreePine,
       title: dict.services.gartenpflege?.title || 'Gartenpflege',
       desc: dict.services.gartenpflege?.description || 'Rasenmähen, Heckenschnitt und mehr.',
       span: 'md:col-span-1 md:row-span-1',
@@ -55,7 +55,7 @@ export function TrueBentoGrid({ locale, dict }: { locale: string; dict: any }) {
     },
     {
       id: 'abbrucharbeiten',
-      icon: ClipboardCheck,
+      icon: Hammer,
       title: dict.services.abbrucharbeiten?.title || 'Abbrucharbeiten',
       desc: dict.services.abbrucharbeiten?.description || 'Effizienter Rückbau und Planung.',
       span: 'md:col-span-1 md:row-span-1',
@@ -64,7 +64,7 @@ export function TrueBentoGrid({ locale, dict }: { locale: string; dict: any }) {
     },
     {
       id: 'entruempelungen',
-      icon: Stethoscope,
+      icon: Truck,
       title: dict.services.entruempelungen?.title || 'Entrümpelung',
       desc: dict.services.entruempelungen?.description || 'Fachgerechte Entsorgung und besenreine Übergabe.',
       span: 'md:col-span-2 md:row-span-1',
@@ -170,7 +170,7 @@ export function TrueBentoGrid({ locale, dict }: { locale: string; dict: any }) {
 
                   {/* Bottom Content */}
                   <div className="mt-auto w-full">
-                    <h3 className={`font-bold mb-3 transition-colors ${(card.featured || card.featured_sub) ? 'text-white' : 'text-[#0a0a0a] group-hover:text-[#fed01b]'} ${card.featured ? 'text-3xl lg:text-4xl' : 'text-xl'}`}>
+                    <h3 className={`font-bold mb-3 transition-colors ${(card.featured || card.featured_sub) ? 'text-white' : 'text-[#0a0a0a]'} ${card.featured ? 'text-3xl lg:text-4xl' : 'text-xl'}`}>
                       {card.title}
                     </h3>
                     <p className={`leading-relaxed ${(card.featured || card.featured_sub) ? 'text-slate-300' : 'text-[#52525b]'} ${card.featured ? 'text-base max-w-sm' : 'text-sm'}`}>

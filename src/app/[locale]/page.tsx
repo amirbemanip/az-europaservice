@@ -45,6 +45,33 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       {/* Layer 5: Interactive Region Map (Premium) */}
       <InteractiveRegionMap locale={locale} dict={dict} />
 
+      {/* Layer 5.5: Detailed Semantic Content (Premium) */}
+      {dict.hero.paragraphs && dict.hero.paragraphs.length > 0 && (
+        <section className="py-24 bg-white">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-10">
+                {dict.hero.paragraphs.map((p: string, i: number) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) {
+                    return (
+                      <h3 key={i} className="text-2xl md:text-3xl font-black text-[#0a0a0a] tracking-tight pt-10 first:pt-0">
+                        {p.replace(/\*\*/g, '')}
+                      </h3>
+                    );
+                  }
+                  return (
+                    <p key={i} className="text-[17px] text-[#45464d] leading-[1.8]">
+                      {p}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Layer 6: Stylized Location Banners (Premium) */}
       <LocationBanners locale={locale} dict={dict} />
 

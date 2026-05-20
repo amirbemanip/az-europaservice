@@ -6,10 +6,11 @@ import { getDictionary } from '@/lib/get-dictionary';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const seo = dict.seo?.karriere;
   
   return {
-    title: `${dict.nav.career} | AZ-Europa Service GmbH`,
-    description: dict.karriere.hero_desc,
+    title: seo?.title || `${dict.nav.karriere || dict.nav.career} | AZ-Europa Service GmbH`,
+    description: seo?.description || dict.karriere.hero_desc,
   };
 }
 
@@ -71,6 +72,33 @@ export default async function KarrierePage({ params }: { params: Promise<{ local
           </div>
         </div>
       </section>
+
+      {/* ── DETAILED CONTENT (New) ── */}
+      {dict.karriere.paragraphs && dict.karriere.paragraphs.length > 0 && (
+        <section className="py-24 bg-[#f8f9fa] border-y border-[#eee]">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-12">
+                {dict.karriere.paragraphs.map((p: string, i: number) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) {
+                    return (
+                      <h3 key={i} className="text-2xl md:text-3xl font-black text-[#0a0a0a] tracking-tight pt-8 first:pt-0">
+                        {p.replace(/\*\*/g, '')}
+                      </h3>
+                    );
+                  }
+                  return (
+                    <p key={i} className="text-[17px] text-[#45464d] leading-[1.8]">
+                      {p}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── BENEFITS ── */}
       <section className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden">

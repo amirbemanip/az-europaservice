@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const dict = await getDictionary(locale);
   if (!city) return { title: 'Nicht gefunden' };
   
+  const seo = dict.seo?.[city.id];
+  
   // Helper to get city-specific content for metadata
   const getCityContent = (key: string, fallback: string) => {
     const override = dict.cities?.[city.id]?.[key];
@@ -34,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     return fallback.replace(/{city}/g, city.name);
   };
 
-  const title = getCityContent('hero_title_2', dict.city_page.hero_title_2);
-  const description = getCityContent('hero_desc', dict.city_page.hero_desc);
+  const title = seo?.title || getCityContent('hero_title_2', dict.city_page.hero_title_2);
+  const description = seo?.description || getCityContent('hero_desc', dict.city_page.hero_desc);
   
   return {
     title: title,
@@ -72,6 +74,10 @@ export default async function CityHubPage({ params }: { params: Promise<{ locale
       description: localized?.description || fallbackDescription,
     };
   };
+
+  const cityParagraphs = dict.cities?.[city.id]?.paragraphs || [];
+  const cityFeatures = dict.cities?.[city.id]?.features || [];
+  const cityContentTitle = getCityContent('hero_title_2', dict.city_page.expertise_label);
 
   return (
     <div className={`flex flex-col min-h-screen bg-[#f7f9fb] overflow-x-hidden ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -187,6 +193,54 @@ export default async function CityHubPage({ params }: { params: Promise<{ locale
           </div>
         </div>
       </section>
+      
+      {/* ── 2.5 SEMANTIC CITY CONTENT ── */}
+      {cityParagraphs.length > 0 && (
+        <section className="py-24 bg-[#f7f9fb] border-t border-[#e0e3e5]">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div className={`grid lg:grid-cols-3 gap-16 ${isRTL ? 'rtl' : ''}`}>
+              <div className={`lg:col-span-2 prose prose-slate max-w-none ${isRTL ? 'text-right' : 'text-left'}`}>
+                <h2 className="text-3xl font-black text-[#0a0a0a] tracking-tight mb-8">
+                  {cityContentTitle}
+                </h2>
+                <div className="space-y-8">
+                  {cityParagraphs.map((p: string, i: number) => {
+                    const isHeading = p.startsWith('**') && p.endsWith('**');
+                    if (isHeading) {
+                      return (
+                        <h3 key={i} className="text-2xl font-black text-[#0a0a0a] tracking-tight pt-6 first:pt-0">
+                          {p.replace(/\*\*/g, '')}
+                        </h3>
+                      );
+                    }
+                    return (
+                      <p key={i} className="text-[17px] text-[#45464d] leading-[1.8]">
+                        {p}
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+              
+              {cityFeatures.length > 0 && (
+                <div className="space-y-8">
+                  <div className={`p-8 bg-white border border-[#e0e3e5] rounded-[4px] ${isRTL ? 'text-right' : ''}`}>
+                    <h4 className="text-lg font-bold text-[#0a0a0a] mb-6">{dict.service_page.expertise_label}</h4>
+                    <ul className="space-y-4">
+                      {cityFeatures.map((f: string, i: number) => (
+                        <li key={i} className={`flex items-start gap-3 text-sm text-[#45464d] font-medium ${isRTL ? 'flex-row-reverse' : ''}`}>
+                          <CheckCircle className="w-5 h-5 text-[#fed01b] flex-shrink-0 mt-0.5" />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── 3. LOCAL TRUST & SOCIAL PROOF ── */}
       <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">

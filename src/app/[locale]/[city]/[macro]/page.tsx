@@ -87,6 +87,13 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
   const localizedServiceDesc = getMatrixContent('hero_desc', dict.service_page.hero_desc);
   const contentTitle = getMatrixContent('hero_title', dict.service_page.content_title);
   const contentP1 = getMatrixContent('content_p1', dict.service_page.content_p1);
+  const matrixParagraphs = dict.matrix?.[city.id]?.[macro.id]?.paragraphs;
+  const paragraphsToDisplay = matrixParagraphs || [
+    contentP1,
+    getMatrixContent('content_p2', ''),
+    getMatrixContent('content_p3', '')
+  ].filter(Boolean);
+
   const matrixFeatures = dict.matrix?.[city.id]?.[macro.id]?.features;
   const featuresToDisplay = matrixFeatures || dict.service_page.feature_points;
   const ctaTitle = getMatrixContent('cta_title', dict.service_page.offer_card_title.replace('{service}', macro.title));
@@ -180,20 +187,22 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
               <h2 className="text-3xl font-black text-[#0a0a0a] tracking-tight mb-8">
                 {contentTitle}
               </h2>
-              <div className="space-y-6">
-                <p className="text-lg text-[#45464d] leading-relaxed">
-                  {contentP1}
-                </p>
-                {getMatrixContent('content_p2', '') && (
-                  <p className="text-lg text-[#45464d] leading-relaxed">
-                    {getMatrixContent('content_p2', '')}
-                  </p>
-                )}
-                {getMatrixContent('content_p3', '') && (
-                  <p className="text-lg text-[#45464d] leading-relaxed">
-                    {getMatrixContent('content_p3', '')}
-                  </p>
-                )}
+              <div className="space-y-8">
+                {paragraphsToDisplay.map((p, i) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) {
+                    return (
+                      <h3 key={i} className="text-2xl font-black text-[#0a0a0a] tracking-tight pt-6 first:pt-0">
+                        {p.replace(/\*\*/g, '')}
+                      </h3>
+                    );
+                  }
+                  return (
+                    <p key={i} className="text-[17px] text-[#45464d] leading-[1.8]">
+                      {p}
+                    </p>
+                  );
+                })}
               </div>
               <h3 className="text-xl font-bold text-[#0a0a0a] mt-10 mb-4">{dict.service_page.why_us_title}</h3>
               <p className="text-[#45464d] leading-relaxed mb-6">

@@ -4,10 +4,11 @@ import { getDictionary } from '@/lib/get-dictionary';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const seo = dict.seo?.datenschutz;
   
   return {
-    title: `${dict.privacy.title} | AZ-Europa Service GmbH`,
-    description: dict.privacy.subtitle,
+    title: seo?.title || `${dict.privacy.title} | AZ-Europa Service GmbH`,
+    description: seo?.description || dict.privacy.subtitle,
   };
 }
 
