@@ -5,12 +5,12 @@
   --font-sans: var(--font-inter), var(--font-vazir), ui-sans-serif, system-ui, sans-serif;
   --font-vazir: var(--font-vazir), ui-sans-serif, system-ui, sans-serif;
   
-  /* AZ-Europa Enterprise Design Tokens */
+  /* AZ-Europa Enterprise Design Tokens (10/10 Premium Clean-Light) */
   --color-brand-white: #FFFFFF;
-  --color-brand-light: #F8FAFC;
-  --color-brand-navy: #0a0a0a;
-  --color-brand-slate: #334155;
-  --color-brand-yellow: #FACC15;
+  --color-brand-light: #F9FAFC;
+  --color-brand-navy: #0C0D14;
+  --color-brand-slate: #4B5563;
+  --color-brand-yellow: #FED01B;
   
   --color-background: var(--color-brand-light);
   --color-foreground: var(--color-brand-navy);
@@ -18,8 +18,8 @@
 
 @layer base {
   :root {
-    --background: #F7F9FB;
-    --foreground: #0a0a0a;
+    --background: #FAFAFA;
+    --foreground: #0C0D14;
   }
 
   *,
@@ -44,19 +44,19 @@
 
   ::selection {
     background-color: #fed01b;
-    color: #0a0a0a;
+    color: #0c0d14;
   }
 
-  /* Custom Scrollbar */
+  /* Premium Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #fafafa;
   }
   ::-webkit-scrollbar-thumb {
     background: #cbd5e1;
-    border-radius: 4px;
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;

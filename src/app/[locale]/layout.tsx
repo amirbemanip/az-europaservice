@@ -23,31 +23,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const dict = await getDictionary(locale);
   
-  const titles: Record<string, string> = {
-    de: 'AZ-Europa Service | Profi Reinigung & Hausmeisterservice Franken',
-    en: 'AZ-Europa Service | Professional Cleaning & Facility Management Franconia',
-    fa: 'AZ-Europa Service | خدمات نظافت حرفه‌ای و مدیریت ساختمان در آلمان',
-    ar: 'AZ-Europa Service | خدمات التنظيف المهنية وإدارة المرافق في ألمانيا',
-    ru: 'AZ-Europa Service | Профессиональная уборка и обслуживание зданий в Германии',
-    uk: 'AZ-Europa Service | Професійне прибирання та обслуговування будівель у Німеччині',
-  };
-
-  const descriptions: Record<string, string> = {
-    de: 'Ihr zuverlässiger Meisterbetrieb für Reinigung, Renovierung und Hausmeisterservice in Nürnberg, Erlangen und Bamberg. TÜV geprüft. 24h Service.',
-    en: 'Your reliable master business for cleaning, renovation, and facility management in Nuremberg, Erlangen, and Bamberg. TÜV certified. 24h service.',
-    fa: 'شرکت متخصص و تایید شده شما برای خدمات نظافت، نوسازی و مدیریت ساختمان در نورنبرگ، ارلانگن و بامبرگ. دارای تاییدیه TÜV و خدمات ۲۴ ساعته.',
-    ar: 'شركتك المتخصصة والمعتمدة لخدمات التنظيف والتجديد وإدارة المرافق في نورمبرغ وإرلنغن وبامبرغ. معتمدة من TÜV وخدمة على مدار 24 ساعة.',
-    ru: 'Ваше надежное сертифицированное предприятие по уборке, ремонту и обслуживанию зданий в Нюрнберге, Эрлангене и Бамберге. Сертификация TÜV. 24-часовой сервис.',
-    uk: 'Ваше надійне сертифіковане підприємство з прибирання, ремонту та обслуговування будівель у Нюрнберзі, Ерлангені та Бамберзі. Сертифікація TÜV. 24-годинний сервіс.',
+  const seo = dict.seo?.home || {
+    title: 'AZ-Europa Service',
+    description: 'Meisterbetrieb für Reinigung & Facility Management'
   };
 
   return {
     metadataBase: new URL('https://az-europaservice.de'),
     title: {
-      default: titles[locale] || titles.de,
+      default: seo.title,
       template: `%s | ${locale === 'fa' ? 'شرکت AZ-Europa Service' : 'AZ-Europa Service GmbH'}`
     },
-    description: descriptions[locale] || descriptions.de,
+    description: seo.description,
     alternates: {
       canonical: locale === 'de' ? '/' : `/${locale}`,
       languages: {
@@ -69,8 +56,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     openGraph: {
-      title: titles[locale] || titles.de,
-      description: descriptions[locale] || descriptions.de,
+      title: seo.title,
+      description: seo.description,
       type: 'website',
       locale: locale === 'de' ? 'de_DE' : locale === 'en' ? 'en_GB' : locale === 'fa' ? 'fa_IR' : locale === 'ar' ? 'ar-SA' : locale === 'ru' ? 'ru-RU' : 'uk-UA',
       images: [
@@ -84,8 +71,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title: titles[locale] || titles.de,
-      description: descriptions[locale] || descriptions.de,
+      title: seo.title,
+      description: seo.description,
       images: ['/logo.png'],
     },
   };

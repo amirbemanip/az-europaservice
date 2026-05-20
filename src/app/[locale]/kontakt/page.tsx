@@ -6,10 +6,11 @@ import { getDictionary } from '@/lib/get-dictionary';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const seo = dict.seo?.contact;
   
   return {
-    title: `${dict.nav.contact} | AZ-Europa Service GmbH`,
-    description: dict.kontakt.hero_desc,
+    title: seo?.title || `${dict.nav.contact} | AZ-Europa Service GmbH`,
+    description: seo?.description || dict.kontakt.hero_desc,
   };
 }
 

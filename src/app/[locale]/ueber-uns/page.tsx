@@ -5,10 +5,11 @@ import { getDictionary } from '@/lib/get-dictionary';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const seo = dict.seo?.about;
   
   return {
-    title: `${dict.nav.about} | AZ-Europa Service GmbH`,
-    description: dict.about.hero_desc,
+    title: seo?.title || `${dict.nav.about} | AZ-Europa Service GmbH`,
+    description: seo?.description || dict.about.hero_desc,
   };
 }
 
@@ -47,7 +48,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div className={`grid lg:grid-cols-2 gap-20 items-center ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl font-black text-[#0a0a0a] tracking-tight">
-                {dict.about.quality_title.split(',').slice(0, 1).join('')}, <br />{dict.about.quality_title.split(',').slice(1).join('')}
+                {dict.about.quality_title}
               </h2>
               <p className="text-[#45464d] leading-relaxed">
                 {dict.about.quality_desc}
@@ -81,6 +82,33 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </div>
         </div>
       </section>
+
+      {/* ── 2.5 DETAILED CONTENT (New) ── */}
+      {dict.about.paragraphs && dict.about.paragraphs.length > 0 && (
+        <section className="py-24 bg-[#f8f9fa] border-y border-[#eee]">
+          <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-12">
+                {dict.about.paragraphs.map((p: string, i: number) => {
+                  const isHeading = p.startsWith('**') && p.endsWith('**');
+                  if (isHeading) {
+                    return (
+                      <h3 key={i} className="text-2xl md:text-3xl font-black text-[#0a0a0a] tracking-tight pt-8 first:pt-0">
+                        {p.replace(/\*\*/g, '')}
+                      </h3>
+                    );
+                  }
+                  return (
+                    <p key={i} className="text-[17px] text-[#45464d] leading-[1.8]">
+                      {p}
+                    </p>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── 3. TEAM / PHILOSOPHY ── */}
       <section className="py-24 bg-[#0a0a0a] text-white">
