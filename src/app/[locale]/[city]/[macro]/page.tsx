@@ -188,7 +188,7 @@ export default async function ServiceMatrixPage({ params }: { params: Promise<{ 
                 {contentTitle}
               </h2>
               <div className="space-y-8">
-                {paragraphsToDisplay.map((p, i) => {
+                {paragraphsToDisplay.map((p: string, i: number) => {
                   const isHeading = p.startsWith('**') && p.endsWith('**');
                   if (isHeading) {
                     return (

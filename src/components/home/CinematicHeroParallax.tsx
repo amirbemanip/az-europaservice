@@ -18,7 +18,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
   // Parallax effects
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
-  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.8], [1, 1]);
 
   const trustItems = [
     { icon: Shield, text: dict.hero.trust.tuv },
@@ -43,7 +43,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           priority
           quality={75}
           className="object-cover opacity-20 object-center mix-blend-luminosity"
-          sizes="100vw"
+          sizes="100vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8//79fwAJ+wPlQAAAABJRU5ErkJggg=="
         />
         {/* Subtle grid pattern overlay */}
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
@@ -72,7 +72,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           >
             <div className="flex gap-0.5">
               {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="w-3.5 h-3.5 fill-[#fed01b] text-[#fed01b]" />
+                <Star key={star} className="w-3.5 h-3.5 fill-[#fed01b] text-[#d97706]" />
               ))}
             </div>
             <span className="w-px h-3 bg-white/20" />
@@ -86,7 +86,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl md:text-7xl lg:text-[90px] font-black leading-[1.05] tracking-tight text-white mb-8"
+            className="text-5xl md:text-7xl lg:text-[90px] font-black leading-[1.05] tracking-tight text-[#e2e8f0] mb-8"
           >
             {dict.hero.title} <br className="hidden md:block"/>
             <span className="relative inline-block mt-2">
@@ -116,7 +116,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           >
             <Link 
               href={getLocalizedHref('/kontakt')} 
-              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#fed01b] text-[#0a0a0a] rounded-full font-black text-[13px] tracking-[0.1em] uppercase overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(254,208,27,0.2)] hover:shadow-[0_0_60px_rgba(254,208,27,0.4)] ${isRTL ? 'flex-row-reverse' : ''}`}
+              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#fed01b] text-[#0a0a0a] rounded-full font-black text-[13px] tracking-[0.1em] uppercase overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(254,208,27,0.2)] hover:shadow-[0_0_60px_rgba(254,208,27,0.4)] pulse-glow ${isRTL ? 'flex-row-reverse' : ''}`}
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
               {dict.hero.cta_primary}
@@ -125,7 +125,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
 
             <Link 
               href={getLocalizedHref('/leistungen')} 
-              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-[13px] tracking-[0.1em] uppercase backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
+              className={`group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/5 border border-white/10 text-[#e2e8f0] rounded-full font-bold text-[13px] tracking-[0.1em] uppercase backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
             >
               {dict.hero.cta_secondary}
               <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -143,7 +143,7 @@ export function CinematicHeroParallax({ locale, dict }: { locale: string, dict: 
           >
             {trustItems.map((item, idx) => (
               <div key={idx} className={`flex items-center gap-3 text-[#71717a] ${isRTL ? 'flex-row-reverse' : ''}`}>
-                <item.icon className="w-4 h-4 text-[#fed01b]/70" />
+                <item.icon className="w-4 h-4 text-[#d97706]/70" />
                 <span className="text-[13px] font-bold uppercase tracking-wider">{item.text}</span>
               </div>
             ))}

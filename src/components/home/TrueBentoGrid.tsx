@@ -144,7 +144,7 @@ export function TrueBentoGrid({ locale, dict }: { locale: string; dict: any }) {
                       alt={card.title} 
                       fill 
                       className="object-cover" 
-                      sizes="(max-width: 768px) 100vw, 50vw" 
+                      sizes="(max-width: 768px) 100vw, 50vw" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8//79fwAJ+wPlQAAAABJRU5ErkJggg=="
                     />
 
                     {/* Bottom gradient fade for text legibility */}

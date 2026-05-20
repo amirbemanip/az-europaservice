@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, ThumbsUp, Building2 } from 'lucide-react';
+import { AnimatedCounter } from '../ui/AnimatedCounter';
 
 export function AuthorityMatrix({ locale, dict }: { locale: string; dict: any }) {
   const isRTL = locale === 'fa' || locale === 'ar';
@@ -19,7 +20,7 @@ export function AuthorityMatrix({ locale, dict }: { locale: string; dict: any })
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a] border-y border-white/5 relative overflow-hidden z-20">
+    <section className="py-24 bg-[#0a0a0a] border-y border-[#fed01b]/10 relative overflow-hidden z-20">
       {/* Decorative gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#fed01b]/50 to-transparent" />
       
@@ -39,8 +40,8 @@ export function AuthorityMatrix({ locale, dict }: { locale: string; dict: any })
               <div className="w-14 h-14 bg-[#fed01b]/10 rounded-2xl flex items-center justify-center mb-6 border border-[#fed01b]/20">
                 <stat.icon className="w-7 h-7 text-[#fed01b]" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-2">
-                {stat.value}
+              <div className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-2 tabular-nums">
+                <AnimatedCounter value={stat.value} />
               </div>
               <div className="text-slate-400 font-medium tracking-wide">
                 {stat.name}
