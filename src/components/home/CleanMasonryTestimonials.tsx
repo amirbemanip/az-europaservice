@@ -65,10 +65,10 @@ export function CleanMasonryTestimonials({ locale, dict }: { locale: string; dic
           {localizedTestimonials.map((t: any, i: number) => (
             <motion.div
               key={t.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
+              transition={{ delay: i * 0.1, duration: 0.8, type: "spring", stiffness: 100 }}
               className={`${t.span} group bg-white border border-[#f4f4f5] rounded-3xl p-8 flex flex-col justify-between relative hover:border-[#0a0a0a] transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_80px_rgb(0,0,0,0.08)] hover:-translate-y-1`}
             >
               {/* Quote icon */}

@@ -34,7 +34,7 @@ export function FloatingChatWidget({ locale, dict }: { locale: string; dict: any
       {/* ── FLOATING BUTTON ── */}
       <motion.button
         onClick={() => { setIsOpen(!isOpen); setActiveTab('main'); setFormSent(false); setSelectedFaq(null); }}
-        className={`fixed bottom-6 ${isRTL ? 'left-6' : 'right-6'} z-[60] w-16 h-16 rounded-full bg-[#0a0a0a] text-white flex items-center justify-center shadow-[0_8px_32px_rgba(19,27,46,0.3)] hover:shadow-[0_12px_40px_rgba(19,27,46,0.4)] transition-all duration-300 group`}
+        className={`fixed bottom-32 ${isRTL ? 'left-6' : 'right-6'} z-[60] w-16 h-16 rounded-full bg-[#0a0a0a] text-white flex items-center justify-center shadow-[0_8px_32px_rgba(19,27,46,0.3)] hover:shadow-[0_12px_40px_rgba(19,27,46,0.4)] transition-all duration-300 group`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Chat-Fenster öffnen"
@@ -66,7 +66,7 @@ export function FloatingChatWidget({ locale, dict }: { locale: string; dict: any
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className={`fixed bottom-24 ${isRTL ? 'left-6' : 'right-6'} z-[60] w-[380px] max-h-[520px] bg-white rounded-2xl shadow-[0_24px_80px_rgba(0,0,0,0.15)] border border-[#e0e3e5] overflow-hidden flex flex-col ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`fixed bottom-48 ${isRTL ? 'left-6' : 'right-6'} z-[60] w-[380px] max-h-[520px] bg-white rounded-2xl shadow-[0_24px_80px_rgba(0,0,0,0.15)] border border-[#e0e3e5] overflow-hidden flex flex-col ${isRTL ? 'text-right' : 'text-left'}`}
           >
             {/* Header */}
             <div className={`bg-[#0a0a0a] px-6 py-5 flex items-center gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>

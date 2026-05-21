@@ -151,7 +151,7 @@ export function EnterpriseHeader({ cities, macroServices, microServices, dict, l
       {/* ═══════════════ MAIN HEADER (LIQUID GLASS / CINEMATIC DARK) ═══════════════ */}
       <header
         className={`fixed w-full z-[51] transition-all duration-500 ${scrolled
-            ? 'top-0 bg-[#050505]/95 backdrop-blur-3xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-white/10'
+            ? 'top-0 bg-[rgba(255,255,255,0.7)] backdrop-blur-3xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-[#fed01b]'
             : 'top-10 bg-[#050505]/75 backdrop-blur-xl border-b border-white/5'
           }`}
         onMouseLeave={closeMega}
@@ -163,7 +163,7 @@ export function EnterpriseHeader({ cities, macroServices, microServices, dict, l
             {/* ── LOGO (YELLOW) ── */}
             <div className="flex-1 min-w-0 relative h-[72px]">
               <Link href={getLocalizedHref('/')} className="absolute inset-y-0 left-0 flex items-center group z-[60] w-[200px]" onClick={closeMega}>
-                <div className="relative h-[104px] w-[736px] lg:h-[123px] lg:w-[872px] transition-transform duration-300 group-hover:scale-105 mt-2 -ml-2 lg:mt-3 lg:-ml-4 pointer-events-none">
+                <div className="relative h-[80px] w-[280px] lg:h-[104px] lg:w-[736px] transition-transform duration-300 group-hover:scale-105 mt-2 -ml-2 lg:mt-3 lg:-ml-4 pointer-events-none">
                   <Image
                     src="/logo_new2.png"
                     alt="AZ-Europa Service GmbH"
@@ -258,7 +258,7 @@ export function EnterpriseHeader({ cities, macroServices, microServices, dict, l
               {/* CTA — Desktop */}
               <Link
                 href={getLocalizedHref('/kontakt')}
-                className="hidden lg:flex items-center gap-3 px-8 py-3 bg-[#fed01b] text-[#0a0a0a] text-[13px] font-black tracking-[0.1em] uppercase rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(254,208,27,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 group shadow-[0_0_20px_rgba(254,208,27,0.2)]"
+                className="hidden lg:flex items-center gap-3 px-8 py-3 bg-[#fed01b] text-[#0a0a0a] text-[13px] font-black tracking-[0.1em] uppercase rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(254,208,27,0.6)] pulse-glow hover:scale-105 active:scale-95 transition-all duration-300 group shadow-[0_0_20px_rgba(254,208,27,0.2)]"
               >
                 {dict.nav.cta}
                 <ArrowRight className={`w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 ${isRTL ? 'rotate-180' : ''}`} />

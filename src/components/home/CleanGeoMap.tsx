@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from "next/image";
 import { motion } from 'framer-motion';
 import { MapPin, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
